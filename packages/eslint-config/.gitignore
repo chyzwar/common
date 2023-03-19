@@ -1,0 +1,16 @@
+# Logs #
+*.log
+
+# Coverage #
+coverage
+
+# Node Files #
+node_modules
+
+# Editors #
+.vscode
+.idea
+
+# Build Files #
+dist
+lib

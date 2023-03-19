@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2019",
+    "strict": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true
+  },
+  "include": [],
+  "references": [
+    {"path": "./packages/runner"},
+    {"path": "./packages/eslint-config"}
+  ]
+}
