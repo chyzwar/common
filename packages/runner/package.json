@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "engines": {
     "node": "> 16.x.x",
-    "yarn": "1.x.x"
+    "yarn": "3.x.x"
   },
   "type": "module",
   "main": "./lib/index.js",

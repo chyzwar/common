@@ -1,0 +1,18 @@
+{
+  "name": "@project/tsconfigs",
+  "version": "0.2.0",
+  "author": "chyzwar",
+  "license": "MIT",
+  "main": "./node.js",
+  "engines": {
+    "node": "18.x.x",
+    "yarn": "3.x.x"
+  },
+  "description": "Typescript configs",
+  "keywords": [
+    "typescript"
+  ],
+  "dependencies": {
+    "eslint": "^8.36.0"
+  }
+}
