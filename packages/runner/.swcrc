@@ -1,12 +1,14 @@
 {
+  "$schema": "http://json.schemastore.org/swcrc",
   "jsc": {
     "target": "es2022",
     "parser": {
-      "syntax": "typescript",
-      "strict": true,
-      "strictMode": true,
-      "lazy": false,
-      "noInterop": true
+      "syntax": "typescript"
     }
+  }, 
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "strictMode": true
   }
 }

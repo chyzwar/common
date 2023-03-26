@@ -1,11 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
     "moduleResolution": "node16",
     "module": "ES2022",
     "target": "ES2022",
     "newLine": "lf",
-    "jsx": "react",
     "outDir": "lib",
     "rootDir": "src",
     "tsBuildInfoFile": "./lib/buildInfo.json",
@@ -23,16 +23,13 @@
     
     "removeComments": false,
     "preserveConstEnums": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "pretty": true,
     "declaration": true,
     "declarationMap": true,
     "listFiles": false,
     "listEmittedFiles": false,
-    "composite": true,
-    "types": [
-      "node"
-    ]
+    "composite": true
   },
   "include": [
     "src/**/*.ts",

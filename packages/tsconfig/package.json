@@ -11,8 +11,5 @@
   "description": "Typescript configs",
   "keywords": [
     "typescript"
-  ],
-  "dependencies": {
-    "eslint": "^8.36.0"
-  }
+  ]
 }

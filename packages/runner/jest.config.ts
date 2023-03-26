@@ -4,7 +4,6 @@ import type {Config} from '@jest/types';
  * Use jest with ts-jest to transform
  *
  * @see https://facebook.github.io/jest/docs/en/configuration.html
- * @see https://kulshekhar.github.io/ts-jest/user/config/
  */
 const config: Config.InitialOptions = {
   testEnvironment: "node",
