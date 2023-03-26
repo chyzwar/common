@@ -1,0 +1,12 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "access": "public",
+      "registry": "https://npm.pkg.github.com/xcanchal"
+    }
+  }
+}

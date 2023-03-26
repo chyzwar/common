@@ -37,6 +37,10 @@
     "lint-staged": "^13.2.0",
     "typescript": "^5.0.2"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn lint:fix"
   },
