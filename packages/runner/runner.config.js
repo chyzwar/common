@@ -1,8 +1,8 @@
-import {spawnTask, dockerTask, parallelTask} from "@hyper/runner";
+import {spawnTask, dockerTask, parallelTask, seriesTask} from "@hyper/runner";
+import {argv} from 'process'
 
 const otherIndex = 3;
-const otherArgv = process.argv.slice(otherIndex);
-
+const otherArgv = argv.slice(otherIndex);
 
 spawnTask("build:watch", 
   "yarn", ["build:watch"], 
@@ -47,7 +47,7 @@ dockerTask("postgres", "postgres", {
 });
 
 
-seriesTaskFunction("start:prod", ["build:api", "build:ui", "start:api:prod"])
+seriesTask("start:prod", ["build:api", "build:ui", "start:api:prod"])
 parallelTask("start", [
   "build:watch", 
   "postgres", 

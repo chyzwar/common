@@ -7,14 +7,14 @@
     "node": "18.x.x",
     "yarn": "3.x.x"
   },
-  "description": "Eslint configs",
+  "description": "ESLint configs",
   "keywords": [
     "eslint"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
     "@project/tsconfigs": "0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "find-up": "^6.3.0"

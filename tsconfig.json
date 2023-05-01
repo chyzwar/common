@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "ES2019",
+    "target": "ES2022",
     "strict": true,
     "pretty": true,
     "skipLibCheck": true,

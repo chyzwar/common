@@ -1,36 +1,39 @@
-import {spawn} from "child_process";
 import {expect, jest, describe, it} from '@jest/globals';
-import dockerTask from "../dockerTask.js";
 import register from "../register.js";
 
-jest.unstable_mockModule("child_process", () => {
+jest.unstable_mockModule("node:child_process", () => {
   return {
-    spawn: jest.fn()
+    spawn: jest.fn().mockImplementation(() => {
+      const handlers: Record<string, (arg: unknown) => void> = {};
+      
+      const timeout = 10;
+      setTimeout(() => {
+        handlers.close(0);
+      }, timeout);
+  
+      return {
+        stdout: {
+          on: jest.fn(),
+        },
+        stderr: {
+          on: jest.fn(),
+        },
+        on: jest.fn((name: string, handler: (arg: unknown) => void) => {
+          handlers[name] = handler;
+        }),
+      };
+    })
   }
 });
 
-describe("dockerTask", () => {
-  (spawn as jest.Mock).mockImplementation(() => {
-    const handlers: Record<string, Function> = {};
-    
-    const timeout = 10;
-    setTimeout(() => {
-      handlers.close(0);
-    }, timeout);
+jest.unstable_mockModule("../Logger.js", async () => {
+  return await import("../__mocks__/Logger.js");
+});
 
-    return {
-      stdout: {
-        on: jest.fn(),
-      },
-      stderr: {
-        on: jest.fn(),
-      },
-      on: jest.fn((name: string, handler: Function) => {
-        handlers[name] = handler;
-      }),
-    };
-  });
+const {default: dockerTask} = await import('../dockerTask.js');
+const {spawn} = await import('node:child_process');
 
+describe("dockerTask", () => {  
   it("should register new task", () => {
     dockerTask("hello", "hello-world");
 
@@ -41,7 +44,7 @@ describe("dockerTask", () => {
     dockerTask("hello", "hello-world", {
       rm: true,
     });
-    await register.get("hello")!();
+    await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "--rm", "hello-world"], {"shell": true});
   });
@@ -50,7 +53,7 @@ describe("dockerTask", () => {
     dockerTask("hello", "hello-world", {
       interactive: true,
     });
-    await register.get("hello")!();
+    await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "--interactive", "hello-world"], {"shell": true});
   });
@@ -59,7 +62,7 @@ describe("dockerTask", () => {
     dockerTask("hello", "hello-world", {
       name: "MyHello",
     });
-    await register.get("hello")!();
+    await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "--name MyHello", "hello-world"], {"shell": true});
   });
@@ -72,7 +75,7 @@ describe("dockerTask", () => {
         test3: "test-value3",
       },
     });
-    await register.get("hello")!();
+    await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "-e test1=test-value1", "-e test3=test-value3", "hello-world"], {"shell": true});
   });
@@ -84,7 +87,7 @@ describe("dockerTask", () => {
         "3001:3001"
       ]
     });
-    await register.get("hello")!();
+    await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "-p 3000:3000", "-p 3001:3001", "hello-world"], {"shell": true});
   });

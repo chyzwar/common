@@ -1,6 +1,6 @@
 import {expect, describe, it} from '@jest/globals';
 import register from "../register.js";
-import series from "../series.js";
+import {series} from "../series.js";
 
 describe("series", () => {
   it("should execute tasks in order", async() => {

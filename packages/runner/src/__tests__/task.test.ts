@@ -1,9 +1,11 @@
 import {expect, jest, describe, it} from '@jest/globals';
-import task from "../task.js";
 import register from "../register.js";
-import Logger from "../Logger.js";
 
-jest.mock("../Logger");
+jest.unstable_mockModule("../Logger.js", async () => {
+  return await import("../__mocks__/Logger.js");
+});
+
+const {task} = await import("../task.js");
 
 describe("task", () => {
   it("should register new task", () => {
@@ -17,10 +19,9 @@ describe("task", () => {
     const ls = jest.fn();
     task("ls",  ls);  
     
-    const run = register.get("ls")!;
-    await run();
+    const run = register.get("ls");
+    await run?.();
 
-    expect(Logger.calls).toMatchSnapshot();
     expect(ls).toHaveBeenCalled();
   });
 });

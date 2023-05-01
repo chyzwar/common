@@ -5,7 +5,7 @@ import Logger from "./Logger.js";
 /**
  * Register task
  */
-function task(taskName: string, taskFunction: TaskFunction): void {
+export function task(taskName: string, taskFunction: TaskFunction): void {
   async function innerTask(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
@@ -23,5 +23,3 @@ function task(taskName: string, taskFunction: TaskFunction): void {
 
   register.set(taskName, innerTask);
 }
-
-export default task;

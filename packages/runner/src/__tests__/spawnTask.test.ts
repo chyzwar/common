@@ -1,9 +1,13 @@
 import {expect, jest, describe, it} from '@jest/globals';
-import spawnTask from "../spawnTask.js";
+
 import register from "../register.js";
 import SpawnError from "../SpawnError.js";
 
-jest.mock("../Logger");
+jest.unstable_mockModule("../Logger.js", async () => {
+  return await import("../__mocks__/Logger.js");
+});
+
+const {spawnTask} = await import("../spawnTask.js");
 
 describe("spawnTask", () => {
   it("should register new task", () => {
@@ -15,9 +19,9 @@ describe("spawnTask", () => {
   it("should handle ENOENT", async() => {
     spawnTask("invalid", "invalid");
 
-    const task = register.get("invalid")!;
+    const task = register.get("invalid");
     
-    await expect(task()).rejects.toThrowError(
+    await expect(task?.()).rejects.toThrowError(
       new SpawnError("Spawn Task closed with non-zero exit code", -2, "invalid")
     );
   });

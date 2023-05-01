@@ -13,7 +13,7 @@ import SpawnError from "./SpawnError.js";
  * @param args arguments for command
  * @param options spawn option
  */
-function spawnTask(taskName: string, command: string, args: string[] = [], options: SpawnOptions = {}): void {
+export function spawnTask(taskName: string, command: string, args: string[] = [], options: SpawnOptions = {}): void {
 
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
@@ -77,5 +77,3 @@ function spawnTask(taskName: string, command: string, args: string[] = [], optio
 
   register.set(taskName, spawnTaskFunction);
 } 
-
-export default spawnTask;

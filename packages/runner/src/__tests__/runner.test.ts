@@ -1,16 +1,26 @@
-import {resolve} from "path";
 import {expect, jest, describe, it} from '@jest/globals';
-import Logger from "../Logger.js";
 
-jest.mock("../Logger");
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+jest.unstable_mockModule("node:process", () => {
+  const currentDir = dirname(fileURLToPath(import.meta.url))
+  return {
+    cwd: () => resolve(currentDir, '../__fixtures__')
+  }
+});
+
+jest.unstable_mockModule("../Logger.js", async () => {
+  const mock = await import("../__mocks__/Logger.js");
+  return mock;
+});
+
+const Logger = await import("../Logger.js");
 
 describe("runner", () => {
   it("should load configuration form runner.config.js", async() => {
-    jest.spyOn(process, "cwd").mockImplementationOnce(() => {
-      return resolve(__dirname, "..", "__fixtures__");
-    });
     await import("../runner.js");
 
-    expect(Logger.calls).toMatchSnapshot();
+    expect(Logger.default.calls).toMatchSnapshot();
   });
 });

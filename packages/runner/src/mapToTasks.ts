@@ -16,7 +16,7 @@ function mapToTasks(taskNames: string[]): TaskFunction[] {
     throw new Error(`Missing tasks definitions: ${diff.join(",")}`);
   }
 
-  return taskNames.map((task: string) => register.get(task)!);
+  return taskNames.map((task: string) => register.get(task) as TaskFunction);
 }
 
   

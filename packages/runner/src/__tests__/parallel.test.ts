@@ -1,7 +1,7 @@
 import {expect, describe, it} from '@jest/globals';
 
 import register from "../register.js";
-import parallel from "../parallel.js";
+import {parallel} from "../parallel.js";
 
 
 describe("parallel", () => {
@@ -25,3 +25,9 @@ describe("parallel", () => {
     expect(order).toEqual(["test2", "test1"]);
   });
 });
+
+
+describe('parallelTask', () => {
+  it.todo('execute tasks in parallel')
+
+})

@@ -10,15 +10,15 @@ class Logger {
   }
 
   public time(label: string): void {
-    console.time(pc.green(`[${this.taskName}] ${label}`));
+    console.time(`${pc.green(`[${this.taskName}]`)} ${label}`);
   }
 
   public timeEnd(label: string): void {
-    console.timeEnd(pc.green(`[${this.taskName}] ${label}`));
+    console.timeEnd(`${pc.green(`[${this.taskName}]`)} ${label}`);
   }
 
   public log(message = ""): void {
-    console.log(`[${pc.green(this.taskName)}] ${message}`);
+    console.time(`${pc.green(`[${this.taskName}]`)} ${message}`);
   }
 
   public warn(message = "", meta: unknown = ""): void {
