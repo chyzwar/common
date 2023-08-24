@@ -24,6 +24,9 @@ jobs:
     - name: Run build
       run: yarn test
 
+    - name: Run lint
+      run: yarn lint
+
     - name: "Setup yarn"
       run: |
           yarn config set -H 'npmAuthToken' "${{secrets.GITHUB_TOKEN}}"
@@ -33,10 +36,10 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
-        npx lerna version \
+        yarn dlx lerna version \
           --conventional-commits \
           --conventional-graduate \
           --yes
 
-        npx lerna publish from-git \
+        yarn dlx lerna publish from-git \
           --yes
