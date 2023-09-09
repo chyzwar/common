@@ -2,7 +2,7 @@
  
 import {series} from "./series.js";
 import Logger from "./Logger.js";
-import {cwd} from 'node:process'
+import {cwd} from "node:process";
 import type SpawnError from "./SpawnError.js";
 
 const logger = new Logger("runner");
@@ -12,7 +12,7 @@ async function handle(argv: string[]): Promise<void> {
     await import(`${cwd()}/runner.config.js`);
   }
   catch (error: unknown) {
-    logger.error(`Failed loading configuration ${error}`);
+    logger.error(`Failed loading configuration ${error as string}`);
   }
 
   const label = `Completed tasks: ${argv.join(", ")} in`;
@@ -21,6 +21,7 @@ async function handle(argv: string[]): Promise<void> {
   await series(...argv)();
   logger.timeEnd(label);
 }
+
 /**
  * Handle exceptions
  */

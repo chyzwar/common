@@ -1,36 +1,37 @@
-import {spawnTask, dockerTask, parallelTask, seriesTask} from "@hyper/runner";
-import {argv} from 'process'
-
-const otherIndex = 3;
-const otherArgv = argv.slice(otherIndex);
+import {
+  spawnTask, 
+  dockerTask, 
+  parallelTask, 
+  seriesTask,
+} from "@chyzwar/runner";
 
 spawnTask("build:watch", 
-  "yarn", ["build:watch"], 
+  "yarn", ["build:watch"] 
 );
 
 spawnTask("start:ui", 
   "yarn", ["start"], 
   {
-    cwd: "./packages/ui"
+    cwd: "./packages/ui",
   }
 );
 spawnTask("build:ui", 
   "yarn", ["build"], 
   {
-    cwd: "./packages/ui"
+    cwd: "./packages/ui",
   }
 );
 
 spawnTask("start:api", 
   "yarn", ["start"], 
   {
-    cwd: "./packages/api"
+    cwd: "./packages/api",
   }
 );
 spawnTask("build:api", 
   "yarn", ["build"], 
   {
-    cwd: "./packages/api"
+    cwd: "./packages/api",
   }
 );
 
@@ -39,7 +40,7 @@ dockerTask("postgres", "postgres", {
   rm: true,
   name: "PostgresDB",
   ports: [
-    "5434:5432"
+    "5434:5432",
   ],
   env: {
     POSTGRES_PASSWORD: "postgres",
@@ -47,10 +48,10 @@ dockerTask("postgres", "postgres", {
 });
 
 
-seriesTask("start:prod", ["build:api", "build:ui", "start:api:prod"])
+seriesTask("start:prod", ["build:api", "build:ui", "start:api:prod"]);
 parallelTask("start", [
   "build:watch", 
   "postgres", 
   "start:api", 
-  "start:ui"
-])
+  "start:ui",
+]);

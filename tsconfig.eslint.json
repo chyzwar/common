@@ -11,6 +11,7 @@
     "**/.eslintrc.js",
     "**/.eslintrc.cjs",
     "**/commitlint.config.cjs",
+    "**/runner.config.js",
     "**/jest.setup.ts",
     "**/jest.config.ts",
     "**/vite.config.ts"

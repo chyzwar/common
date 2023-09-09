@@ -7,23 +7,27 @@ import Logger from "./Logger.js";
 import SpawnError from "./SpawnError.js";
 
 
-interface DockerTaskOptions extends SpawnOptions{
+interface DockerTaskOptions extends SpawnOptions {
+
   /**
    * Automatically remove the container when it exits
    */ 
   rm?: boolean;
+
   /**
    * Keep STDIN open even if not attached
    */
   interactive?: boolean;
+
   /**
    * Assign a name to the container
    */
   name?: string;
+
   /**
    * List of ports to expose
    */
-  ports?: `${number}:${number}`[]
+  ports?: `${number}:${number}`[];
 }
 
 /**
@@ -33,7 +37,7 @@ interface DockerTaskOptions extends SpawnOptions{
  * @param args arguments for command
  * @param options spawn option
  */
-function dockerTask(taskName: string, image: string, options?: DockerTaskOptions): void {
+export function dockerTask(taskName: string, image: string, options?: DockerTaskOptions): void {
   const args = ["run"];
   if (options?.rm) {
     args.push("--rm");
@@ -57,7 +61,7 @@ function dockerTask(taskName: string, image: string, options?: DockerTaskOptions
   if (options?.ports) {
     options.ports
       .forEach((value) => {
-        if (value) {
+        if (value.includes(":")) {
           args.push(`-p ${value}`);
         }
       });

@@ -1,16 +1,16 @@
-import {expect, jest, describe, it} from '@jest/globals';
+import {expect, jest, describe, it} from "@jest/globals";
 
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import {dirname, resolve} from "node:path";
+import {fileURLToPath} from "node:url";
 
 jest.unstable_mockModule("node:process", () => {
-  const currentDir = dirname(fileURLToPath(import.meta.url))
+  const currentDir = dirname(fileURLToPath(import.meta.url));
   return {
-    cwd: () => resolve(currentDir, '../__fixtures__')
-  }
+    cwd: (): string => resolve(currentDir, "../__fixtures__"),
+  };
 });
 
-jest.unstable_mockModule("../Logger.js", async () => {
+jest.unstable_mockModule("../Logger.js", async() => {
   const mock = await import("../__mocks__/Logger.js");
   return mock;
 });

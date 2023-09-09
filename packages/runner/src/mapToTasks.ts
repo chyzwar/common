@@ -7,16 +7,15 @@ import register from "./register.js";
  * Find and error if task is missing
  */
 function mapToTasks(taskNames: string[]): TaskFunction[] {
-  const taskSet = new Set([...taskNames.values()]);
-  const funcSet = new Set([...register.keys()]);
-
-  const diff = [...taskSet].filter(x => !funcSet.has(x));
-
-  if (diff.length) {
-    throw new Error(`Missing tasks definitions: ${diff.join(",")}`);
-  }
-
-  return taskNames.map((task: string) => register.get(task) as TaskFunction);
+  return taskNames.map((task: string) => {
+    const taskFn = register.get(task);
+    if (taskFn) {
+      return taskFn;
+    }
+    else {
+      throw Error(`Missing tasks definition for: ${task}`);
+    }
+  });
 }
 
   

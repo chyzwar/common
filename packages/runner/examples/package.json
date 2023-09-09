@@ -1,0 +1,15 @@
+{
+  "name": "@chyzwar/runner-examples",
+  "packageManager": "yarn@3.5.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "start": "runner start"
+  },
+  "dependencies": {
+    "@chyzwar/runner": "^0.4.1",
+    "@chyzwar/tsconfig": "0.2.0",
+    "typescript": "^5.2.2"
+  }
+}

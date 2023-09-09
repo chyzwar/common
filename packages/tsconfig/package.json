@@ -1,5 +1,5 @@
 {
-  "name": "@project/tsconfigs",
+  "name": "@chyzwar/tsconfig",
   "version": "0.2.0",
   "author": "chyzwar",
   "license": "MIT",
@@ -10,6 +10,6 @@
   },
   "description": "Typescript configs",
   "keywords": [
-    "typescript"
+    "typescript preset"
   ]
 }

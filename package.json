@@ -1,5 +1,5 @@
 {
-  "name": "@common/root",
+  "name": "@chyzwar/root",
   "version": "1.0.0",
   "engines": {
     "node": "16.x",
@@ -10,12 +10,11 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/*/examples",
+    "packages/*/examples/packages/*"
   ],
   "scripts": {
-    "initialize": ".local/init.sh",
-    "prestart": "yarn install",
-    "start": "runner start",
     "lint": "eslint . --ext .ts,.js,.tsx",
     "lint:fix": "eslint . --ext .ts,.js,.tsx --fix",
     "build": "tsc --build",
@@ -26,18 +25,18 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@chyzwar/eslint-config": "^0.2.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@project/eslint-config": "^0.2.0",
-    "@types/node": "^18.17.6",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0",
+    "@types/node": "^18.17.14",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
     "husky": "^8.0.3",
-    "jest": "^29.6.2",
-    "lint-staged": "^14.0.0",
+    "jest": "^29.6.4",
+    "lint-staged": "^14.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "publishConfig": {
     "access": "public",

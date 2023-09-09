@@ -8,12 +8,12 @@ import register from "./register.js";
  * @param args task names
  */
 export function series(...args: string[]): TaskFunction {
-  const seriesTask = async(): Promise<void> => {
+  const seriesTaskFn = async(): Promise<void> => {
     for (const task of mapToTasks(args)) {
       await task();
     }
   };
-  return seriesTask;
+  return seriesTaskFn;
 }
 
 /**
@@ -29,11 +29,12 @@ export function seriesTask(taskName: string, taskList: string[]): void {
     logger.time("Task completed in");
     
     try {
-      await series(...taskList)()
+      await series(...taskList)();
       logger.timeEnd("Task completed in");
-    } catch(e) {
+    }
+    catch (e) {
       logger.timeEnd("Task completed in");
-      throw e
+      throw e;
     }
   }
 

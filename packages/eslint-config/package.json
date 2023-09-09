@@ -1,8 +1,8 @@
 {
-  "name": "@project/eslint-config",
+  "name": "@chyzwar/eslint-config",
   "version": "0.2.0",
   "author": "chyzwar",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": "18.x.x",
     "yarn": "3.x.x"
@@ -12,9 +12,9 @@
     "eslint"
   ],
   "dependencies": {
-    "@project/tsconfigs": "0.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
+    "@chyzwar/tsconfig": "0.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "find-up": "^6.3.0"

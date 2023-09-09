@@ -12,7 +12,7 @@ import Logger from "./Logger.js";
  * @param command command to spawn
  * @param options spawn option
  */
-function execTask(taskName: string, command: string, options?: ExecOptions): void {
+export function execTask(taskName: string, command: string, options?: ExecOptions): void {
 
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
@@ -55,5 +55,3 @@ function execTask(taskName: string, command: string, options?: ExecOptions): voi
 
   register.set(taskName, spawnTaskFunction);
 } 
-
-export default execTask;

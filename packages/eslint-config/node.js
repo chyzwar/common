@@ -10,7 +10,6 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",
-    "extraFileExtensions": [".mjs", ".cjs"],
     "project": [
       "./tsconfig.json",
       findUp.sync("tsconfig.eslint.json"),

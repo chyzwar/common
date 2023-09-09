@@ -1,4 +1,5 @@
-import pc from "picocolors"
+/* eslint-disable no-console */
+import pc from "picocolors";
 
 class Logger {
   public static calls: unknown[][];

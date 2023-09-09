@@ -1,5 +1,5 @@
 {
-  "extends": "@project/tsconfigs/lib.json", 
+  "extends": "@chyzwar/tsconfig/lib.json", 
   "compilerOptions": {
     "noEmit": true,
     "rootDir": ".",

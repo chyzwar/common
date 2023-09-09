@@ -212,4 +212,9 @@ module.exports = {
     "generics": "always-multiline",
     "functions": "never",
   }],
+
+  "@typescript-eslint/no-shadow": ["error", {
+    ignoreTypeValueShadow: true,
+    ignoreFunctionTypeParameterNameValueShadow: true,
+  }],
 };

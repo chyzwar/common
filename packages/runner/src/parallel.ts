@@ -4,11 +4,11 @@ import register from "./register.js";
 import type TaskFunction from "./TaskFunction.js";
 
 export function parallel(...args: string[]): TaskFunction {
-  const parallelTask = async(): Promise<void> => {
-    await Promise.all(mapToTasks(args).map((task) => task()));
+  const parallelTaskFn = async(): Promise<void> => {
+    await Promise.all(mapToTasks(args).map(async(task) => task()));
   };
 
-  return parallelTask;
+  return parallelTaskFn;
 }
 
 
@@ -25,11 +25,12 @@ export function parallelTask(taskName: string, taskList: string[]): void {
     logger.time("Task completed in");
     
     try {
-      await parallel(...taskList)()
+      await parallel(...taskList)();
       logger.timeEnd("Task completed in");
-    } catch(e) {
+    }
+    catch (e) {
       logger.timeEnd("Task completed in");
-      throw e
+      throw e;
     }
   }
 

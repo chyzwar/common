@@ -1,4 +1,4 @@
-import {expect, describe, it} from '@jest/globals';
+import {expect, describe, it} from "@jest/globals";
 
 import register from "../register.js";
 import {parallel} from "../parallel.js";
@@ -27,7 +27,7 @@ describe("parallel", () => {
 });
 
 
-describe('parallelTask', () => {
-  it.todo('execute tasks in parallel')
+describe("parallelTask", () => {
+  it.todo("execute tasks in parallel");
 
-})
+});

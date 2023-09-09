@@ -16,7 +16,7 @@ export function task(taskName: string, taskFunction: TaskFunction): void {
       logger.timeEnd("Task completed in");
     }
     catch (error: unknown) {
-      logger.error(`Task failed with: ${error}`);
+      logger.error(`Task failed with: ${error as string}`);
       throw error;
     }
   }

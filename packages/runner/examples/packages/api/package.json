@@ -1,0 +1,11 @@
+{
+  "name": "@chyzwar/runner-examples-api",
+  "packageManager": "yarn@3.5.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.22.2"
+  }
+}

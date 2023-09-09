@@ -1,4 +1,4 @@
-import {expect, jest, describe, it} from '@jest/globals';
+import {expect, jest, describe, it} from "@jest/globals";
 import register from "../register.js";
 import mapToTasks from "../mapToTasks.js";
 
@@ -15,6 +15,6 @@ describe("mapToTasks", () => {
 
   it("should throw if task is not registered", () => {
     expect(() => mapToTasks(["test-missing1", "test-missing2"]))
-      .toThrowError(new Error("Missing tasks definitions: test-missing1,test-missing2"));
+      .toThrowError(new Error("Missing tasks definition for: test-missing1"));
   });
 });

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/class-methods-use-this */
+
 class Logger {
   public static calls: unknown[][] = [];
 

@@ -1,8 +1,8 @@
-import {expect, jest, describe, it} from '@jest/globals';
+import {expect, jest, describe, it} from "@jest/globals";
 import register from "../register.js";
 
-jest.unstable_mockModule("../Logger.js", async () => {
-  return await import("../__mocks__/Logger.js");
+jest.unstable_mockModule("../Logger.js", async() => {
+  return import("../__mocks__/Logger.js");
 });
 
 const {task} = await import("../task.js");

@@ -11,6 +11,7 @@ module.exports = {
   "no-use-before-define": "off",
   "quotes": "off",
   "semi": "off",
+  "no-shadow": "off",
   "comma-dangle": "off",
   "lines-between-class-members": "off",
 

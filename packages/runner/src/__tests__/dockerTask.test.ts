@@ -1,4 +1,4 @@
-import {expect, jest, describe, it} from '@jest/globals';
+import {expect, jest, describe, it} from "@jest/globals";
 import register from "../register.js";
 
 jest.unstable_mockModule("node:child_process", () => {
@@ -22,16 +22,16 @@ jest.unstable_mockModule("node:child_process", () => {
           handlers[name] = handler;
         }),
       };
-    })
-  }
+    }),
+  };
 });
 
-jest.unstable_mockModule("../Logger.js", async () => {
-  return await import("../__mocks__/Logger.js");
+jest.unstable_mockModule("../Logger.js", async() => {
+  return import("../__mocks__/Logger.js");
 });
 
-const {default: dockerTask} = await import('../dockerTask.js');
-const {spawn} = await import('node:child_process');
+const {dockerTask} = await import("../dockerTask.js");
+const {spawn} = await import("node:child_process");
 
 describe("dockerTask", () => {  
   it("should register new task", () => {
@@ -84,8 +84,8 @@ describe("dockerTask", () => {
     dockerTask("hello", "hello-world", {
       ports: [
         "3000:3000", 
-        "3001:3001"
-      ]
+        "3001:3001",
+      ],
     });
     await register.get("hello")?.();
 

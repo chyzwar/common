@@ -3,7 +3,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "moduleResolution": "node16",
-    "module": "ES2022",
+    "module": "node16",
     "target": "ES2022",
     "newLine": "lf",
     "outDir": "lib",
