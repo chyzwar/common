@@ -4,8 +4,7 @@ on:
   pull_request:
     types: [closed]
     branches:
-      - development
-      - main
+      - master
 
 jobs:
   publish:
@@ -22,6 +21,9 @@ jobs:
         node-version: '18'
 
     - name: Run build
+      run: yarn build
+
+    - name: Run test
       run: yarn test
 
     - name: Run lint
@@ -38,7 +40,6 @@ jobs:
 
         yarn dlx lerna version \
           --conventional-commits \
-          --conventional-graduate \
           --yes
 
         yarn dlx lerna publish from-git \
