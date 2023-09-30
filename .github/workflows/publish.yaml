@@ -20,6 +20,9 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Install
+      run: yarn install
+      
     - name: Run build
       run: yarn build
 
