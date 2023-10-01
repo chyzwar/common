@@ -53,5 +53,4 @@ jobs:
         echo "Publish"
         yarn dlx lerna publish from-git \
           --loglevel debug \
-          --verify-access \
           --yes
