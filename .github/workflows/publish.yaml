@@ -35,11 +35,12 @@ jobs:
 
     - name: Run lint
       run: yarn lint
-
-    - name: "Setup yarn"
+    
+    - name: "Setup npm"
       run: |
-          yarn config set -H 'npmAuthToken' "${{secrets.GITHUB_TOKEN}}"
-      
+        npm set @chyzwar:registry=https://npm.pkg.github.com/chyzwar
+        npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
+
     - name: "Version and publish"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
