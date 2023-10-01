@@ -5,6 +5,10 @@
     "node": "> 16.x.x",
     "yarn": "3.x.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chyzwar/common.git"
+  },
   "type": "module",
   "main": "./lib/index.js",
   "bin": "./lib/runner.js",
