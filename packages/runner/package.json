@@ -31,8 +31,8 @@
     "picocolors": "^1.0.0"
   },
   "devDependencies": {
-    "@chyzwar/eslint-config": "0.2.0",
-    "@chyzwar/tsconfig": "0.2.0",
+    "@chyzwar/eslint-config": "^0.2.0",
+    "@chyzwar/tsconfig": "^0.2.0",
     "@jest/globals": "^29.7.0",
     "@swc/core": "^1.3.90",
     "@swc/jest": "^0.2.29",
