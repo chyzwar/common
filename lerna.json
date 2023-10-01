@@ -11,7 +11,7 @@
       "noPrivate": true,
       "conventionalCommits": true,
       "createRelease": "github",
-      "message": "chore(release): %s",
+      "message": "chore(release): new versions",
       "allowBranch": "master"
     },
     "publish": {
