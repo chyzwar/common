@@ -2,6 +2,7 @@
   "name": "@chyzwar/runner-examples",
   "packageManager": "yarn@3.5.0",
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "tsc --build",
     "build:watch": "tsc --build --watch",

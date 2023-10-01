@@ -2,6 +2,7 @@
   "name": "@chyzwar/runner-examples-api",
   "packageManager": "yarn@3.5.0",
   "type": "module",
+  "private": true,
   "scripts": {
     "start": "node server.js"
   },
