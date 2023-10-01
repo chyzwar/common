@@ -1,11 +1,14 @@
 {
-  "packages": [
-    "packages/*"
+  "workspaces": [
+    "packages/*",
+    "packages/*/examples",
+    "packages/*/examples/packages/*"
   ],
   "npmClient": "yarn",
   "version": "independent",
   "command": {
     "version": {
+      "noPrivate": true,
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "chore(release): %s",
