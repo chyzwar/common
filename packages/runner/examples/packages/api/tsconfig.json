@@ -1,11 +1,12 @@
 {
-  "extends": "@chyzwar/tsconfig/node.json", 
+  "extends": "@chyzwar/tsconfig/api.json", 
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
     "tsBuildInfoFile": "./dist/buildInfo.json"
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "server.js"
   ]
 }
