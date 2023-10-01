@@ -1,0 +1,38 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "module": "es2022",
+    "target": "es2022",
+    "newLine": "lf",
+    "jsx": "react-jsx",
+    "outDir": "lib",
+    "rootDir": "src",
+    "tsBuildInfoFile": "./lib/buildInfo.json",
+    "incremental": true,
+    "experimentalDecorators": true,
+
+    "allowUnreachableCode": false,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "pretty": true,
+    "declaration": true,
+    "declarationMap": true,
+    "listFiles": false,
+    "listEmittedFiles": false,
+    "composite": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json"
+  ]
+}
