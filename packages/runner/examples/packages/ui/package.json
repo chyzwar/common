@@ -16,6 +16,7 @@
     "@chyzwar/eslint-config": "^0.2.3",
     "@chyzwar/tsconfig": "^0.2.3",
     "@preact/preset-vite": "^2.5.0",
+    "eslint": "^8.50.0",
     "preact": "^10.18.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"

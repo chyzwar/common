@@ -490,6 +490,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": ^0.2.0
     "@chyzwar/tsconfig": ^0.2.0
+    eslint: ^8.50.0
     fastify: ^4.23.2
   languageName: unknown
   linkType: soft
@@ -502,6 +503,7 @@ __metadata:
     "@chyzwar/eslint-config": ^0.2.3
     "@chyzwar/tsconfig": ^0.2.3
     "@preact/preset-vite": ^2.5.0
+    eslint: ^8.50.0
     preact: ^10.18.0
     typescript: ^5.2.2
     vite: ^4.4.9
@@ -515,6 +517,7 @@ __metadata:
     "@chyzwar/eslint-config": ^0.2.0
     "@chyzwar/runner": ^0.4.1
     "@chyzwar/tsconfig": ^0.2.0
+    eslint: ^8.50.0
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
