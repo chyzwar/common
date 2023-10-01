@@ -1,6 +1,6 @@
 {
   "name": "@chyzwar/eslint-config",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "chyzwar",
   "license": "MIT",
   "engines": {
@@ -16,7 +16,7 @@
     "eslint"
   ],
   "dependencies": {
-    "@chyzwar/tsconfig": "^0.2.3",
+    "@chyzwar/tsconfig": "^0.2.4",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "eslint-plugin-jest": "^27.4.2",
