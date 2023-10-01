@@ -44,12 +44,15 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        echo "Set git user"
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
+        echo "Version"
         yarn dlx lerna version \
           --conventional-commits \
           --yes
-
+        
+        echo "Publish"
         yarn dlx lerna publish from-git \
           --yes
