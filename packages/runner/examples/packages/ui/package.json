@@ -1,7 +1,7 @@
 {
   "name": "@chyzwar/runner-examples-ui",
   "private": true,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
-    "@chyzwar/eslint-config": "^0.2.9",
-    "@chyzwar/tsconfig": "^0.2.9",
+    "@chyzwar/eslint-config": "^0.2.10",
+    "@chyzwar/tsconfig": "^0.2.10",
     "@preact/preset-vite": "^2.5.0",
     "eslint": "^8.50.0",
     "preact": "^10.18.0",

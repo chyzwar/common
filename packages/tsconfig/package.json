@@ -1,6 +1,6 @@
 {
   "name": "@chyzwar/tsconfig",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "author": "chyzwar",
   "license": "MIT",
   "main": "./node.js",
