@@ -13,9 +13,6 @@
       "createRelease": "github",
       "message": "chore(release): new versions",
       "allowBranch": "master"
-    },
-    "publish": {
-      "registry": "https://npm.pkg.github.com"
     }
   }
 }
