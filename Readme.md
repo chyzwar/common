@@ -2,6 +2,31 @@
 
 Collection of usefull packages that I am using in my side projects.
 
+## @chyzwar/tsconfig
+
+### Instalation
+```
+yarn add "@chyzwar/tsconfig
+```
+
+### Usage
+
+Extend preset:
+
+```json
+{
+  "extends": "@chyzwar/tsconfig/lib.json", 
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "tsBuildInfoFile": "./lib/buildInfo.json"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
+``````
+
 ## @chyzwar/eslint-config
 
 Strict preset for eslint. Intention is to include plugin dependacies and make it easy manage configs in one place. It support number of sub-presets: 
@@ -11,7 +36,9 @@ Strict preset for eslint. Intention is to include plugin dependacies and make it
 
 ### Instalation
 
+```
 yarn add eslint @chyzwar/eslint-config
+```
 
 ### Examples
 
@@ -33,7 +60,7 @@ runner makes possible to define tasks as serial or parallel sequences
 
 ### Instalation
 
-yarn add eslint @chyzwar/runner
+yarn add @chyzwar/runner
 
 ### Examples
 
