@@ -8,8 +8,8 @@
     "version": {
       "conventionalCommits": true,
       "createRelease": "github",
-      "exact": true,
-      "message": "chore(release): %s"
+      "message": "chore(release): %s",
+      "allowBranch": "master"
     }
   }
 }

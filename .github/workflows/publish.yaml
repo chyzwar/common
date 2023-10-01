@@ -51,7 +51,6 @@ jobs:
         echo "Version"
         yarn dlx lerna version \
           --conventional-commits \
-          --conventional-graduate \
           --yes
         
         echo "Publish"
