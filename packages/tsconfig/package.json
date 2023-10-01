@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chyzwar/common.git"
+    "url": "https://github.com/chyzwar/common"
   },
   "description": "Typescript configs",
   "keywords": [
