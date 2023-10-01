@@ -480,7 +480,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     find-up: ^5.0.0
   peerDependencies:
-    eslint: 8.x.x
+    eslint: 8.x
   languageName: unknown
   linkType: soft
 
