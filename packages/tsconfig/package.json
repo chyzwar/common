@@ -3,7 +3,6 @@
   "version": "0.2.12",
   "author": "chyzwar",
   "license": "MIT",
-  "main": "./node.js",
   "engines": {
     "node": "18.x.x",
     "yarn": "3.x.x"
@@ -11,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/chyzwar/common"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "description": "Typescript configs",
   "keywords": [
