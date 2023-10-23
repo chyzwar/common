@@ -4,9 +4,9 @@ node_modules
 .yarn/install-state.gz
 
 # testing
-/coverage
+coverage
 
-# production
+# build
 lib
 build
 buildInfo.json
@@ -19,6 +19,3 @@ buildInfo.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Ignore build files
-buildInfo.json

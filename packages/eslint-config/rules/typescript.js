@@ -2,6 +2,16 @@
 module.exports = {
 
   /**
+   * @see https://typescript-eslint.io/rules/consistent-type-exports
+   */
+  "@typescript-eslint/consistent-type-exports": "error",
+
+  /**
+   * @see https://typescript-eslint.io/rules/consistent-type-imports
+   */
+  "@typescript-eslint/consistent-type-imports": "error",
+
+  /**
    * Good rule but do not play nicely with Promises
    * @see https://github.com/typescript-eslint/typescript-eslint/issues/1956
    * @see https://github.com/typescript-eslint/typescript-eslint/blob/v2.30.0/packages/eslint-plugin/docs/rules/no-invalid-void-type.md
