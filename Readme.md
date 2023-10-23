@@ -25,7 +25,7 @@ Extend preset:
     "src/**/*"
   ]
 }
-``````
+```
 
 ## @chyzwar/eslint-config
 
