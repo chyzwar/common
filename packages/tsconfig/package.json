@@ -4,7 +4,7 @@
   "author": "chyzwar",
   "license": "MIT",
   "engines": {
-    "node": "18.x.x",
+    "node": "18.x",
     "yarn": "3.x.x"
   },
   "repository": {
