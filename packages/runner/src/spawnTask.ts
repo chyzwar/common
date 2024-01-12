@@ -39,7 +39,7 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
             .split(/\r?\n/)
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(`${line}`); 
+              logger.info(line); 
             }); 
         }
       });
@@ -51,7 +51,7 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
             .split(/\r?\n/)
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(`${line}`); 
+              logger.info(line); 
             }); 
         }
       });

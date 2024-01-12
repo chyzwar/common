@@ -12,10 +12,11 @@ jobs:
     - name: "Checkout"
       uses: actions/checkout@v4
 
-    - name: "Use NodeJS 18"
-      uses: actions/setup-node@v3
+    - name: "Use NodeJS 20"
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
+        cache: 'yarn'
 
     - name: Install
       run: yarn install

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "Node16",
     "module": "Node16",
-    "target": "ES2022",
+    "target": "es2022",
     "newLine": "lf",
     "jsx": "react",
     "outDir": "lib",

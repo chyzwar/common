@@ -84,7 +84,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
             .split("\n")
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(`${line}`); 
+              logger.info(line); 
             }); 
         }
       });
@@ -96,7 +96,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
             .split("\n")
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(`${line}`); 
+              logger.info(line); 
             }); 
         }
       });

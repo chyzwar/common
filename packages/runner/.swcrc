@@ -10,6 +10,10 @@
   }, 
   "module": {
     "type": "es6",
-    "resolveFully": true
+    "strict": true,
+    "resolveFully": true,
+    "noInterop": true,
+    "ignoreDynamic": true, 
+    "importInterop": "none"
   }
 }

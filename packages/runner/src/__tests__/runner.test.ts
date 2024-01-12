@@ -1,5 +1,4 @@
 import {expect, jest, describe, it} from "@jest/globals";
-
 import {dirname, resolve} from "node:path";
 import {fileURLToPath} from "node:url";
 
@@ -20,7 +19,7 @@ const Logger = await import("../Logger.js");
 describe("runner", () => {
   it("should load configuration form runner.config.js", async() => {
     await import("../runner.js");
-
+    
     expect(Logger.default.calls).toMatchSnapshot();
   });
 });

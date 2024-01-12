@@ -227,4 +227,9 @@ module.exports = {
     ignoreTypeValueShadow: true,
     ignoreFunctionTypeParameterNameValueShadow: true,
   }],
+  /**
+   * Maximum number params to functions
+   * @see https://typescript-eslint.io/rules/max-params/
+   */
+  "@typescript-eslint/max-params": ["error", { max: 5 }],
 };

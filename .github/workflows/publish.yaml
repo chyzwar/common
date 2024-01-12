@@ -6,13 +6,13 @@ name: Publish
 #   I tried to use github registry to publish public packages,
 #   but packages in github require auth to insall even if package is public.
 #
-#   Lernau use npm for publish, even if npm client is set to yarn
+#   Lerna use npm for publish, even if npm client is set to yarn
 #   Publish only use npm as client and it ignore any config in yarnrc and npmClient settings
 #
-#   Npm token will not be configured without registry-url set in setup-node
+#   Npm token will not be configured without registry-url set in actions/setup-node
 #   To configure authToken for npm both registry-url and secret is needed.
 #   
-#   When publishing public package, publishConfig.access need to be stetup
+#   When publishing public package, publishConfig.access need to be configured
 # 
 
 on:
@@ -30,11 +30,12 @@ jobs:
     - name: "Checkout"
       uses: actions/checkout@v4
 
-    - name: "Use NodeJS 18"
-      uses: actions/setup-node@v3
+    - name: "Use NodeJS 20"
+      uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
         registry-url: 'https://registry.npmjs.org'
+        cache: 'yarn'
 
     - name: Install
       run: yarn install

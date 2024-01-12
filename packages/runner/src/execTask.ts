@@ -25,7 +25,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
             .toString()
             .split(/\r?\n/)
             .forEach((line: string) => {
-              logger.error(`${line}`);
+              logger.error(line);
             }); 
         }
 
@@ -34,7 +34,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
             .toString()
             .split(/\r?\n/)
             .forEach((line: string) => {
-              logger.error(`${line}`); 
+              logger.error(line); 
             }); 
         }
 

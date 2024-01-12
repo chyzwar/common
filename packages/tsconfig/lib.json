@@ -4,7 +4,7 @@
   "compilerOptions": {
     "moduleResolution": "node16",
     "module": "node16",
-    "target": "ES2022",
+    "target": "es2022",
     "newLine": "lf",
     "outDir": "lib",
     "rootDir": "src",

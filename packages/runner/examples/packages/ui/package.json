@@ -9,16 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.18.0"
+    "preact": "^10.19.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@chyzwar/eslint-config": "^0.2.12",
-    "@chyzwar/tsconfig": "^0.2.12",
-    "@preact/preset-vite": "^2.5.0",
-    "eslint": "^8.50.0",
-    "preact": "^10.18.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "@babel/core": "^7.23.7",
+    "@chyzwar/eslint-config": "^0.2.2",
+    "@chyzwar/tsconfig": "^0.2.2",
+    "@preact/preset-vite": "^2.8.1",
+    "eslint": "^8.56.0",
+    "preact": "^10.19.3",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
   }
 }

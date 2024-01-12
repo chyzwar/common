@@ -2,8 +2,8 @@
   "name": "@chyzwar/common",
   "version": "1.0.0",
   "engines": {
-    "node": "16.x",
-    "yarn": "3.x"
+    "node": "20.x",
+    "yarn": "4.x"
   },
   "main": "index.js",
   "type": "module",
@@ -26,20 +26,20 @@
   },
   "dependencies": {
     "@chyzwar/eslint-config": "^0.2.0",
-    "@commitlint/cli": "^18.0.0",
-    "@commitlint/config-conventional": "^18.0.0",
-    "@types/node": "^18.18.1",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "eslint": "^8.50.0",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
-    "lint-staged": "^14.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "lint-staged": "^15.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn lint:fix"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.0.2"
 }

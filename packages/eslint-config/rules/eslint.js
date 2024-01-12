@@ -13,6 +13,7 @@ module.exports = {
   "semi": "off",
   "no-shadow": "off",
   "comma-dangle": "off",
+  "max-params": "off",
   "lines-between-class-members": "off",
 
   "no-console": "warn",
