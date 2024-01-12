@@ -476,7 +476,7 @@ __metadata:
     "@chyzwar/tsconfig": "npm:^0.2.15"
     "@typescript-eslint/eslint-plugin": "npm:^6.18.1"
     "@typescript-eslint/parser": "npm:^6.18.1"
-    eslint-plugin-jest: "npm:^27.6.2"
+    eslint-plugin-jest: "npm:^27.6.3"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     find-up: "npm:^5.0.0"
   peerDependencies:
@@ -3317,9 +3317,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^27.6.2":
-  version: 27.6.2
-  resolution: "eslint-plugin-jest@npm:27.6.2"
+"eslint-plugin-jest@npm:^27.6.3":
+  version: 27.6.3
+  resolution: "eslint-plugin-jest@npm:27.6.3"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.10.0"
   peerDependencies:
@@ -3331,7 +3331,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 05c07c58620becf4fb24301024cfaad5404f09fc8354cd0decf0f6a552058d46f2cb263d307107f1357ee9721018fabfb56a47cc4c35f19ab3ca8bb44eea757b
+  checksum: 02cb44aec014b81263f77e8e4631a8bc9073e9e0499e20999a7c9326050b0b50aef3ec71b5bc2a6d9336a9e08182f763ab01a38f044aca282e0a1ade216e95ac
   languageName: node
   linkType: hard
 
