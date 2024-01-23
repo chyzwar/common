@@ -469,11 +469,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.15, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.16, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
-    "@chyzwar/tsconfig": "npm:^0.2.15"
+    "@chyzwar/tsconfig": "npm:^0.2.16"
     "@typescript-eslint/eslint-plugin": "npm:^6.19.1"
     "@typescript-eslint/parser": "npm:^6.19.1"
     eslint-plugin-jest: "npm:^27.6.3"
@@ -526,8 +526,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.15"
-    "@chyzwar/tsconfig": "npm:^0.2.15"
+    "@chyzwar/eslint-config": "npm:^0.2.16"
+    "@chyzwar/tsconfig": "npm:^0.2.16"
     "@jest/globals": "npm:^29.7.0"
     "@swc/core": "npm:^1.3.105"
     "@swc/jest": "npm:^0.2.31"
@@ -543,7 +543,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.15, @chyzwar/tsconfig@npm:^0.2.2, @chyzwar/tsconfig@workspace:packages/tsconfig":
+"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.16, @chyzwar/tsconfig@npm:^0.2.2, @chyzwar/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@chyzwar/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
