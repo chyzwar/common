@@ -48,6 +48,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
       });
 
       child.on("exit", () => {
+        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         reject();
       });
     });
