@@ -28,6 +28,10 @@ interface DockerTaskOptions extends SpawnOptions {
    * List of ports to expose
    */
   ports?: `${number}:${number}`[];
+  /**
+   * List of volumes to mount in container
+   */
+  volumes: string[]
 }
 
 /**
@@ -63,6 +67,14 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       .forEach((value) => {
         if (value.includes(":")) {
           args.push(`-p ${value}`);
+        }
+      });
+  }
+  if (options?.volumes) {
+    options.volumes
+      .forEach((value) => {
+        if (value.includes(":")) {
+          args.push(`-v ${value}`);
         }
       });
   }
