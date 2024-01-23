@@ -91,7 +91,7 @@ describe("dockerTask", () => {
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "-p 3000:3000", "-p 3001:3001", "hello-world"], {"shell": true});
   });
-  
+
   it("should append volumes variables", async() => {
     dockerTask("hello", "hello-world", {
       volumes: [
@@ -101,5 +101,14 @@ describe("dockerTask", () => {
     await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "-v ./Caddyfile:/etc/caddy/Caddyfile", "hello-world"], {"shell": true});
+  });
+  
+  it("should support network option", async() => {
+    dockerTask("hello", "hello-world", {
+      network: "host",
+    });
+    await register.get("hello")?.();
+
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--network=host", "hello-world"], {"shell": true});
   });
 });

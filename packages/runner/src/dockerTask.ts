@@ -32,6 +32,10 @@ interface DockerTaskOptions extends SpawnOptions {
    * List of volumes to mount in container
    */
   volumes?: `${string}:${string}`[];
+  /**
+   * Type of network
+   */
+  network?: "bridge" | "host"
 }
 
 /**
@@ -45,6 +49,9 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
   const args = ["run"];
   if (options?.rm) {
     args.push("--rm");
+  }
+  if (options?.network) {
+    args.push(`--network=${options.network}`);
   }
   if (options?.interactive) {
     args.push("--interactive");
