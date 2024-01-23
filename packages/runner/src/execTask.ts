@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-promise-reject-errors */
 
 import type {ExecOptions} from "child_process";
 import {exec} from "child_process";
@@ -48,7 +49,6 @@ export function execTask(taskName: string, command: string, options?: ExecOption
       });
 
       child.on("exit", () => {
-        // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
         reject();
       });
     });
