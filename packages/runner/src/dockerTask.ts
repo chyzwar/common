@@ -31,7 +31,7 @@ interface DockerTaskOptions extends SpawnOptions {
   /**
    * List of volumes to mount in container
    */
-  volumes: string[]
+  volumes?: `${string}:${string}`[];
 }
 
 /**
