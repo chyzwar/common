@@ -463,7 +463,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     husky: "npm:^8.0.3"
     jest: "npm:^29.7.0"
-    lint-staged: "npm:^15.2.0"
+    lint-staged: "npm:^15.2.2"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -4998,29 +4998,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^15.2.0":
-  version: 15.2.0
-  resolution: "lint-staged@npm:15.2.0"
+"lint-staged@npm:^15.2.2":
+  version: 15.2.2
+  resolution: "lint-staged@npm:15.2.2"
   dependencies:
     chalk: "npm:5.3.0"
     commander: "npm:11.1.0"
     debug: "npm:4.3.4"
     execa: "npm:8.0.1"
     lilconfig: "npm:3.0.0"
-    listr2: "npm:8.0.0"
+    listr2: "npm:8.0.1"
     micromatch: "npm:4.0.5"
     pidtree: "npm:0.6.0"
     string-argv: "npm:0.3.2"
     yaml: "npm:2.3.4"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3b672ec400262477d0603245d0f83dbdd8ed7effcc4a0a8eb9026c89321e0c7351d3201053deafc7b60a4f77c389f628c51937a445704f159a91ca31d2ad5fac
+  checksum: a7eaddc88e969b6d0a4f22e224dda616c4008292feb0e0e4ee5888f06df96d117ae13c5b86d4015c051097f700716121619b66b4017abacab25af7d2509e30dd
   languageName: node
   linkType: hard
 
-"listr2@npm:8.0.0":
-  version: 8.0.0
-  resolution: "listr2@npm:8.0.0"
+"listr2@npm:8.0.1":
+  version: 8.0.1
+  resolution: "listr2@npm:8.0.1"
   dependencies:
     cli-truncate: "npm:^4.0.0"
     colorette: "npm:^2.0.20"
@@ -5028,7 +5028,7 @@ __metadata:
     log-update: "npm:^6.0.0"
     rfdc: "npm:^1.3.0"
     wrap-ansi: "npm:^9.0.0"
-  checksum: 8dc36b02c6f4d6d2b8905cd810b081e2d3512a9878b0519c1b0399847c262a66e2c93168f26e1929dcd3d5b3a007c022393802c33bc74d2095f48aff8f339a35
+  checksum: 257e359ce2484f06828995c6667a90d48ccbc453d3addd23da863a4e3d87f8cf92ffdfe4bcc27dbc7b2605a1d4d81764d15d45eb1fb881046f72b3c910bc41c9
   languageName: node
   linkType: hard
 
