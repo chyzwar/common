@@ -1,7 +1,10 @@
 {
   "name": "@chyzwar/sea",
+  "version": "1.0.0",
   "packageManager": "yarn@4.0.2",
-  "bin": "./bin.sea.js",
+  "bin": {
+    "sea": "./bin/sea.js"
+  },
   "engines": {
     "node": "> 20.x.x",
     "yarn": "4.x"
@@ -11,7 +14,7 @@
     "url": "https://github.com/chyzwar/common"
   },
   "type": "module",
-  "description": "Simple task runner",
+  "description": "Create node.js sea executable",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -41,6 +44,6 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@types/node": "> 16.0.0"
+    "@types/node": "> 20.0.0"
   }
 }

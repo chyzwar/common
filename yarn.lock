@@ -557,9 +557,9 @@ __metadata:
     jest: "npm:^29.7.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@types/node": "> 16.0.0"
+    "@types/node": "> 20.0.0"
   bin:
-    sea: ./bin.sea.js
+    sea: ./bin/sea.js
   languageName: unknown
   linkType: soft
 
