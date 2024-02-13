@@ -1,9 +1,9 @@
-import {expect, jest, describe, it} from "@jest/globals";
+import {expect, describe, it, vi} from "vitest";
 import register from "../register.js";
 
-jest.unstable_mockModule("node:child_process", () => {
+vi.mock("node:child_process", () => {
   return {
-    spawn: jest.fn().mockImplementation(() => {
+    spawn: vi.fn().mockImplementation(() => {
       const handlers: Record<string, (arg: unknown) => void> = {};
       
       const timeout = 10;
@@ -13,12 +13,12 @@ jest.unstable_mockModule("node:child_process", () => {
   
       return {
         stdout: {
-          on: jest.fn(),
+          on: vi.fn(),
         },
         stderr: {
-          on: jest.fn(),
+          on: vi.fn(),
         },
-        on: jest.fn((name: string, handler: (arg: unknown) => void) => {
+        on: vi.fn((name: string, handler: (arg: unknown) => void) => {
           handlers[name] = handler;
         }),
       };
@@ -26,7 +26,7 @@ jest.unstable_mockModule("node:child_process", () => {
   };
 });
 
-jest.unstable_mockModule("../Logger.js", async() => {
+vi.mock("../Logger.js", async() => {
   return import("../__mocks__/Logger.js");
 });
 

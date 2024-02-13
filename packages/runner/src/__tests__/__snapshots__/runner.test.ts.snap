@@ -1,3 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`runner should load configuration form runner.config.js 1`] = `[]`;
+exports[`runner > should load configuration from runner.config.js 1`] = `
+[
+  [
+    "Completed tasks: test in ",
+  ],
+  [
+    "Failed with error: Error: Missing tasks definition for: test",
+  ],
+]
+`;

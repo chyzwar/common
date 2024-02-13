@@ -1,11 +1,11 @@
-import {expect, jest, describe, it} from "@jest/globals";
+import {expect, describe, it, vi} from "vitest";
 import register from "../register.js";
 import mapToTasks from "../mapToTasks.js";
 
 describe("mapToTasks", () => {
   it("should map to registered tasks", () => {
-    const task1 = jest.fn();
-    const task2 = jest.fn();
+    const task1 = vi.fn();
+    const task2 = vi.fn();
     register.set("test1", task1);
     register.set("test2", task2);
 
