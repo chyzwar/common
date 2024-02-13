@@ -8,12 +8,12 @@
     "esModuleInterop": true
   },
   "include": [
+    "commitlint.config.cjs",
+    "vitest.workspace.ts",
     "**/.eslintrc.js",
     "**/.eslintrc.cjs",
-    "**/commitlint.config.cjs",
     "**/runner.config.js",
-    "**/jest.setup.ts",
-    "**/jest.config.ts",
+    "**/vitest.config.ts",
     "**/vite.config.ts"
   ],
 }

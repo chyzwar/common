@@ -28,14 +28,8 @@ export function seriesTask(taskName: string, taskList: string[]): void {
     logger.info("Started task");
     logger.time("Task completed in");
     
-    try {
-      await series(...taskList)();
-      logger.timeEnd("Task completed in");
-    }
-    catch (e) {
-      logger.timeEnd("Task completed in");
-      throw e;
-    }
+    await series(...taskList)();
+    logger.timeEnd("Task completed in");
   }
 
   register.set(taskName, seriesTaskFunction);

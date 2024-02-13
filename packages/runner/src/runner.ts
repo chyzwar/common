@@ -1,25 +1,22 @@
 #! /usr/bin/env node
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-base-to-string */
  
 import {series} from "./series.js";
 import Logger from "./Logger.js";
-import {cwd} from "node:process";
-import type SpawnError from "./SpawnError.js";
+import {argv, cwd} from "node:process";
+import SpawnError from "./SpawnError.js";
 
 const logger = new Logger("runner");
 
-async function handle(argv: string[]): Promise<void> {
+async function handle(args: string[]): Promise<void> {
   try {
     await import(`${cwd()}/runner.config.js`);
   }
   catch (error: unknown) {
     logger.error(`Failed loading configuration ${error as string}`);
   }
-
-  const label = `Completed tasks: ${argv.join(", ")} in`;
-  
-  logger.time(label);
-  await series(...argv)();
-  logger.timeEnd(label);
+  return series(...args)();
 }
 
 /**
@@ -33,9 +30,20 @@ process.on("unhandledRejection", (signal) => {
   logger.error("unhandledRejection", signal);
 });
 
+const tasks = argv.slice(2, 3);
+const label = `Completed tasks: ${tasks.join(", ")} in `;
 
-handle(process.argv.slice(2, 3))
-  .catch((info: SpawnError) => {
-    logger.error(`Failed with code: ${info.code} on task: <${info.taskName}>`);
+logger.time(label);
+handle(tasks)
+  .then(() => {
+    logger.timeEnd(label);
+  })
+  .catch((error: Error | SpawnError) => {
+    if (error instanceof SpawnError) {
+      logger.error(`Failed with code: ${error.code} on task: <${error.taskName}>`);
+    }
+    if (error instanceof Error) {
+      logger.error(`Failed with error: ${error}`);
+    }
   });
   

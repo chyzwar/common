@@ -1,4 +1,4 @@
-import {expect, describe, it} from "@jest/globals";
+import {expect, describe, it} from "vitest";
 import register from "../register.js";
 import {series} from "../series.js";
 

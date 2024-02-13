@@ -1,5 +1,4 @@
 const findUp = require("find-up");
-
 const eslint = require("./rules/eslint");
 const jest = require("./rules/jest");
 const typescript = require("./rules/typescript");

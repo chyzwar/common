@@ -1,9 +1,9 @@
-import {expect, jest, describe, it} from "@jest/globals";
+import {expect, describe, it, vi} from "vitest";
 
 import register from "../register.js";
 import SpawnError from "../SpawnError.js";
 
-jest.unstable_mockModule("../Logger.js", async() => {
+vi.mock("../Logger.js", async() => {
   return import("../__mocks__/Logger.js");
 });
 
