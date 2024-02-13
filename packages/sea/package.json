@@ -1,6 +1,6 @@
 {
   "name": "@chyzwar/sea",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "yarn@4.0.2",
   "bin": "./bin/sea.js",
   "engines": {
@@ -31,8 +31,8 @@
   "author": "chyzwar",
   "license": "MIT",
   "devDependencies": {
-    "@chyzwar/eslint-config": "^0.2.17",
-    "@chyzwar/tsconfig": "^0.2.17",
+    "@chyzwar/eslint-config": "^0.2.18",
+    "@chyzwar/tsconfig": "^0.2.18",
     "@types/node": "^20.11.17",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
