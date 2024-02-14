@@ -59,12 +59,14 @@ jobs:
         git config user.email "${{ github.actor}}@users.noreply.github.com"
 
         echo "Version"
-        yarn dlx lerna version \
+        yarn lerna version \
           --conventional-commits \
+          --skip-bump-only-releases \
+          --sync-workspace-lock \
           --no-private \
           --yes
         
         echo "Publish"
-        yarn dlx lerna publish from-git \
+        yarn lerna publish from-git \
           --loglevel debug \
           --yes
