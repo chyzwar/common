@@ -307,6 +307,7 @@ __metadata:
     "@chyzwar/eslint-config": "npm:^0.2.0"
     "@commitlint/cli": "npm:^18.6.1"
     "@commitlint/config-conventional": "npm:18.6.0"
+    "@lerna-lite/cli": "npm:^3.3.0"
     "@lerna-lite/publish": "npm:^3.3.0"
     "@lerna-lite/version": "npm:^3.3.0"
     "@types/node": "npm:^20.11.17"
@@ -984,7 +985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lerna-lite/cli@npm:3.3.0":
+"@lerna-lite/cli@npm:3.3.0, @lerna-lite/cli@npm:^3.3.0":
   version: 3.3.0
   resolution: "@lerna-lite/cli@npm:3.3.0"
   dependencies:

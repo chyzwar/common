@@ -61,9 +61,6 @@ jobs:
         echo "Version"
         yarn lerna version \
           --conventional-commits \
-          --skip-bump-only-releases \
-          --sync-workspace-lock \
-          --no-private \
           --yes
         
         echo "Publish"
