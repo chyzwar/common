@@ -311,7 +311,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.0.1"
     "@typescript-eslint/parser": "npm:^7.0.1"
     eslint: "npm:^8.56.0"
-    husky: "npm:^9.0.10"
+    husky: "npm:^9.0.11"
     lint-staged: "npm:^15.2.2"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
@@ -3282,12 +3282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.0.10":
-  version: 9.0.10
-  resolution: "husky@npm:9.0.10"
+"husky@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
   bin:
     husky: bin.mjs
-  checksum: 10c2/fe69ae824fe67e291e6a0f5bdcb46eba03b7a460b26fdee78581a1fbdcfb9b4bfe8e5d9dbb487381050980f713e419aa7d28ad1d273333cd83c1dac3274714b1
+  checksum: 10c2/f6f5ae330df229769478c0ff1395ba5bd6c0140d0f368671f1a51cbf9e2d60a896b519716bba63d1a872fd7ed54ac368233974403fdb12b04de10001b9749ab5
   languageName: node
   linkType: hard
 
