@@ -1,4 +1,3 @@
-
 {
   "workspaces": [
     "packages/*",
@@ -10,10 +9,16 @@
   "command": {
     "version": {
       "noPrivate": true,
+      "skipBumpOnlyReleases": true,
       "conventionalCommits": true,
+      "syncWorkspaceLock": true,
       "createRelease": "github",
       "message": "chore(release): new versions",
       "allowBranch": "master"
     }
-  }
+  },
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "packages": [
+    "packages/*"
+  ]
 }
