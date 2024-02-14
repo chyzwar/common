@@ -12,6 +12,7 @@ main: ${main}
 output: ${output} 
 `);
 
+
 const seaConfig = JSON.stringify({
   main,
   output: "/tmp/app.blob",
