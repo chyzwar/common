@@ -22,16 +22,10 @@ export function parallelTask(taskName: string, taskList: string[]): void {
   async function parallelTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
-    logger.time("Task completed in");
     
-    try {
-      await parallel(...taskList)();
-      logger.timeEnd("Task completed in");
-    }
-    catch (e) {
-      logger.timeEnd("Task completed in");
-      throw e;
-    }
+    logger.time("Task completed in");
+    await parallel(...taskList)();
+    logger.timeEnd("Task completed in");
   }
 
   register.set(taskName, parallelTaskFunction);

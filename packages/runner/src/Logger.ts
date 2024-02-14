@@ -1,37 +1,63 @@
+/* eslint-disable no-prototype-builtins */
 /* eslint-disable no-console */
 import pc from "picocolors";
+import type { Formatter } from "picocolors/types.js";
+
+const colorFormatters: Formatter[]= [
+  pc.green,
+  pc.red,
+  pc.yellow,
+  pc.blue,
+  pc.magenta,
+  pc.cyan,
+  pc.white,
+  pc.gray,
+];
+
+let lastAssigned = 0;
+const colorsAssigned: Record<string, Formatter>= {};
+
+const getColorFn = (taskName: string): Formatter => {
+  if (!colorsAssigned.hasOwnProperty(taskName)) {
+    colorsAssigned[taskName] = colorFormatters[lastAssigned++ % 8];
+  }
+
+  return colorsAssigned[taskName];
+};
 
 class Logger {
   public static calls: unknown[][];
  
   private readonly taskName: string;
+  private readonly colorFn: Formatter;
 
   public constructor(taskName: string) {
     this.taskName = taskName;
+    this.colorFn =  getColorFn(taskName);
   }
-
+   
   public time(label: string): void {
-    console.time(`${pc.green(`[${this.taskName}]`)} ${label}`);
+    console.time(`${this.colorFn(`[${this.taskName}]`)} ${label}`);
   }
 
   public timeEnd(label: string): void {
-    console.timeEnd(`${pc.green(`[${this.taskName}]`)} ${label}`);
+    console.timeEnd(`${this.colorFn(`[${this.taskName}]`)} ${label}`);
   }
 
   public log(message = ""): void {
-    console.time(`${pc.green(`[${this.taskName}]`)} ${message}`);
+    console.time(`${this.colorFn(`[${this.taskName}]`)} ${message}`);
   }
 
   public warn(message = "", meta: unknown = ""): void {
-    console.warn(pc.yellow(`[${this.taskName}] ${message}`), meta);
+    console.warn(`${this.colorFn(`[${this.taskName}]`)}${pc.yellow("[warn]")} ${message}`, meta);
   }
 
   public error(message = "", meta: unknown = ""): void {
-    console.log(`${pc.red(`[${this.taskName}]`)} ${message}`, meta);
+    console.error(`${this.colorFn(`[${this.taskName}]`)}${pc.red("[error]")} ${message}`, meta);
   }
 
   public info(message = ""): void {
-    console.log(`${pc.green(`[${this.taskName}]`)} ${message}`);
+    console.log(`${this.colorFn(`[${this.taskName}]`)} ${message}`);
   }
 }
 
