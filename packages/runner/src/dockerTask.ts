@@ -77,6 +77,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         }
       });
   }
+  
   if (options?.volumes) {
     options.volumes
       .forEach((value) => {
