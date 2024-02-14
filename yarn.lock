@@ -306,7 +306,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.0"
     "@commitlint/cli": "npm:^18.6.1"
-    "@commitlint/config-conventional": "npm:18.6.0"
+    "@commitlint/config-conventional": "npm:18.6.2"
     "@lerna-lite/cli": "npm:^3.3.0"
     "@lerna-lite/publish": "npm:^3.3.0"
     "@lerna-lite/version": "npm:^3.3.0"
@@ -435,12 +435,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:18.6.0":
-  version: 18.6.0
-  resolution: "@commitlint/config-conventional@npm:18.6.0"
+"@commitlint/config-conventional@npm:18.6.2":
+  version: 18.6.2
+  resolution: "@commitlint/config-conventional@npm:18.6.2"
   dependencies:
+    "@commitlint/types": "npm:^18.6.1"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 10c2/3d6cbf74cadee6e7bef23b560f59f74dfd62a764eeb6d15ff7c43a2a51709a9fc8c752b886756f7c717480cadcec6ac975abbb08eebb0593f964c68a80eb0b68
+  checksum: 10c2/b3ec3d4eeac2eff604b060c1c665bf40d491e47f4fd01bbc5a8ce199b60b24abe81ab61c1da555b944c8ff24e554cb827bda094d12ef3031922ada82f05b7bcf
   languageName: node
   linkType: hard
 
