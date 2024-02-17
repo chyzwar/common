@@ -329,7 +329,7 @@ __metadata:
     "@chyzwar/tsconfig": "npm:^0.2.21"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.1"
     "@typescript-eslint/parser": "npm:^7.0.1"
-    eslint-plugin-jest: "npm:^27.6.3"
+    eslint-plugin-jest: "npm:^27.9.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     find-up: "npm:^5.0.0"
   peerDependencies:
@@ -3589,13 +3589,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^27.6.3":
-  version: 27.6.3
-  resolution: "eslint-plugin-jest@npm:27.6.3"
+"eslint-plugin-jest@npm:^27.9.0":
+  version: 27.9.0
+  resolution: "eslint-plugin-jest@npm:27.9.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.10.0"
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0 || ^6.0.0
+    "@typescript-eslint/eslint-plugin": ^5.0.0 || ^6.0.0 || ^7.0.0
     eslint: ^7.0.0 || ^8.0.0
     jest: "*"
   peerDependenciesMeta:
@@ -3603,7 +3603,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 10c2/02cb44aec014b81263f77e8e4631a8bc9073e9e0499e20999a7c9326050b0b50aef3ec71b5bc2a6d9336a9e08182f763ab01a38f044aca282e0a1ade216e95ac
+  checksum: 10c2/214f3504453f4875a93d227a214c026de4d85c364ff032f9551e37d9bbcb62ccc2a770bc81d267475e0e7c810eafc00ce2dec9d9043adc50327cc442b3e7a6fe
   languageName: node
   linkType: hard
 
