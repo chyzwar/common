@@ -6,6 +6,7 @@
   ],
   "npmClient": "yarn",
   "version": "independent",
+  "changelogPreset": "conventional-changelog-conventionalcommits",
   "command": {
     "version": {
       "noPrivate": true,
@@ -14,6 +15,7 @@
       "syncWorkspaceLock": true,
       "createRelease": "github",
       "message": "chore(release): new versions",
+      "changelogIncludeCommitsClientLogin": " - by @%l",
       "allowBranch": "master",
       "ignoreChanges": ["yarn.lock"]
     }
