@@ -12,7 +12,6 @@ main: ${main}
 output: ${output} 
 `);
 
-
 const seaConfig = JSON.stringify({
   main,
   output: "/tmp/app.blob",
@@ -34,8 +33,7 @@ try {
     seaConfigPath, 
     seaConfig
   );
-  execSync(`node --experimental-sea-config ${seaConfig}`);
-  
+  execSync(`node --experimental-sea-config ${seaConfigPath}`);
   execSync(`npx postject ${output} NODE_SEA_BLOB ${blobPath} --sentinel-fuse ${sentinelFuse}`);
 } 
 finally {
