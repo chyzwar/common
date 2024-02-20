@@ -232,4 +232,16 @@ module.exports = {
    * @see https://typescript-eslint.io/rules/max-params/
    */
   "@typescript-eslint/max-params": ["error", { max: 5 }],
+
+  /**
+   * Disable module boundaries, this is not gradual enough
+   * Ideally we could lint for exports on package level and not on module
+   */
+  "@typescript-eslint/explicit-module-boundary-types": ["off"],
+  /**
+   * Do not force return type of simple functions that can be inferred
+   */
+  "@typescript-eslint/explicit-function-return-type": ["error", {
+    allowFunctionsWithoutTypeParameters: true,
+  }],
 };
