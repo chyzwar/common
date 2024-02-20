@@ -53,6 +53,5 @@ export function execTask(taskName: string, command: string, options?: ExecOption
       });
     });
   }
-
   register.set(taskName, spawnTaskFunction);
 } 
