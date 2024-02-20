@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.19.4"
+    "preact": "^10.19.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
@@ -17,8 +17,8 @@
     "@chyzwar/tsconfig": "^0.2.2",
     "@preact/preset-vite": "^2.8.1",
     "eslint": "^8.56.0",
-    "preact": "^10.19.4",
+    "preact": "^10.19.5",
     "typescript": "^5.3.3",
-    "vite": "^5.1.1"
+    "vite": "^5.1.3"
   }
 }

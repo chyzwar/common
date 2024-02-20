@@ -4,6 +4,6 @@ module.exports = {
     "@commitlint/config-conventional",
   ],
   rules: {
-    "scope-empty": [2, "always"],
+    "scope-empty": [2, "never"],
   },
 };
