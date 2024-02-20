@@ -41,6 +41,7 @@ const importTS = async(path: string): Promise<void> => {
     );
     await import(compiledConfigPath);
   }
+  
   finally {
     rmSync(compiledConfigPath, removeOpts);
   }
