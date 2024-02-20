@@ -14,7 +14,8 @@
       "syncWorkspaceLock": true,
       "createRelease": "github",
       "message": "chore(release): new versions",
-      "allowBranch": "master"
+      "allowBranch": "master",
+      "ignoreChanges": ["yarn.lock"]
     }
   },
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
