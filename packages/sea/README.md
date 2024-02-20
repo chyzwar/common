@@ -9,4 +9,5 @@ sea ./build/app.js ./dist/app
 ## SEA in node is experimental
 
 - ESM is not supported <https://github.com/nodejs/single-executable/issues/77>
+- Only support build-in modules
 - SEA withing node.js core look pretty dead as sub-project
