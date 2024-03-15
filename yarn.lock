@@ -319,7 +319,7 @@ __metadata:
     lint-staged: "npm:^15.2.2"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
-    vitest: "npm:^1.3.0"
+    vitest: "npm:^1.4.0"
   languageName: unknown
   linkType: soft
 
@@ -386,7 +386,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     picocolors: "npm:^1.0.0"
     typescript: "npm:^5.3.3"
-    vitest: "npm:^1.3.0"
+    vitest: "npm:^1.4.0"
   peerDependencies:
     "@types/node": "> 16.0.0"
   bin:
@@ -2030,57 +2030,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/expect@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitest/expect@npm:1.3.0"
+"@vitest/expect@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitest/expect@npm:1.4.0"
   dependencies:
-    "@vitest/spy": "npm:1.3.0"
-    "@vitest/utils": "npm:1.3.0"
+    "@vitest/spy": "npm:1.4.0"
+    "@vitest/utils": "npm:1.4.0"
     chai: "npm:^4.3.10"
-  checksum: 10c2/0e397d5aa9093113fe04b7ffa1de8903adcc671d50add8b26f5eed9fe0fbe5859aa2fe1cc66d5eed5f762896d192ab9526b564b8a93eb7b55ff43f8e8e24eb7d
+  checksum: 10c2/bea25b115dcbb64e4c20c43045e0af080e024939155bb343e224484e46dbdd614e24dc025b0f026ab3d051ddade246b8f7007ae750f6f47b2c019c4f9497bd24
   languageName: node
   linkType: hard
 
-"@vitest/runner@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitest/runner@npm:1.3.0"
+"@vitest/runner@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitest/runner@npm:1.4.0"
   dependencies:
-    "@vitest/utils": "npm:1.3.0"
+    "@vitest/utils": "npm:1.4.0"
     p-limit: "npm:^5.0.0"
     pathe: "npm:^1.1.1"
-  checksum: 10c2/47ca7657ec50bd05c52f44082b31b8eb50c6b891aa69b08d5c5ff9f9d42731f8adf7ef8ce99dfa0066502bc0526d6c1012858e46f9a279d58bfa074914d52beb
+  checksum: 10c2/5433a102ae766cdfc8d58b45a79ab98e81466a8f860673eeb7b7b0fac4983f9cae83dbc5b57cbc71079a8d0b357917d7250c2766814d013c268a9a2ed8702008
   languageName: node
   linkType: hard
 
-"@vitest/snapshot@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitest/snapshot@npm:1.3.0"
+"@vitest/snapshot@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitest/snapshot@npm:1.4.0"
   dependencies:
     magic-string: "npm:^0.30.5"
     pathe: "npm:^1.1.1"
     pretty-format: "npm:^29.7.0"
-  checksum: 10c2/7dcade0eef22b79ec8e549e97d6425f215dfc6bb1f379e1d3e8c6b822d45651bc872308aa69589fb5176fcd19353146a6a35acd84d7134909db701693becaaa5
+  checksum: 10c2/8f582715c222a189383425bf07d0fab3b25c962457148134326f34d31df4dedea58f1d0900f627a3e3e8998fe72bed901082ac8906e1d96ae30c307c3138db63
   languageName: node
   linkType: hard
 
-"@vitest/spy@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitest/spy@npm:1.3.0"
+"@vitest/spy@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitest/spy@npm:1.4.0"
   dependencies:
     tinyspy: "npm:^2.2.0"
-  checksum: 10c2/45de4ffe5aa1d508c54eb8b7331d61351556f386e9894dc40b948d4471265d448367abed25dabaa0c636c4cdd8341308a05095a1dc435e887ff45a826c86f1b8
+  checksum: 10c2/40dc3504734517617ca756d87f89f05454df812eb78fe5168062196e1f7640333c0e1dda4d4f12260bb0c47a86246ee80502d9b31cb4380dfa3b8909023f7b4b
   languageName: node
   linkType: hard
 
-"@vitest/utils@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitest/utils@npm:1.3.0"
+"@vitest/utils@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitest/utils@npm:1.4.0"
   dependencies:
     diff-sequences: "npm:^29.6.3"
     estree-walker: "npm:^3.0.3"
     loupe: "npm:^2.3.7"
     pretty-format: "npm:^29.7.0"
-  checksum: 10c2/dcc6ac9a9792759a804da11584c25990731bfb447582ec848befd65519431e314a69f1f9cd99ada56c4cb829bb862707756c37b4d209bb92d41252e031ea263b
+  checksum: 10c2/60b85ae3ca081ceba3d52cb7bf0ad46ce5fa2e1aa07f492555986b0cc82e42e32723c6e9c97abdf211e20cee8136a8c91f04dbfab04ecc9e631651abb3d0861c
   languageName: node
   linkType: hard
 
@@ -7989,9 +7989,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-node@npm:1.3.0":
-  version: 1.3.0
-  resolution: "vite-node@npm:1.3.0"
+"vite-node@npm:1.4.0":
+  version: 1.4.0
+  resolution: "vite-node@npm:1.4.0"
   dependencies:
     cac: "npm:^6.7.14"
     debug: "npm:^4.3.4"
@@ -8000,7 +8000,7 @@ __metadata:
     vite: "npm:^5.0.0"
   bin:
     vite-node: vite-node.mjs
-  checksum: 10c2/8777bfb383f09d1756a8536ff4a1de5535504eb70bdd3ca08560df9f519a31ec74050cb4913cf8a7a0b1027e86b8c2b5c8889521708752d9c3b16b428a1c6662
+  checksum: 10c2/03d41b29fa157f3fd834f80fb0b4754974248ad7914930ac02aef29a7c295d6723a7157e52c7e008640517c905e9f00976214e279a697ad7454516241fe364d7
   languageName: node
   linkType: hard
 
@@ -8044,15 +8044,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "vitest@npm:1.3.0"
+"vitest@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "vitest@npm:1.4.0"
   dependencies:
-    "@vitest/expect": "npm:1.3.0"
-    "@vitest/runner": "npm:1.3.0"
-    "@vitest/snapshot": "npm:1.3.0"
-    "@vitest/spy": "npm:1.3.0"
-    "@vitest/utils": "npm:1.3.0"
+    "@vitest/expect": "npm:1.4.0"
+    "@vitest/runner": "npm:1.4.0"
+    "@vitest/snapshot": "npm:1.4.0"
+    "@vitest/spy": "npm:1.4.0"
+    "@vitest/utils": "npm:1.4.0"
     acorn-walk: "npm:^8.3.2"
     chai: "npm:^4.3.10"
     debug: "npm:^4.3.4"
@@ -8066,13 +8066,13 @@ __metadata:
     tinybench: "npm:^2.5.1"
     tinypool: "npm:^0.8.2"
     vite: "npm:^5.0.0"
-    vite-node: "npm:1.3.0"
+    vite-node: "npm:1.4.0"
     why-is-node-running: "npm:^2.2.2"
   peerDependencies:
     "@edge-runtime/vm": "*"
     "@types/node": ^18.0.0 || >=20.0.0
-    "@vitest/browser": 1.3.0
-    "@vitest/ui": 1.3.0
+    "@vitest/browser": 1.4.0
+    "@vitest/ui": 1.4.0
     happy-dom: "*"
     jsdom: "*"
   peerDependenciesMeta:
@@ -8090,7 +8090,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 10c2/c3219b259c623612425683ecf1e8c6324dcce590332df73e927ba63586d370c7a05d4f0ac61856cbb422d686327db91d195ae45a94d2d801a21fc08256aca3c4
+  checksum: 10c2/8de5e17a8e1ef9f7c727241a715ac996ffe2a5f3c0cc878f7cd6a491bde942879712016278b5ce142ad4c32094122afee74ab7791a68aafbed6eb78c7d04d3aa
   languageName: node
   linkType: hard
 
