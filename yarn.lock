@@ -7524,11 +7524,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.4.2#optional!builtin<compat/typescript>":
   version: 5.4.2
-  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=d69c25"
+  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c2/6a538ecb51bbd087a1f4bcfe05f6fd06b68172bcb5525e7031fac08aa0c2329c51fb230ce43d645535c02daa9cfac41f2cb4b1979a7501b2d448c5ea78a18a76
+  checksum: 10c2/9c19035472ef28f103ba5c5aee7c56e9749ab97c5616e34d9ad8f9323f2e29c51736964b6d13f5116092350cedb3535c2b78705e75fb1e99f41e9b1d838b0f77
   languageName: node
   linkType: hard
 
