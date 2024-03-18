@@ -1,7 +1,7 @@
 {
   "name": "@chyzwar/sea",
   "version": "1.0.8",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.1.1",
   "bin": "./bin/sea.js",
   "engines": {
     "node": "> 20.x.x",
