@@ -310,7 +310,7 @@ __metadata:
     "@lerna-lite/cli": "npm:^3.3.1"
     "@lerna-lite/publish": "npm:^3.3.1"
     "@lerna-lite/version": "npm:^3.3.1"
-    "@types/node": "npm:^20.11.28"
+    "@types/node": "npm:^20.11.30"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
     "@typescript-eslint/parser": "npm:^7.2.0"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
@@ -382,7 +382,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.25"
     "@chyzwar/tsconfig": "npm:^0.2.25"
-    "@types/node": "npm:^20.11.28"
+    "@types/node": "npm:^20.11.30"
     eslint: "npm:^8.57.0"
     picocolors: "npm:^1.0.0"
     typescript: "npm:^5.4.2"
@@ -400,7 +400,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.25"
     "@chyzwar/tsconfig": "npm:^0.2.25"
-    "@types/node": "npm:^20.11.28"
+    "@types/node": "npm:^20.11.30"
     eslint: "npm:^8.57.0"
     typescript: "npm:^5.4.2"
   peerDependencies:
@@ -1816,12 +1816,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.11.28":
+"@types/node@npm:*":
   version: 20.11.28
   resolution: "@types/node@npm:20.11.28"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c2/4d58c3c13004b32981fde4c2052fa819de6a6d90efd9f52beb1f32e816b93ed4abb197e945608b56f37a3d5e9209fa473ec40bebe48bf1253683245bcb37cfd0
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.11.30":
+  version: 20.11.30
+  resolution: "@types/node@npm:20.11.30"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c2/f199dd5a8599f5de4a9ffe300e7d3752b4e1fb491c0c3588d36e382c5b2794d82245a30331bc9028fe276e028480876c9ab637ae88b132d9e765425f53f10591
   languageName: node
   linkType: hard
 
