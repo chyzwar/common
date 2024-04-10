@@ -38,7 +38,7 @@
     "@chyzwar/tsconfig": "^0.2.25",
     "@types/node": "^20.11.28",
     "eslint": "^8.57.0",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.5",
     "vitest": "^1.4.0"
   },
   "peerDependencies": {
