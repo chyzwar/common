@@ -27,6 +27,6 @@
     "find-up": "^5.0.0"
   },
   "peerDependencies": {
-    "eslint": "8.x"
+    "eslint": "9.2.0"
   }
 }
