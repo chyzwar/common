@@ -34,7 +34,7 @@
     "@lerna-lite/publish": "^3.3.3",
     "@lerna-lite/version": "^3.3.3",
     "@types/node": "^20.12.10",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "^9.2.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
@@ -45,5 +45,5 @@
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn lint:fix"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.2.1"
 }
