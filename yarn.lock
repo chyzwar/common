@@ -312,8 +312,6 @@ __metadata:
     "@lerna-lite/publish": "npm:^3.3.3"
     "@lerna-lite/version": "npm:^3.3.3"
     "@types/node": "npm:^20.12.10"
-    "@typescript-eslint/eslint-plugin": "npm:^7.8.0"
-    "@typescript-eslint/parser": "npm:^7.8.0"
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
     eslint: "npm:^9.2.0"
     husky: "npm:^9.0.11"
@@ -1805,7 +1803,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:7.8.0, @typescript-eslint/eslint-plugin@npm:^7.8.0":
+"@typescript-eslint/eslint-plugin@npm:7.8.0":
   version: 7.8.0
   resolution: "@typescript-eslint/eslint-plugin@npm:7.8.0"
   dependencies:
@@ -1830,7 +1828,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:7.8.0, @typescript-eslint/parser@npm:^7.8.0":
+"@typescript-eslint/parser@npm:7.8.0":
   version: 7.8.0
   resolution: "@typescript-eslint/parser@npm:7.8.0"
   dependencies:
