@@ -312,7 +312,7 @@ __metadata:
     "@lerna-lite/publish": "npm:^3.3.3"
     "@lerna-lite/version": "npm:^3.3.3"
     "@types/node": "npm:^20.12.10"
-    conventional-changelog-conventionalcommits: "npm:^8.0.0"
+    conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.2.0"
     husky: "npm:^9.0.11"
     lint-staged: "npm:^15.2.2"
@@ -2779,15 +2779,6 @@ __metadata:
   dependencies:
     compare-func: "npm:^2.0.0"
   checksum: 10c2/a97040620f09ee6322012a59ff53699b1a67f764953de76a5247a6edfc3984e6e280965c41fec8c1b0d08726935916269da35e4b2594d846c17f78d2ad745778
-  languageName: node
-  linkType: hard
-
-"conventional-changelog-conventionalcommits@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "conventional-changelog-conventionalcommits@npm:8.0.0"
-  dependencies:
-    compare-func: "npm:^2.0.0"
-  checksum: 10c2/767b40c4d56d71939d9e46148c21d7bae7fb155d21effbbfa46b7ce4e21261f045175267e0626546a002eda6f6d6575524db9a3cf1288f1bdf1214ec1fbbe242
   languageName: node
   linkType: hard
 
@@ -7437,11 +7428,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
   version: 5.4.5
-  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=d69c25"
+  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c2/0724bd9fd0b0fa69b13759284cd1871b09ecbcb2af6e840d587fdd110295767ff4caa0f964d3b0a4604b64eaf25d0a9c683e293712860d70e04de5cebb7bb5b3
+  checksum: 10c2/60f5cb89f35c54035454c5b97dc9f5a65b9f5a6c9420823711935cc0539282b3ba8eafcc17605ec77882af9b862c33e93d98cba2e656129dc6b7e01bb8157d04
   languageName: node
   linkType: hard
 
