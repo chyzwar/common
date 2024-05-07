@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-/* eslint-disable no-console */
+ 
 import pc from "picocolors";
 import type { Formatter } from "picocolors/types.js";
 
