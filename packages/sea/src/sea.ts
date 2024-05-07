@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import { execSync } from "child_process";
 import { copyFileSync, mkdirSync, rmSync, writeFileSync } from "fs";
 import { dirname } from "path";
@@ -39,5 +39,4 @@ try {
 finally {
   rmSync(seaConfigPath, {force: true});
   rmSync(blobPath, {force: true});
-  rmSync(outputDir, {force: true});
 }

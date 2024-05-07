@@ -1,56 +1,39 @@
-const findUp = require("find-up");
-const eslint = require("./rules/eslint");
-const jest = require("./rules/jest");
-const typescript = require("./rules/typescript");
-const esm = require("./rules/esm");
+import eslint from "@eslint/js";
+import tsEslint from "typescript-eslint";
+import typescript from "./rules/typescript.js";
+import jest from "./rules/jest.js";
+import esm from "./rules/esm.js";
+import globals from "globals";
 
-module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2019,
-    "sourceType": "module",
-    "project": [
-      "./tsconfig.json",
-      findUp.sync("tsconfig.eslint.json"),
+export default tsEslint.config(
+  eslint.configs.recommended,
+  ...tsEslint.configs.all,
+  ...tsEslint.configs.strictTypeChecked, 
+  ...typescript,
+  ...jest,
+  ...esm, 
+  {
+    files: [
+      "**/*.js", 
+      "**/*.cjs",
+      "**/*.mjs",
+      
+      "**/drizzle.config.ts",
+      "**/runner.config.ts",
+      "**/vite.config.ts",
+      "**/vitest.setup.ts",
+      "**/vitest.config.ts",
+
+      "deployer.config.ts",
+      "vitest.workspace.ts",
     ],
+    ...tsEslint.configs.disableTypeChecked,
   },
-  "env": {
-    "browser": false,
-    "node": true,
-    "jest": true,
-  },
-  "globals": {
-    "globalThis": true,
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "jest",
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/all",
-  ],
-  "rules": {
-    ...eslint,
-    ...jest,
-    ...typescript,
-    ...esm,
-  },
-  overrides: [
-    {
-      files: ["*.ts", "*.tsx"],
-    },
-    {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/explicit-function-return-type": ["off"],
-        "@typescript-eslint/no-unsafe-call": ["off"],
-        "@typescript-eslint/no-unsafe-member-access": ["off"],
-        "@typescript-eslint/no-unsafe-return": ["off"],
-        "@typescript-eslint/no-unsafe-assignment": ["off"],
-        "@typescript-eslint/no-unnecessary-condition": ["off"],
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
       },
     },
-  ],
-};
+  }
+);

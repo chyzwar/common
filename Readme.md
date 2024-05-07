@@ -1,11 +1,12 @@
 # Common
 
-Collection of usefull packages that I am using in my side projects.
+Collection of useful packages that I am using in my side projects.
 
 ## @chyzwar/tsconfig
 
-### Instalation
-```
+### Installation
+
+```sh
 yarn add "@chyzwar/tsconfig
 ```
 
@@ -29,20 +30,21 @@ Extend preset:
 
 ## @chyzwar/eslint-config
 
-Strict preset for eslint. Intention is to include plugin dependacies and make it easy manage configs in one place. It support number of sub-presets: 
+Strict preset for eslint. Intention is to include plugin dependacies and make it easy manage configs in one place. It support number of sub-presets:
 
 - node
 - react
 
-### Instalation
+### Installation
 
-```
+```sh
 yarn add eslint @chyzwar/eslint-config
 ```
 
 ### Examples
 
 Example of usage in eslint.cjs
+
 ```js
 module.exports = {
   extends: "@hyper/eslint-config/node",
@@ -57,7 +59,6 @@ module.exports = {
 It is tool inspired by grunt/gulp and docker-compose
 runner makes possible to define tasks as serial or parallel sequences
 
-
 ### Instalation
 
 yarn add @chyzwar/runner
@@ -65,6 +66,7 @@ yarn add @chyzwar/runner
 ### Examples
 
 Example of config file runner.config.js
+
 ```js
 import {spawnTask, dockerTask, parallelTask, seriesTask} from "@hyper/runner";
 

@@ -4,7 +4,7 @@ name: Publish
 # https://dev.to/xcanchal/automatic-versioning-in-a-lerna-monorepo-using-github-actions-4hij
 # Problems:
 #   I tried to use github registry to publish public packages,
-#   but packages in github require auth to insall even if package is public.
+#   but packages in github require auth to install even if package is public.
 #
 #   Lerna use npm for publish, even if npm client is set to yarn
 #   Publish only use npm as client and it ignore any config in yarnrc and npmClient settings
