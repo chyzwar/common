@@ -383,7 +383,7 @@ __metadata:
     "@chyzwar/tsconfig": "npm:^0.2.26"
     "@types/node": "npm:^20.12.10"
     eslint: "npm:^9.2.0"
-    picocolors: "npm:^1.0.0"
+    picocolors: "npm:^1.0.1"
     typescript: "npm:^5.4.5"
     vitest: "npm:^1.6.0"
   peerDependencies:
@@ -6125,6 +6125,13 @@ __metadata:
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
   checksum: 10c2/32ad2b81b88a3e74e587cdb41a3801125212ea92381b1d22ac1f93b8e45dcf88ba09e05187ffd7d8fe8574d7a5af6a90d2ccc23302f6c4cf9d5de691df8464bc
+  languageName: node
+  linkType: hard
+
+"picocolors@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "picocolors@npm:1.0.1"
+  checksum: 10c2/96f7b19c67de94da06508fd65bfa5c0a973c818b9f00d34a0fd351bdb7ddfdace84f1961769a8b52b250ddb9e88a0b9604353f6224f312ce689656f5f258dc36
   languageName: node
   linkType: hard
 
