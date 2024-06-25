@@ -2,7 +2,7 @@
   "name": "@chyzwar/common",
   "version": "1.0.0",
   "engines": {
-    "node": "20.x",
+    "node": "20.15.0",
     "yarn": "4.x"
   },
   "main": "index.js",
@@ -33,7 +33,7 @@
     "@lerna-lite/cli": "^3.3.3",
     "@lerna-lite/publish": "^3.3.3",
     "@lerna-lite/version": "^3.3.3",
-    "@types/node": "^20.12.10",
+    "@types/node": "^20.14.9",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "^9.2.0",
     "husky": "^9.0.11",
