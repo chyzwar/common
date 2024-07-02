@@ -330,7 +330,7 @@ __metadata:
     "@eslint/js": "npm:^9.2.0"
     eslint-plugin-jest: "npm:^28.5.0"
     eslint-plugin-react-hooks: "npm:^4.6.2"
-    globals: "npm:^15.1.0"
+    globals: "npm:^15.8.0"
     typescript-eslint: "npm:^7.8.0"
   peerDependencies:
     eslint: ^9.2.0
@@ -4064,10 +4064,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.1.0":
-  version: 15.1.0
-  resolution: "globals@npm:15.1.0"
-  checksum: 10c2/de26827b1990bf37fe63db96859b06f834e46f1837070f5afd4c17779dc3eab8a397f989c0319f87003f33cb4a44b21752c5bb5a99cbbb928a6220bead4baef1
+"globals@npm:^15.8.0":
+  version: 15.8.0
+  resolution: "globals@npm:15.8.0"
+  checksum: 10c2/a064da17c8db6571f7dbd500552f6391182bb3d676e75669c11693d3a616585e95338c2b55b669c02fbdba97d12d5d14a0bb5eac6992f0450090ec6a051a5c19
   languageName: node
   linkType: hard
 
