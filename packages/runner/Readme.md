@@ -12,6 +12,7 @@ yarn add @chyzwar/runner
 ### Examples
 
 Example of config file runner.config.js
+
 ```js
 import {spawnTask, dockerTask, parallelTask, seriesTask} from "@chyzwar/runner";
 
