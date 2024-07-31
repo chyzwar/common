@@ -2,7 +2,7 @@
   "name": "@chyzwar/common",
   "version": "1.0.0",
   "engines": {
-    "node": "20.x",
+    "node": "20.16.0",
     "yarn": "4.x"
   },
   "main": "index.js",
