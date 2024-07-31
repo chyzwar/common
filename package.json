@@ -23,7 +23,6 @@
     "test": "vitest --run",
     "test:coverage": "vitest --coverage",
     "test:watch": "vitest",
-    "postinstall": "husky install",
     "prepare": "husky"
   },
   "dependencies": {
