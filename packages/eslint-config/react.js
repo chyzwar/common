@@ -4,13 +4,11 @@ import typescript from "./rules/typescript.js";
 import jest from "./rules/jest.js";
 import esm from "./rules/esm.js";
 import globals from "globals";
-import reactPlugin from "eslint-plugin-react";
 
 export default tsEslint.config(
   eslint.configs.recommended,
   ...tsEslint.configs.all,
   ...tsEslint.configs.strictTypeChecked,
-  ...reactPlugin.configs.flat.recommended,
   ...typescript,
   ...jest,
   ...esm, 
