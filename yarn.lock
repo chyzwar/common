@@ -387,11 +387,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.26, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.27, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
-    "@chyzwar/tsconfig": "npm:^0.2.25"
+    "@chyzwar/tsconfig": "npm:^0.2.27"
     "@eslint/js": "npm:^9.8.0"
     eslint-plugin-jest: "npm:^28.6.0"
     eslint-plugin-react: "npm:7.35.0"
@@ -445,8 +445,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.26"
-    "@chyzwar/tsconfig": "npm:^0.2.26"
+    "@chyzwar/eslint-config": "npm:^0.2.27"
+    "@chyzwar/tsconfig": "npm:^0.2.27"
     "@types/node": "npm:^22.0.0"
     eslint: "npm:^9.8.0"
     picocolors: "npm:^1.0.1"
@@ -463,8 +463,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.26"
-    "@chyzwar/tsconfig": "npm:^0.2.26"
+    "@chyzwar/eslint-config": "npm:^0.2.27"
+    "@chyzwar/tsconfig": "npm:^0.2.27"
     "@types/node": "npm:^22.0.0"
     eslint: "npm:^9.8.0"
     typescript: "npm:^5.5.4"
@@ -475,7 +475,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.2, @chyzwar/tsconfig@npm:^0.2.25, @chyzwar/tsconfig@npm:^0.2.26, @chyzwar/tsconfig@workspace:packages/tsconfig":
+"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.2, @chyzwar/tsconfig@npm:^0.2.27, @chyzwar/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@chyzwar/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
