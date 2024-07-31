@@ -399,7 +399,7 @@ __metadata:
     globals: "npm:^15.8.0"
     typescript-eslint: "npm:^7.18.0"
   peerDependencies:
-    eslint: ^9.2.0
+    eslint: ^9.8.0
   languageName: unknown
   linkType: soft
 
