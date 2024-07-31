@@ -31,15 +31,15 @@
   "author": "chyzwar",
   "license": "MIT",
   "dependencies": {
-    "picocolors": "^1.0.0"
+    "picocolors": "^1.0.1"
   },
   "devDependencies": {
     "@chyzwar/eslint-config": "^0.2.26",
     "@chyzwar/tsconfig": "^0.2.26",
-    "@types/node": "^20.12.10",
-    "eslint": "^9.2.0",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "@types/node": "^22.0.0",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "@types/node": "> 16.0.0"
