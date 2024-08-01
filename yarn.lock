@@ -394,7 +394,7 @@ __metadata:
     "@chyzwar/tsconfig": "npm:^0.2.28"
     "@eslint/js": "npm:^9.8.0"
     eslint-plugin-jest: "npm:^28.6.0"
-    globals: "npm:^15.8.0"
+    globals: "npm:^15.9.0"
     typescript-eslint: "npm:^7.18.0"
   peerDependencies:
     eslint: ^9.2.0
@@ -4251,10 +4251,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.8.0":
-  version: 15.8.0
-  resolution: "globals@npm:15.8.0"
-  checksum: 10c2/a064da17c8db6571f7dbd500552f6391182bb3d676e75669c11693d3a616585e95338c2b55b669c02fbdba97d12d5d14a0bb5eac6992f0450090ec6a051a5c19
+"globals@npm:^15.9.0":
+  version: 15.9.0
+  resolution: "globals@npm:15.9.0"
+  checksum: 10c2/6045da70bfb7aca4466180ad813f4711f7f89d4d84a9f47bc6d808282529605d8d4e8827c72b9f51c4bc80803556c47c05029ff94393f0fcb92ae1b3f1060dde
   languageName: node
   linkType: hard
 
