@@ -29,7 +29,7 @@
     "@chyzwar/eslint-config": "^0.2.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@lerna-lite/cli": "^3.7.1",
+    "@lerna-lite/cli": "^3.8.0",
     "@lerna-lite/publish": "^3.7.1",
     "@lerna-lite/version": "^3.7.1",
     "@types/node": "^22.0.0",
