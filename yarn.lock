@@ -376,7 +376,7 @@ __metadata:
     "@lerna-lite/cli": "npm:^3.7.1"
     "@lerna-lite/publish": "npm:^3.7.1"
     "@lerna-lite/version": "npm:^3.7.1"
-    "@types/node": "npm:^22.0.0"
+    "@types/node": "npm:^22.5.4"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.8.0"
     husky: "npm:^9.1.4"
@@ -445,7 +445,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.28"
     "@chyzwar/tsconfig": "npm:^0.2.28"
-    "@types/node": "npm:^22.0.0"
+    "@types/node": "npm:^22.5.4"
     eslint: "npm:^9.8.0"
     picocolors: "npm:^1.0.1"
     typescript: "npm:^5.5.4"
@@ -463,7 +463,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.28"
     "@chyzwar/tsconfig": "npm:^0.2.28"
-    "@types/node": "npm:^22.0.0"
+    "@types/node": "npm:^22.5.4"
     eslint: "npm:^9.8.0"
     typescript: "npm:^5.5.4"
   peerDependencies:
@@ -2081,6 +2081,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~6.11.1"
   checksum: 10c2/78d767b4baa824fb5426fbfb99afa4c298a4c226c20f9a1540c7ac80f1efb1cf3cdd12d9d73eb69e3d75138c126ec935e70b767ebe5f5a6205808a30d6b09deb
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.5.4":
+  version: 22.5.4
+  resolution: "@types/node@npm:22.5.4"
+  dependencies:
+    undici-types: "npm:~6.19.2"
+  checksum: 10c2/aa498ed15aeea22a235fdac7014034393ec933f9cced19698a7bbbd76981aec204e725fa906021297d1b83f39ac6eae082cc77ceefc94afac6848390f45700cb
   languageName: node
   linkType: hard
 
@@ -7419,6 +7428,13 @@ __metadata:
   version: 6.11.1
   resolution: "undici-types@npm:6.11.1"
   checksum: 10c2/3e1e2be6f67f1121efecb9e17171b07b98cdaffacaaf3bf618e549618d5bc5477368bf962b1cfce89c5b7e20461f70677e2faf8950c3988464af5138b7469e3a
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: 10c2/d9004dd49debee7310be3922c74caeb1163e60c2c7b1d270e47063096f9c061f521ba5fca615a4e2c70c25bfff9e4ffbda1d0b4c33a16554de2bee06db45e39a
   languageName: node
   linkType: hard
 
