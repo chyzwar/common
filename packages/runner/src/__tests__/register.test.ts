@@ -1,4 +1,4 @@
-import {expect, describe, it} from "vitest";
+import { expect, describe, it } from "vitest";
 import register from "../register.js";
 
 describe("register", () => {

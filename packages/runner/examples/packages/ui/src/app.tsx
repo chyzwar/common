@@ -1,9 +1,8 @@
-import {useState} from "preact/hooks";
+import { useState } from "preact/hooks";
 import preactLogo from "./assets/preact.svg";
 import viteLogo from "/vite.svg";
 import "./app.css";
-import type {FunctionComponent} from "preact";
-
+import type { FunctionComponent } from "preact";
 
 export const App: FunctionComponent = () => {
   const [count, setCount] = useState(0);
@@ -21,12 +20,19 @@ export const App: FunctionComponent = () => {
       <h1>Vite + Preact</h1>
       <div class="card">
         <button onClick={(): void => {
-          setCount((c) => c + 1); 
-        }}>
-          count is {count}
+          setCount(c => c + 1);
+        }}
+        >
+          count is
+          {" "}
+          {count}
         </button>
         <p>
-          Edit <code>src/app.tsx</code> and save to test HMR
+          Edit
+          {" "}
+          <code>src/app.tsx</code>
+          {" "}
+          and save to test HMR
         </p>
       </div>
       <p class="read-the-docs">

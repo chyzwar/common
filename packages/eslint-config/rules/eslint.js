@@ -1,4 +1,3 @@
-
 export default [{
   rules: {
   /**
@@ -17,12 +16,12 @@ export default [{
     "lines-between-class-members": "off",
 
     "no-console": "warn",
-    "space-before-blocks": [ "error", {
-      "functions": "always",
-      "keywords": "always",
-      "classes": "always",
+    "space-before-blocks": ["error", {
+      functions: "always",
+      keywords: "always",
+      classes: "always",
     }],
     "keyword-spacing": [
-      "error", {"before": true},
+      "error", { before: true },
     ],
-  }}];
+  } }];

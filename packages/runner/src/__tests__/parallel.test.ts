@@ -1,18 +1,17 @@
-import {expect, describe, it} from "vitest";
+import { expect, describe, it } from "vitest";
 
 import register from "../register.js";
-import {parallel} from "../parallel.js";
-
+import { parallel } from "../parallel.js";
 
 describe("parallel", () => {
-  it("should execute tasks in parallel", async() => {
+  it("should execute tasks in parallel", async () => {
     const order: string[] = [];
 
-    const task1 = async(): Promise<void> => new Promise((resolve) => setTimeout(() => {
+    const task1 = async (): Promise<void> => new Promise(resolve => setTimeout(() => {
       order.push("test1");
       resolve();
     }, 20));
-    const task2 = async(): Promise<void> => new Promise((resolve) => setTimeout(() => {
+    const task2 = async (): Promise<void> => new Promise(resolve => setTimeout(() => {
       order.push("test2");
       resolve();
     }, 1));
@@ -26,8 +25,6 @@ describe("parallel", () => {
   });
 });
 
-
 describe("parallelTask", () => {
   it.todo("execute tasks in parallel");
-
 });

@@ -18,6 +18,6 @@ class Logger {
   public error(...args: unknown[]): void {
     Logger.calls.push(args);
   }
-} 
+}
 
 export default Logger;

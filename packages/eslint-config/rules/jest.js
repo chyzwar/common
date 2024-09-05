@@ -5,8 +5,8 @@ export default [
     files: ["**/*.test.ts", "**/*.test.tsx"],
     ...jest.configs["flat/recommended"],
     settings: {
-      "jest": {
-        "version": "latest",
+      jest: {
+        version: "latest",
       },
     },
     rules: {

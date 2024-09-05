@@ -1,4 +1,3 @@
-
 import type TaskFunction from "./TaskFunction.js";
 import register from "./register.js";
 
@@ -17,7 +16,5 @@ function mapToTasks(taskNames: string[]): TaskFunction[] {
     }
   });
 }
-
-  
 
 export default mapToTasks;

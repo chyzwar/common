@@ -1,9 +1,8 @@
-
 type TaskFunctionSync = () => void;
 type TaskFunctionAsync = () => Promise<void>;
 
-type TaskFunction = 
-  | TaskFunctionAsync 
+type TaskFunction =
+  | TaskFunctionAsync
   | TaskFunctionSync;
 
 export default TaskFunction;

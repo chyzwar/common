@@ -1,6 +1,6 @@
-import {expect, describe, it, vi} from "vitest";
-import {dirname, resolve} from "node:path";
-import {fileURLToPath} from "node:url";
+import { expect, describe, it, vi } from "vitest";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 vi.mock("node:process", () => {
   const currentDir = dirname(fileURLToPath(import.meta.url));
@@ -8,14 +8,14 @@ vi.mock("node:process", () => {
   return {
     cwd: (): string => resolve(currentDir, "../__fixtures__"),
     argv: [
-      "node", 
-      "runner", 
+      "node",
+      "runner",
       "test",
     ],
   };
 });
 
-vi.mock("../Logger.js", async() => {
+vi.mock("../Logger.js", async () => {
   const mock = await import("../__mocks__/Logger.js");
   return mock;
 });
@@ -23,7 +23,7 @@ vi.mock("../Logger.js", async() => {
 const Logger = await import("../Logger.js");
 
 describe("runner", () => {
-  it("should load configuration from runner.config.js", async() => {
+  it("should load configuration from runner.config.js", async () => {
     await import("../runner.js");
     await vi.dynamicImportSettled();
     expect(Logger.default.calls).toMatchSnapshot();

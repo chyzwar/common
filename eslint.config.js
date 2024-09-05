@@ -7,11 +7,11 @@ export default [
     ignores: ["**/dist/", "**/lib/", "packages/sea/bin/", "node_modules/"],
   },
   {
-    files: ["packages/*/examples/**/*.{ts,tsx}" ],
+    files: ["packages/*/examples/**/*.{ts,tsx}"],
     ...tsEslint.configs.disableTypeChecked,
   },
   {
-    files: ["packages/*/src/**/*.{ts,tsx}" ],
+    files: ["packages/*/src/**/*.{ts,tsx}"],
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,

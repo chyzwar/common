@@ -1,17 +1,15 @@
-
-import {spawn} from "node:child_process";
-import type {SpawnOptions} from "node:child_process";
+import { spawn } from "node:child_process";
+import type { SpawnOptions } from "node:child_process";
 
 import register from "./register.js";
 import Logger from "./Logger.js";
 import SpawnError from "./SpawnError.js";
 
-
 interface DockerTaskOptions extends SpawnOptions {
 
   /**
    * Automatically remove the container when it exits
-   */ 
+   */
   rm?: boolean;
 
   /**
@@ -35,7 +33,7 @@ interface DockerTaskOptions extends SpawnOptions {
   /**
    * Type of network
    */
-  network?: "bridge" | "host"
+  network?: "bridge" | "host";
 }
 
 /**
@@ -77,7 +75,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         }
       });
   }
-  
+
   if (options?.volumes) {
     options.volumes
       .forEach((value) => {
@@ -86,7 +84,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         }
       });
   }
-  
+
   args.push(image);
 
   async function spawnTaskFunction(): Promise<void> {
@@ -94,8 +92,8 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
     logger.info("Started task");
 
     logger.time("Task completed in");
-    const proc = spawn("docker", args, {shell: true});
-    
+    const proc = spawn("docker", args, { shell: true });
+
     return new Promise<void>((resolve, reject) => {
       proc.stdout.on("data", (data?: Buffer) => {
         if (data) {
@@ -104,11 +102,11 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
             .split("\n")
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(line); 
-            }); 
+              logger.info(line);
+            });
         }
       });
-      
+
       proc.stderr.on("data", (data?: Buffer) => {
         if (data) {
           data
@@ -116,15 +114,15 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
             .split("\n")
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(line); 
-            }); 
+              logger.info(line);
+            });
         }
       });
-      
+
       proc.on("error", (error) => {
         logger.error(`Task <${taskName}> failed with:`, error);
       });
-      
+
       proc.on("close", (code: number) => {
         if (code === 0) {
           logger.timeEnd("Task completed in");
@@ -133,7 +131,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         else {
           logger.error(`Failed with code: ${code}`);
           reject(
-            new SpawnError("Docker Task closed with non-zero exit code", code, taskName)
+            new SpawnError("Docker Task closed with non-zero exit code", code, taskName),
           );
         }
       });
@@ -141,6 +139,6 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
   }
 
   register.set(taskName, spawnTaskFunction);
-} 
+}
 
 export default dockerTask;

@@ -1,9 +1,9 @@
 /* eslint-disable no-prototype-builtins */
- 
+
 import pc from "picocolors";
 import type { Formatter } from "picocolors/types.js";
 
-const colorFormatters: Formatter[]= [
+const colorFormatters: Formatter[] = [
   pc.green,
   pc.red,
   pc.yellow,
@@ -15,7 +15,7 @@ const colorFormatters: Formatter[]= [
 ];
 
 let lastAssigned = 0;
-const colorsAssigned: Record<string, Formatter>= {};
+const colorsAssigned: Record<string, Formatter> = {};
 
 const getColorFn = (taskName: string): Formatter => {
   if (!colorsAssigned.hasOwnProperty(taskName)) {
@@ -27,15 +27,15 @@ const getColorFn = (taskName: string): Formatter => {
 
 class Logger {
   public static calls: unknown[][];
- 
+
   private readonly taskName: string;
   private readonly colorFn: Formatter;
 
   public constructor(taskName: string) {
     this.taskName = taskName;
-    this.colorFn =  getColorFn(taskName);
+    this.colorFn = getColorFn(taskName);
   }
-   
+
   public time(label: string): void {
     console.time(`${this.colorFn(`[${this.taskName}]`)} ${label}`);
   }
@@ -60,6 +60,5 @@ class Logger {
     console.log(`${this.colorFn(`[${this.taskName}]`)} ${message}`);
   }
 }
-
 
 export default Logger;

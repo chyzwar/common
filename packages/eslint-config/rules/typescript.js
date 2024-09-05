@@ -1,4 +1,3 @@
-
 export default [{
   rules: {
     /**
@@ -66,18 +65,6 @@ export default [{
     "@typescript-eslint/prefer-enum-initializers": ["off"],
 
     /**
-     * Use stroustrup style for braces
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
-     */
-    "@typescript-eslint/brace-style": ["error", "stroustrup"],
-
-    /**
-     * Use double quotes everywhere
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md
-     */
-    "@typescript-eslint/quotes": ["error", "double"],
-
-    /**
      * Lets discuss this on PR
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
      */
@@ -88,16 +75,16 @@ export default [{
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unbound-method.md
      */
     "@typescript-eslint/unbound-method": ["error", {
-      "ignoreStatic": true,
+      ignoreStatic: true,
     }],
 
     /**
      * Allow for arrow functions to omit annotation
-     * 
+     *
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/typedef.md
      */
     "@typescript-eslint/typedef": ["error", {
-      "arrowParameter": false,
+      arrowParameter: false,
     }],
 
     /**
@@ -105,8 +92,8 @@ export default [{
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
      */
     "@typescript-eslint/no-explicit-any": ["error", {
-      "fixToUnknown": true,
-      "ignoreRestArgs": true,
+      fixToUnknown: true,
+      ignoreRestArgs: true,
     }],
 
     /**
@@ -114,83 +101,20 @@ export default [{
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
      */
     "@typescript-eslint/restrict-template-expressions": ["error", {
-      "allowNumber": true,
-      "allowBoolean": true,
+      allowNumber: true,
+      allowBoolean: true,
     }],
-
-    /**
-     * Enforce semicolons
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
-     */
-    "@typescript-eslint/semi": ["error"],
-
-    /**
-     * Enforce 2 space indentation across project
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
-     */
-    "@typescript-eslint/indent": ["error", 2],
 
     /**
      * Allow for type aliases only in unions
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md
      */
     "@typescript-eslint/no-type-alias": ["error", {
-      "allowAliases": "always",
-      "allowCallbacks": "always",
-      "allowLiterals": "always",
-      "allowTupleTypes": "always",
-      "allowGenerics": "always",
-    }],
-
-    /**
-     * I prefer not to add extra space before paren
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
-     */
-    "@typescript-eslint/space-before-function-paren": ["error", {
-      "anonymous": "never",
-      "named": "never",
-      "asyncArrow": "never",
-    }],
-
-    /**
-     * Extends default option by allowing object and Function
-     * Revisit later
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
-     */
-    "@typescript-eslint/ban-types": ["error", {
-      extendDefaults: false,
-      types: {
-        String: {
-          message: "Use string instead",
-          fixWith: "string",
-        },
-        Boolean: {
-          message: "Use boolean instead",
-          fixWith: "boolean",
-        },
-        Number: {
-          message: "Use number instead",
-          fixWith: "number",
-        },
-        Symbol: {
-          message: "Use symbol instead",
-          fixWith: "symbol",
-        },
-        Object: {
-          message: [
-            "The `Object` type actually means \"any non-nullish value\", so it is marginally better than `unknown`.",
-            "- If you want a type meaning \"any object\", you probably want `Record<string, unknown>` instead.",
-            "- If you want a type meaning \"any value\", you probably want `unknown` instead.",
-          ].join("\n"),
-        },
-        "{}": {
-          message: [
-            "`{}` actually means \"any non-nullish value\".",
-            "- If you want a type meaning \"any object\", you probably want `Record<string, unknown>` instead.",
-            "- If you want a type meaning \"any value\", you probably want `unknown` instead.",
-          ].join("\n"),
-        },
-      },
+      allowAliases: "always",
+      allowCallbacks: "always",
+      allowLiterals: "always",
+      allowTupleTypes: "always",
+      allowGenerics: "always",
     }],
 
     /**
@@ -200,8 +124,8 @@ export default [{
      */
     "@typescript-eslint/naming-convention": ["error",
       {
-        "selector": "variable",
-        "format": ["camelCase", "PascalCase", "UPPER_CASE"],
+        selector: "variable",
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
       },
     ],
 
@@ -209,23 +133,8 @@ export default [{
      * Allow typedefs
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
      */
-    "@typescript-eslint/no-use-before-define": ["error", { 
-      "typedefs": false,
-    }],
-
-    /**
-     * Extend comma dangle rules for ts
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/v4.6.0/packages/eslint-plugin/docs/rules/comma-dangle.md
-     */
-    "@typescript-eslint/comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
-      "exports": "always-multiline",
-      "enums": "always-multiline",
-      "tuples": "always-multiline",
-      "generics": "always-multiline",
-      "functions": "never",
+    "@typescript-eslint/no-use-before-define": ["error", {
+      typedefs: false,
     }],
 
     "@typescript-eslint/no-shadow": ["error", {
