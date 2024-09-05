@@ -1,4 +1,4 @@
-import {expect, describe, it, vi} from "vitest";
+import { expect, describe, it, vi } from "vitest";
 import register from "../register.js";
 import mapToTasks from "../mapToTasks.js";
 

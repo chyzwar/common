@@ -2,7 +2,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "moduleResolution": "node16",
-    "module": "es2022",
+    "module": "node16",
     "target": "es2022",
     "newLine": "lf",
     "jsx": "react-jsx",

@@ -8,7 +8,7 @@ import register from "./register.js";
  * @param args task names
  */
 export function series(...args: string[]): TaskFunction {
-  const seriesTaskFn = async(): Promise<void> => {
+  const seriesTaskFn = async (): Promise<void> => {
     for (const task of mapToTasks(args)) {
       await task();
     }
@@ -22,15 +22,14 @@ export function series(...args: string[]): TaskFunction {
  * @param taskList command to spawn
  */
 export function seriesTask(taskName: string, taskList: string[]): void {
-
   async function seriesTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
     logger.time("Task completed in");
-    
+
     await series(...taskList)();
     logger.timeEnd("Task completed in");
   }
 
   register.set(taskName, seriesTaskFunction);
-} 
+}

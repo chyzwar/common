@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import tsEslint from "typescript-eslint";
+import stylistic from "@stylistic/eslint-plugin";
 import typescript from "./rules/typescript.js";
 import jest from "./rules/jest.js";
 import esm from "./rules/esm.js";
@@ -8,16 +9,22 @@ import globals from "globals";
 export default tsEslint.config(
   eslint.configs.recommended,
   ...tsEslint.configs.all,
-  ...tsEslint.configs.strictTypeChecked, 
+  ...tsEslint.configs.strictTypeChecked,
   ...typescript,
   ...jest,
-  ...esm, 
+  ...esm,
+  stylistic.configs.customize({
+    indent: 2,
+    quotes: "double",
+    semi: true,
+    jsx: true,
+  }),
   {
     files: [
-      "**/*.js", 
+      "**/*.js",
       "**/*.cjs",
       "**/*.mjs",
-      
+
       "**/drizzle.config.ts",
       "**/runner.config.ts",
       "**/vite.config.ts",
@@ -35,5 +42,5 @@ export default tsEslint.config(
         ...globals.node,
       },
     },
-  }
+  },
 );

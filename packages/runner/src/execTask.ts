@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/prefer-promise-reject-errors */
 
-import type {ExecOptions} from "child_process";
-import {exec} from "child_process";
+import type { ExecOptions } from "child_process";
+import { exec } from "child_process";
 
 import register from "./register.js";
 import Logger from "./Logger.js";
-
 
 /**
  * Create task to exec process
@@ -14,11 +13,10 @@ import Logger from "./Logger.js";
  * @param options spawn option
  */
 export function execTask(taskName: string, command: string, options?: ExecOptions): void {
-
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
-    
+
     return new Promise<void>((resolve, reject) => {
       const child = exec(command, options, (error, stdout, stderr) => {
         if (stdout) {
@@ -27,7 +25,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
             .split(/\r?\n/)
             .forEach((line: string) => {
               logger.error(line);
-            }); 
+            });
         }
 
         if (stderr) {
@@ -35,12 +33,12 @@ export function execTask(taskName: string, command: string, options?: ExecOption
             .toString()
             .split(/\r?\n/)
             .forEach((line: string) => {
-              logger.error(line); 
-            }); 
+              logger.error(line);
+            });
         }
 
         if (error) {
-          logger.error("Exec Task error:", error);  
+          logger.error("Exec Task error:", error);
           reject(error);
         }
         else {
@@ -54,4 +52,4 @@ export function execTask(taskName: string, command: string, options?: ExecOption
     });
   }
   register.set(taskName, spawnTaskFunction);
-} 
+}

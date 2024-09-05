@@ -1,16 +1,16 @@
-import {expect, describe, it} from "vitest";
+import { expect, describe, it } from "vitest";
 import register from "../register.js";
-import {series} from "../series.js";
+import { series } from "../series.js";
 
 describe("series", () => {
-  it("should execute tasks in order", async() => {
+  it("should execute tasks in order", async () => {
     const order: string[] = [];
 
-    const task1 = async(): Promise<void> => new Promise((resolve) => setTimeout(() => {
+    const task1 = async (): Promise<void> => new Promise(resolve => setTimeout(() => {
       order.push("test1");
       resolve();
     }, 20));
-    const task2 = async(): Promise<void> => new Promise((resolve) => setTimeout(() => {
+    const task2 = async (): Promise<void> => new Promise(resolve => setTimeout(() => {
       order.push("test2");
       resolve();
     }, 1));

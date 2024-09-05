@@ -1,12 +1,11 @@
 import { defineWorkspace } from "vitest/config";
 
 const projects = [
-  "runner", 
+  "runner",
 ];
 
-
 export default defineWorkspace(
-  projects.map(name => {
+  projects.map((name) => {
     return {
       extends: `./packages/${name}/vitest.config.ts`,
       test: {
@@ -18,7 +17,5 @@ export default defineWorkspace(
         ],
       },
     };
-  })
+  }),
 );
-
-  

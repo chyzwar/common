@@ -1,6 +1,5 @@
-
-import type {SpawnOptions} from "child_process";
-import {spawn} from "child_process";
+import type { SpawnOptions } from "child_process";
+import { spawn } from "child_process";
 
 import register from "./register.js";
 import Logger from "./Logger.js";
@@ -14,12 +13,11 @@ import SpawnError from "./SpawnError.js";
  * @param options spawn option
  */
 export function spawnTask(taskName: string, command: string, args: string[] = [], options: SpawnOptions = {}): void {
-
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
     logger.time("Task completed in");
-  
+
     const spawnOptions: SpawnOptions = {
       ...options,
       env: {
@@ -30,7 +28,7 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
     };
 
     const proc = spawn(command, args, spawnOptions);
-    
+
     return new Promise<void>((resolve, reject) => {
       proc.stdout?.on("data", (data?: Buffer) => {
         if (data) {
@@ -39,11 +37,11 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
             .split(/\r?\n/)
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(line); 
-            }); 
+              logger.info(line);
+            });
         }
       });
-      
+
       proc.stderr?.on("data", (data?: Buffer) => {
         if (data) {
           data
@@ -51,11 +49,11 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
             .split(/\r?\n/)
             .filter(s => s !== "")
             .forEach((line: string) => {
-              logger.info(line); 
-            }); 
+              logger.info(line);
+            });
         }
       });
-      
+
       proc.on("error", (error) => {
         logger.error(`Task <${taskName}> failed with:`, error);
       });
@@ -68,7 +66,7 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
         else {
           logger.error(`Failed with code: ${code}`);
           reject(
-            new SpawnError("Spawn Task closed with non-zero exit code", code, taskName)
+            new SpawnError("Spawn Task closed with non-zero exit code", code, taskName),
           );
         }
       });
@@ -76,4 +74,4 @@ export function spawnTask(taskName: string, command: string, args: string[] = []
   }
 
   register.set(taskName, spawnTaskFunction);
-} 
+}

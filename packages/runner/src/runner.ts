@@ -1,32 +1,32 @@
 #! /usr/bin/env node
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-base-to-string */
- 
-import {series} from "./series.js";
+
+import { series } from "./series.js";
 import Logger from "./Logger.js";
-import {argv, cwd} from "node:process";
+import { argv, cwd } from "node:process";
 import SpawnError from "./SpawnError.js";
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 
 const encoding = { encoding: "utf-8" as const };
 const removeOpts = {
-  force: true, 
+  force: true,
   recursive: true,
 };
 
 const logger = new Logger("runner");
 
-const importTS = async(path: string): Promise<void> => {
+const importTS = async (path: string): Promise<void> => {
   const {
     default: {
-      transpileModule, 
-      ScriptTarget, 
+      transpileModule,
+      ScriptTarget,
       ModuleKind,
     },
   } = await import("typescript");
 
   const source = readFileSync(path, encoding);
-  const {outputText} = transpileModule(source, {
+  const { outputText } = transpileModule(source, {
     compilerOptions: {
       target: ScriptTarget.ES2020,
       module: ModuleKind.ESNext,
@@ -36,12 +36,12 @@ const importTS = async(path: string): Promise<void> => {
   const compiledConfigPath = `${path}.mjs`;
   try {
     writeFileSync(
-      compiledConfigPath, 
-      outputText
+      compiledConfigPath,
+      outputText,
     );
     await import(compiledConfigPath);
   }
-  
+
   finally {
     rmSync(compiledConfigPath, removeOpts);
   }
@@ -89,4 +89,3 @@ handle(tasks)
       logger.error(`Failed with error: ${error}`);
     }
   });
-  

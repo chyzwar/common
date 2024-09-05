@@ -1,38 +1,38 @@
 import {
-  spawnTask, 
-  dockerTask, 
-  parallelTask, 
+  spawnTask,
+  dockerTask,
+  parallelTask,
   seriesTask,
 } from "@chyzwar/runner";
 
-spawnTask("build:watch", 
-  "yarn", ["build:watch"] 
+spawnTask("build:watch",
+  "yarn", ["build:watch"],
 );
 
-spawnTask("start:ui", 
-  "yarn", ["start"], 
+spawnTask("start:ui",
+  "yarn", ["start"],
   {
     cwd: "./packages/ui",
-  }
+  },
 );
-spawnTask("build:ui", 
-  "yarn", ["build"], 
+spawnTask("build:ui",
+  "yarn", ["build"],
   {
     cwd: "./packages/ui",
-  }
+  },
 );
 
-spawnTask("start:api", 
-  "yarn", ["start"], 
+spawnTask("start:api",
+  "yarn", ["start"],
   {
     cwd: "./packages/api",
-  }
+  },
 );
-spawnTask("build:api", 
-  "yarn", ["build"], 
+spawnTask("build:api",
+  "yarn", ["build"],
   {
     cwd: "./packages/api",
-  }
+  },
 );
 
 dockerTask("postgres", "postgres", {
@@ -47,11 +47,10 @@ dockerTask("postgres", "postgres", {
   },
 });
 
-
 seriesTask("start:prod", ["build:api", "build:ui", "start:api:prod"]);
 parallelTask("start", [
-  "build:watch", 
-  "postgres", 
-  "start:api", 
+  "build:watch",
+  "postgres",
+  "start:api",
   "start:ui",
 ]);
