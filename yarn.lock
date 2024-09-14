@@ -379,7 +379,7 @@ __metadata:
     "@types/node": "npm:^22.5.4"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.9.1"
-    husky: "npm:^9.1.5"
+    husky: "npm:^9.1.6"
     lint-staged: "npm:^15.2.10"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.5.4"
@@ -4325,12 +4325,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.1.5":
-  version: 9.1.5
-  resolution: "husky@npm:9.1.5"
+"husky@npm:^9.1.6":
+  version: 9.1.6
+  resolution: "husky@npm:9.1.6"
   bin:
     husky: bin.js
-  checksum: 10c2/86ac14d000ec7ff524181be791e0b3ded1d4782339890d15c09258ece56cf701bfda5c0d6b78ae88054991397904a0c9f0f6ab8ed1e24971fe9c8a857d1d7de0
+  checksum: 10c2/ebec79aac772ecc5489dcba07db758decf5d199c26a21178e364e5cf6a61dd902256be7f7887d4b3bf7c330efbd6e859b08868edf57454b3e8f52a9a494320f2
   languageName: node
   linkType: hard
 
