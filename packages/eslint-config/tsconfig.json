@@ -4,6 +4,7 @@
     "noEmit": true,
     "rootDir": ".",
     "allowJs": true,
+    "skipLibCheck": true,
     "tsBuildInfoFile": "./buildInfo.json"
   },
   "include": [

@@ -38,6 +38,9 @@ export default tsEslint.config(
   },
   {
     languageOptions: {
+      parserOptions: {
+        warnOnUnsupportedTypeScriptVersion: false,
+      },
       globals: {
         ...globals.node,
       },

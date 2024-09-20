@@ -1,9 +1,4 @@
 {
-  "workspaces": [
-    "packages/*",
-    "packages/*/examples",
-    "packages/*/examples/packages/*"
-  ],
   "npmClient": "yarn",
   "version": "independent",
   "changelogPreset": "conventional-changelog-conventionalcommits",
