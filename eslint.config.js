@@ -4,7 +4,13 @@ import tsEslint from "typescript-eslint";
 export default [
   ...nodeConfig,
   {
-    ignores: ["**/dist/", "**/lib/", "packages/sea/bin/", "node_modules/"],
+    ignores: [
+      "**/dist/",
+      "**/lib/",
+      "**/bin/",
+      ".yarn/",
+      "node_modules/",
+    ],
   },
   {
     files: ["packages/*/examples/**/*.{ts,tsx}"],
