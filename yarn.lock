@@ -380,7 +380,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.29, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.30, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
@@ -437,7 +437,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.29"
+    "@chyzwar/eslint-config": "npm:^0.2.30"
     "@chyzwar/tsconfig": "npm:^0.2.29"
     "@types/node": "npm:^22.5.5"
     eslint: "npm:^9.10.0"
@@ -455,7 +455,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.29"
+    "@chyzwar/eslint-config": "npm:^0.2.30"
     "@chyzwar/tsconfig": "npm:^0.2.29"
     "@types/node": "npm:^22.5.5"
     eslint: "npm:^9.10.0"
