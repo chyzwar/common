@@ -6,9 +6,11 @@
     "target": "es2022",
     "newLine": "lf",
     "jsx": "react-jsx",
-    "outDir": "lib",
-    "rootDir": "src",
-    "tsBuildInfoFile": "./lib/buildInfo.json",
+
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/dist",
+    "tsBuildInfoFile": "${configDir}/dist/.buildInfo.json",
+
     "incremental": true,
     "experimentalDecorators": true,
 
