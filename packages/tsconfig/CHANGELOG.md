@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/chyzwar/common/compare/@chyzwar/tsconfig@0.2.29...@chyzwar/tsconfig@0.3.0) (2024-10-02)
+
+### Features
+
+* **tsconfig:** use config dir for shared tsc configs ([6c28398](https://github.com/chyzwar/common/commit/6c28398b605762e4783ace3b3e7869af483361fd)) - by @chyzwar
+
 ## 0.2.29 (2024-09-05)
 
 **Note:** Version bump only for package @chyzwar/tsconfig

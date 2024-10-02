@@ -380,11 +380,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.30, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.31, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
-    "@chyzwar/tsconfig": "npm:^0.2.29"
+    "@chyzwar/tsconfig": "npm:^0.3.0"
     "@eslint/js": "npm:^9.11.1"
     "@stylistic/eslint-plugin": "npm:^2.8.0"
     eslint-plugin-jest: "npm:^28.8.3"
@@ -437,8 +437,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.30"
-    "@chyzwar/tsconfig": "npm:^0.2.29"
+    "@chyzwar/eslint-config": "npm:^0.2.31"
+    "@chyzwar/tsconfig": "npm:^0.3.0"
     "@types/node": "npm:^22.7.4"
     eslint: "npm:^9.11.1"
     picocolors: "npm:^1.1.0"
@@ -455,8 +455,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.30"
-    "@chyzwar/tsconfig": "npm:^0.2.29"
+    "@chyzwar/eslint-config": "npm:^0.2.31"
+    "@chyzwar/tsconfig": "npm:^0.3.0"
     "@types/node": "npm:^22.7.4"
     eslint: "npm:^9.11.1"
     typescript: "npm:^5.6.2"
@@ -467,7 +467,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.2, @chyzwar/tsconfig@npm:^0.2.29, @chyzwar/tsconfig@workspace:packages/tsconfig":
+"@chyzwar/tsconfig@npm:^0.2.0, @chyzwar/tsconfig@npm:^0.2.2":
+  version: 0.2.29
+  resolution: "@chyzwar/tsconfig@npm:0.2.29"
+  checksum: 10c2/7216c9ccfed0ee227637a6b97f244de32ca5d9dec160d310671c11e48a33a304d8d64be41a62ab7a4b5b16ce303a59a83fac667607f34f00fcbb0a6736b239f8
+  languageName: node
+  linkType: hard
+
+"@chyzwar/tsconfig@npm:^0.3.0, @chyzwar/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@chyzwar/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
