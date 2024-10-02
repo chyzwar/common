@@ -3,7 +3,7 @@
   "version": "0.4.32",
   "engines": {
     "node": "> 20.x.x",
-    "yarn": "4.x"
+    "yarn": "4.5.0"
   },
   "repository": {
     "type": "git",
