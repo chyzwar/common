@@ -34,7 +34,7 @@
     "@chyzwar/eslint-config": "^0.2.31",
     "@chyzwar/tsconfig": "^0.3.0",
     "@types/node": "^22.7.4",
-    "eslint": "^9.11.1",
+    "eslint": "^9.12.0",
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
