@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type TaskFunction from "./TaskFunction.js";
 import register from "./register.js";
 import Logger from "./Logger.js";
@@ -16,8 +15,8 @@ export function task(taskName: string, taskFunction: TaskFunction): void {
       await taskFunction();
       logger.timeEnd("Task completed in");
     }
-    catch (error: any) {
-      logger.error(`Task ${taskName} failed with: ${error}`);
+    catch (error) {
+      logger.error(`Task ${taskName} failed with: ${error as string}`);
       throw error;
     }
   }

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/prefer-promise-reject-errors */
 
-import type { ExecOptions } from "child_process";
-import { exec } from "child_process";
+import type { ExecOptions } from "node:child_process";
+import { exec } from "node:child_process";
 
 import register from "./register.js";
 import Logger from "./Logger.js";
