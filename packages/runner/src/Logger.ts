@@ -1,5 +1,3 @@
-/* eslint-disable no-prototype-builtins */
-
 import pc from "picocolors";
 import type { Formatter } from "picocolors/types.js";
 
@@ -18,7 +16,7 @@ let lastAssigned = 0;
 const colorsAssigned: Record<string, Formatter> = {};
 
 const getColorFn = (taskName: string): Formatter => {
-  if (!colorsAssigned.hasOwnProperty(taskName)) {
+  if (!(taskName in colorsAssigned)) {
     colorsAssigned[taskName] = colorFormatters[lastAssigned++ % 8];
   }
 
