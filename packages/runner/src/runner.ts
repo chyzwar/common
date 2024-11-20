@@ -57,7 +57,7 @@ async function handle(args: string[]): Promise<void> {
     }
   }
   catch (error: unknown) {
-    logger.error(`Failed loading configuration ${error as string}`);
+    logger.error(`Failed loading configuration ${error}`);
   }
   return series(...args)();
 }
