@@ -1,6 +1,6 @@
 {
   "name": "@chyzwar/eslint-config",
-  "version": "0.2.31",
+  "version": "0.2.32",
   "author": "chyzwar",
   "type": "module",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "./react": "./react.js"
   },
   "dependencies": {
-    "@chyzwar/tsconfig": "^0.3.0",
+    "@chyzwar/tsconfig": "^0.3.1",
     "@eslint/js": "^9.15.0",
     "@stylistic/eslint-plugin": "^2.11.0",
     "eslint-plugin-jest": "^28.9.0",

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.33](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.4.32...@chyzwar/runner@0.4.33) (2024-11-20)
+
+**Note:** Version bump only for package @chyzwar/runner
+
 ## [0.4.32](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.4.31...@chyzwar/runner@0.4.32) (2024-10-02)
 
 **Note:** Version bump only for package @chyzwar/runner
