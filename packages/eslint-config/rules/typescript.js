@@ -158,5 +158,11 @@ export default [{
     "@typescript-eslint/explicit-function-return-type": ["error", {
       allowFunctionsWithoutTypeParameters: true,
     }],
+
+    /**
+     * Allow unsafe type assertions
+     * @see https://typescript-eslint.io/rules/no-unsafe-type-assertion/
+     */
+    "@typescript-eslint/no-unsafe-type-assertion": ["off"],
   },
 }];
