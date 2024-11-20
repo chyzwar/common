@@ -2,8 +2,7 @@
   "name": "@chyzwar/runner",
   "version": "0.4.32",
   "engines": {
-    "node": "> 20.x.x",
-    "yarn": "4.x"
+    "node": "> 22.x.x"
   },
   "repository": {
     "type": "git",
@@ -31,15 +30,15 @@
   "author": "chyzwar",
   "license": "MIT",
   "dependencies": {
-    "picocolors": "^1.1.0"
+    "picocolors": "^1.1.1"
   },
   "devDependencies": {
     "@chyzwar/eslint-config": "^0.2.31",
     "@chyzwar/tsconfig": "^0.3.0",
-    "@types/node": "^22.7.4",
-    "eslint": "^9.11.1",
-    "typescript": "^5.6.2",
-    "vitest": "^2.1.1"
+    "@types/node": "^22.9.1",
+    "eslint": "^9.15.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
   },
   "peerDependencies": {
     "@types/node": "> 16.0.0"

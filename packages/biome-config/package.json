@@ -5,8 +5,7 @@
   "type": "module",
   "license": "MIT",
   "engines": {
-    "node": "20.x",
-    "yarn": "4.x"
+    "node": "> 22.x.x"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
     "./lib": "./lib.json"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3"
+    "@biomejs/biome": "^1.9.4"
   },
   "peerDependencies": {
     "@biomejs/biome": "^1.0.0"
