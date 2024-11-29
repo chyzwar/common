@@ -8,6 +8,8 @@ import { argv, cwd } from "node:process";
 import SpawnError from "./SpawnError.js";
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 
+process.title = "runner";
+
 const encoding = { encoding: "utf-8" as const };
 const removeOpts = {
   force: true,
