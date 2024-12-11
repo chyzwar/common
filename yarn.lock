@@ -347,7 +347,7 @@ __metadata:
     "@lerna-lite/cli": "npm:^3.10.0"
     "@lerna-lite/publish": "npm:^3.10.0"
     "@lerna-lite/version": "npm:^3.10.0"
-    "@types/node": "npm:^22.9.1"
+    "@types/node": "npm:^22.10.2"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.15.0"
     husky: "npm:^9.1.7"
@@ -417,7 +417,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.33"
     "@chyzwar/tsconfig": "npm:^0.3.1"
-    "@types/node": "npm:^22.9.1"
+    "@types/node": "npm:^22.10.2"
     eslint: "npm:^9.15.0"
     picocolors: "npm:^1.1.1"
     typescript: "npm:^5.6.3"
@@ -435,7 +435,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.33"
     "@chyzwar/tsconfig": "npm:^0.3.1"
-    "@types/node": "npm:^22.9.1"
+    "@types/node": "npm:^22.10.2"
     eslint: "npm:^9.15.0"
     typescript: "npm:^5.6.3"
   peerDependencies:
@@ -1972,12 +1972,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.9.1":
+"@types/node@npm:*":
   version: 22.9.1
   resolution: "@types/node@npm:22.9.1"
   dependencies:
     undici-types: "npm:~6.19.8"
   checksum: 10c2/f997845d7d9e7382771b64164a1e3ee99d02435cdd99fd2444d62304168f380cdfcc789ab571a15a80de3541713d58798ef977ceea0eba0a4eee1e1b4da13cea
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.10.2":
+  version: 22.10.2
+  resolution: "@types/node@npm:22.10.2"
+  dependencies:
+    undici-types: "npm:~6.20.0"
+  checksum: 10c2/a9baf318761021513a949812ef409601ddf44438c7dd759b55565bb90f002a2c07791925b6b6d39ede8f8ac4d3f4aefd9af7fe746b917268951333dffc0bfa2f
   languageName: node
   linkType: hard
 
@@ -6629,6 +6638,13 @@ __metadata:
   version: 6.19.8
   resolution: "undici-types@npm:6.19.8"
   checksum: 10c2/d9004dd49debee7310be3922c74caeb1163e60c2c7b1d270e47063096f9c061f521ba5fca615a4e2c70c25bfff9e4ffbda1d0b4c33a16554de2bee06db45e39a
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10c2/fe6584f3e2920d3fc2c1eb60651024854254db0d555d452663d93a68ca8424dade2ae58721e93068b5c6768fb3c63f9da8d777280095d5dfec8232ee7a7b0c24
   languageName: node
   linkType: hard
 
