@@ -6608,11 +6608,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>":
   version: 5.6.3
-  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=b45daf"
+  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c2/e11b713baee2d87cd88b797712020e4abf195905c32648a5a27f7e4f5bf6bc28fa9724bc5900057d4285c485dea0147adfafa3cb74fbd36663af77a97587b7b7
+  checksum: 10c2/6f3d6f48b9d016fd0fd655e5a12a0cd7148e98d3c827d77ca97d3d53429ab70cfaa690d832014522b312a0b344046baca7005d1b01f1732c2967fd2ddf57d0fe
   languageName: node
   linkType: hard
 
