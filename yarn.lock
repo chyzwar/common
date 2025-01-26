@@ -351,7 +351,7 @@ __metadata:
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.15.0"
     husky: "npm:^9.1.7"
-    lint-staged: "npm:^15.2.10"
+    lint-staged: "npm:^15.4.3"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.6.3"
     vitest: "npm:^2.1.5"
@@ -2602,10 +2602,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^5.3.0, chalk@npm:~5.3.0":
+"chalk@npm:^5.3.0":
   version: 5.3.0
   resolution: "chalk@npm:5.3.0"
   checksum: 10c2/8d82f3c487711bdc3491929e26faa8cabb618e24788516c53db26bd2dc924ae4cc73631481640536d641a74f929bdeb292057a2633e6ef0b74af4d4fad575daf
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "chalk@npm:5.4.1"
+  checksum: 10c2/dd90178333f46fe77236d81510cea840b9cb392b942232379fb6f0f3c10310705375f3c980c8830c7de1b2ecaebc16e36989c34f75eb90563db9aa1cf806a4f6
   languageName: node
   linkType: hard
 
@@ -2748,10 +2755,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:~12.1.0":
-  version: 12.1.0
-  resolution: "commander@npm:12.1.0"
-  checksum: 10c2/53472625adf5926e1a55748cb710f1e1ba2424b0d711c43b85011807aa15997a4153197d94d10f7b8eb8569eed25761964f6dd4de6a4e8d8a8d642eb4b850cdc
+"commander@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "commander@npm:13.1.0"
+  checksum: 10c2/9a57b7d15bf5f64da7bcf687cc7b8402884d1af24386dc9a77443ff22a4adbf3d2cfff03ce1387a340ee8a91f598c4e6f95119ebc609b0bf330473d0f0583a64
   languageName: node
   linkType: hard
 
@@ -2997,7 +3004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.7, debug@npm:~4.3.6":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.7":
   version: 4.3.7
   resolution: "debug@npm:4.3.7"
   dependencies:
@@ -3006,6 +3013,18 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c2/992f71c5ed3577ad4c2bd882ad7e4b54e6f949255e2b7ed572b066c40e8acd14a368781ff16c6bbc2967e639725b4c94d2b398a9553ec9862c088d2823989856
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "debug@npm:4.4.0"
+  dependencies:
+    ms: "npm:^2.1.3"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10c2/d3b706ce86f595c7a13d52558d7343b9bc8ad06bf52cb5ba7f516b0dd936ea1a1b93a853b6968d833985fbcc5af65fb95b032bca2075e3aff0a1e06bd86103c7
   languageName: node
   linkType: hard
 
@@ -3479,7 +3498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^8.0.1, execa@npm:~8.0.1":
+"execa@npm:^8.0.1":
   version: 8.0.1
   resolution: "execa@npm:8.0.1"
   dependencies:
@@ -4565,10 +4584,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:~3.1.2":
-  version: 3.1.2
-  resolution: "lilconfig@npm:3.1.2"
-  checksum: 10c2/1d5e2a0bc4bea1f6cc2ab2be05a1d350dbe0607d1597da1a27002b48c630a808234b4658390b4f47c27cc0e89eeb6fc4f64dc3cc8599144c7152a983c16832d7
+"lilconfig@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "lilconfig@npm:3.1.3"
+  checksum: 10c2/1f5938e8d4ab6dffd6a975f8bdaa4cd3d3322d1414984633c709c23ca7a90ba9f75c0aed80a7fbc7ab071da3e6a9ebc8afc9b18a00ffd237d4fb4a3644ac497f
   languageName: node
   linkType: hard
 
@@ -4586,29 +4605,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^15.2.10":
-  version: 15.2.10
-  resolution: "lint-staged@npm:15.2.10"
+"lint-staged@npm:^15.4.3":
+  version: 15.4.3
+  resolution: "lint-staged@npm:15.4.3"
   dependencies:
-    chalk: "npm:~5.3.0"
-    commander: "npm:~12.1.0"
-    debug: "npm:~4.3.6"
-    execa: "npm:~8.0.1"
-    lilconfig: "npm:~3.1.2"
-    listr2: "npm:~8.2.4"
-    micromatch: "npm:~4.0.8"
-    pidtree: "npm:~0.6.0"
-    string-argv: "npm:~0.3.2"
-    yaml: "npm:~2.5.0"
+    chalk: "npm:^5.4.1"
+    commander: "npm:^13.1.0"
+    debug: "npm:^4.4.0"
+    execa: "npm:^8.0.1"
+    lilconfig: "npm:^3.1.3"
+    listr2: "npm:^8.2.5"
+    micromatch: "npm:^4.0.8"
+    pidtree: "npm:^0.6.0"
+    string-argv: "npm:^0.3.2"
+    yaml: "npm:^2.7.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c2/423a6c431e14d27820bc60d3e9a896971db2201dcc10c4631c528168ebdf301c9c810de3e998299c456cda7362ec8227e98f6fcf515bec4b964c5848fd60908d
+  checksum: 10c2/444c4e10bbb49d9d3beb71c0992862fbd7e7166ed007758902ad76819cc122b9399e6bc901a49f148e14f9ce4659c3f95cdfafa9ea5fed4c4d02ed7669319bb4
   languageName: node
   linkType: hard
 
-"listr2@npm:~8.2.4":
-  version: 8.2.4
-  resolution: "listr2@npm:8.2.4"
+"listr2@npm:^8.2.5":
+  version: 8.2.5
+  resolution: "listr2@npm:8.2.5"
   dependencies:
     cli-truncate: "npm:^4.0.0"
     colorette: "npm:^2.0.20"
@@ -4616,7 +4635,7 @@ __metadata:
     log-update: "npm:^6.1.0"
     rfdc: "npm:^1.4.1"
     wrap-ansi: "npm:^9.0.0"
-  checksum: 10c2/5fbdd940a47b18807f9408a1bdfb39751c98ac3735bdbe44faa56da9c7cd2e5bb653e68debef21d69df78e3d6111bbfaae7cd4c57deee7515008c532c6104b8a
+  checksum: 10c2/8dd19a432897698509dd174547175ebef91a84b1d1f1ea16f7e4a8e2faadef9862bcec0ab11bc9e470335e16c437e5d39efc38eb824e137b5feabf0588abc28f
   languageName: node
   linkType: hard
 
@@ -4826,7 +4845,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4, micromatch@npm:~4.0.8":
+"micromatch@npm:^4.0.4, micromatch@npm:^4.0.8":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
   dependencies:
@@ -5545,7 +5564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pidtree@npm:~0.6.0":
+"pidtree@npm:^0.6.0":
   version: 0.6.0
   resolution: "pidtree@npm:0.6.0"
   bin:
@@ -6270,7 +6289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string-argv@npm:~0.3.2":
+"string-argv@npm:^0.3.2":
   version: 0.3.2
   resolution: "string-argv@npm:0.3.2"
   checksum: 10c2/2d245996e1de6939c7726f609a35a8fe61b87f3a6bc6cc4bbec81843219d35d09b2ad7e394b5b7af3656baa15b4d18424ee4bcda67a50b932dba84f0978417c0
@@ -7022,12 +7041,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:~2.5.0":
-  version: 2.5.1
-  resolution: "yaml@npm:2.5.1"
+"yaml@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "yaml@npm:2.7.0"
   bin:
     yaml: bin.mjs
-  checksum: 10c2/e99db9fce6ec76943ee2ac9b762b1e3458a8f5773dc89d54c6fe8dc4c27f7c0b34c614d5bed8724c6f0a128c3df22e18ec42aac3364216b299a2b93564448b08
+  checksum: 10c2/e77156fbdb07b5096ad11caa0b90e3f5ffedf74e6dd9ba0d72b4a3e5dc38feeb7c24167c5f2f7d3547ed09a0eda9af24421816a21d416e453b42fd12ace4d9fa
   languageName: node
   linkType: hard
 
