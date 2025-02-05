@@ -164,5 +164,12 @@ export default [{
      * @see https://typescript-eslint.io/rules/no-unsafe-type-assertion/
      */
     "@typescript-eslint/no-unsafe-type-assertion": ["off"],
+
+    /**
+     * Typescript config covert this with "noImplicitReturns": true,
+     *
+     * @see https://typescript-eslint.io/rules/consistent-return
+     */
+    "@typescript-eslint/consistent-return": ["off"],
   },
 }];

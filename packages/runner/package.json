@@ -35,10 +35,10 @@
   "devDependencies": {
     "@chyzwar/eslint-config": "^0.2.33",
     "@chyzwar/tsconfig": "^0.3.1",
-    "@types/node": "^22.9.1",
-    "eslint": "^9.15.0",
-    "typescript": "^5.6.3",
-    "vitest": "^2.1.5"
+    "@types/node": "^22.13.1",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
   },
   "peerDependencies": {
     "@types/node": "> 16.0.0"
