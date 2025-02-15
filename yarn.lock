@@ -366,7 +366,7 @@ __metadata:
     "@eslint/js": "npm:^9.19.0"
     "@stylistic/eslint-plugin": "npm:^3.0.1"
     eslint-plugin-jest: "npm:^28.11.0"
-    globals: "npm:^15.14.0"
+    globals: "npm:^15.15.0"
     typescript-eslint: "npm:^8.23.0"
   peerDependencies:
     eslint: ^9.2.0
@@ -4019,10 +4019,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.14.0":
-  version: 15.14.0
-  resolution: "globals@npm:15.14.0"
-  checksum: 10c2/788ad6398a7c33c799bd38937f0bf8062919bb8e0525e77e8f5cc3a343fcf235b2e12bfbef5f189fe5c0ddc1e7c68ad858b1b271a84a929eac3d97017c4807a2
+"globals@npm:^15.15.0":
+  version: 15.15.0
+  resolution: "globals@npm:15.15.0"
+  checksum: 10c2/ec544800aa1c6f1445d5abd79d5efe6a0a1a2bea1399d7969356d5e260d0d7fa635917850017062be30375dfa5b258cce3896f004afb7fd091cc361b223586d1
   languageName: node
   linkType: hard
 
