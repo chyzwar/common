@@ -347,7 +347,7 @@ __metadata:
     "@lerna-lite/cli": "npm:^3.12.0"
     "@lerna-lite/publish": "npm:^3.12.0"
     "@lerna-lite/version": "npm:^3.12.0"
-    "@types/node": "npm:^22.13.1"
+    "@types/node": "npm:^22.13.8"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
     eslint: "npm:^9.19.0"
     husky: "npm:^9.1.7"
@@ -417,7 +417,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.34"
     "@chyzwar/tsconfig": "npm:^0.3.2"
-    "@types/node": "npm:^22.13.1"
+    "@types/node": "npm:^22.13.8"
     eslint: "npm:^9.19.0"
     picocolors: "npm:^1.1.1"
     typescript: "npm:^5.7.3"
@@ -435,7 +435,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.2.34"
     "@chyzwar/tsconfig": "npm:^0.3.2"
-    "@types/node": "npm:^22.13.1"
+    "@types/node": "npm:^22.13.8"
     eslint: "npm:^9.19.0"
     typescript: "npm:^5.7.3"
   peerDependencies:
@@ -2039,12 +2039,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.13.1":
+"@types/node@npm:*":
   version: 22.13.1
   resolution: "@types/node@npm:22.13.1"
   dependencies:
     undici-types: "npm:~6.20.0"
   checksum: 10c2/4d6ad5dd452fd861eeef4ae8c9f030e7b7498698207fedca7bd9f856af609db6570b18dbe543489b083c4395e5ae43350b0f78c0421a6515a0d77b5dd64ab740
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^22.13.8":
+  version: 22.13.8
+  resolution: "@types/node@npm:22.13.8"
+  dependencies:
+    undici-types: "npm:~6.20.0"
+  checksum: 10c2/a2ea00fba8c670deaf9d574884e45876f483c3c1b678c04d09ceea1bdcfed7819dfaacc9c90fcfbab59cd8d897b6ce6a6ee3058a7285acb735bc8dc19bdac911
   languageName: node
   linkType: hard
 
