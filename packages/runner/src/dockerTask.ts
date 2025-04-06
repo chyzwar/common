@@ -6,6 +6,10 @@ import Logger from "./Logger.js";
 import SpawnError from "./SpawnError.js";
 
 interface DockerTaskOptions extends SpawnOptions {
+  /**
+   * Debug mode, print full docker command
+   */
+  debug?: boolean;
 
   /**
    * Automatically remove the container when it exits
@@ -37,6 +41,11 @@ interface DockerTaskOptions extends SpawnOptions {
   network?: "bridge" | "host";
 
   /**
+   * Username or UID (format: <name|uid>[:<group|gid>])
+   */
+  user?: string;
+
+  /**
    * Log driver
    */
   logDriver?: "json-file" | "syslog" | "journald" | "gelf" | "fluentd" | "awslogs" | "splunk" | "etwlogs" | "gcplogs" | "azurelogs" | "none";
@@ -65,9 +74,29 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
   if (options?.interactive) {
     args.push("--interactive");
   }
+
+  if (options?.user) {
+    args.push(`--user ${options.user}`);
+  }
+
   if (options?.name) {
     args.push(`--name ${options.name}`);
   }
+
+  if (options?.logDriver) {
+    args.push(`--log-driver ${options.logDriver}`);
+  }
+
+  if (options?.logDriverOptions) {
+    Object
+      .entries(options.logDriverOptions)
+      .forEach(([key, value]) => {
+        if (value) {
+          args.push(`--log-opt ${key}=${value}`);
+        }
+      });
+  }
+
   if (options?.env) {
     Object
       .entries(options.env)
@@ -96,26 +125,14 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       });
   }
 
-  if (options?.logDriver) {
-    args.push(`--log-driver=${options.logDriver}`);
-  }
-
-  if (options?.logDriverOptions) {
-    Object
-      .entries(options.logDriverOptions)
-      .forEach(([key, value]) => {
-        if (value) {
-          args.push(`--log-opt ${key}=${value}`);
-        }
-      });
-  }
-
   args.push(image);
 
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
-
+    if (options?.debug) {
+      logger.info(`docker ${args.join(" ")}`);
+    }
     logger.time("Task completed in");
     const proc = spawn("docker", args, { shell: true });
 
