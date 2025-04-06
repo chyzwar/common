@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.5.0...@chyzwar/runner@0.6.0) (2025-04-06)
+
+### Features
+
+* **runner:** added user option to docker task ([6496249](https://github.com/chyzwar/common/commit/64962491089c1dc9de67debd55e26cd0e52892fe)) - by @chyzwar
+
 ## [0.5.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.4.36...@chyzwar/runner@0.5.0) (2025-04-06)
 
 ### Features
