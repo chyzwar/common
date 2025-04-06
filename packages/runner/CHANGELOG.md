@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.4.36...@chyzwar/runner@0.5.0) (2025-04-06)
+
+### Features
+
+* **runner:** added docker log driver and options ([2df605c](https://github.com/chyzwar/common/commit/2df605c8a43219e48a8b3b6ac247c5c50125cd05)) - by @chyzwar
+
 ## [0.4.36](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.4.35...@chyzwar/runner@0.4.36) (2025-02-05)
 
 **Note:** Version bump only for package @chyzwar/runner

@@ -358,7 +358,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.34, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.2.0, @chyzwar/eslint-config@npm:^0.2.2, @chyzwar/eslint-config@npm:^0.2.35, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
@@ -411,11 +411,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/runner@npm:^0.4.1, @chyzwar/runner@workspace:packages/runner":
+"@chyzwar/runner@npm:^0.4.1":
+  version: 0.4.36
+  resolution: "@chyzwar/runner@npm:0.4.36"
+  dependencies:
+    picocolors: "npm:^1.1.1"
+  peerDependencies:
+    "@types/node": "> 16.0.0"
+  bin:
+    runner: ./lib/runner.js
+  checksum: 10c2/690b16e5339c376de4d4afdf96a2f887b90e0e4ef79c16710db9b559ab0f34df71695ee362900e4941c428c93e2d38cfbc34f696a201ecc9aae2cdb61a82e94d
+  languageName: node
+  linkType: hard
+
+"@chyzwar/runner@workspace:packages/runner":
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.34"
+    "@chyzwar/eslint-config": "npm:^0.2.35"
     "@chyzwar/tsconfig": "npm:^0.3.2"
     "@types/node": "npm:^22.14.0"
     eslint: "npm:^9.24.0"
@@ -433,7 +446,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.2.34"
+    "@chyzwar/eslint-config": "npm:^0.2.35"
     "@chyzwar/tsconfig": "npm:^0.3.2"
     "@types/node": "npm:^22.14.0"
     eslint: "npm:^9.24.0"
