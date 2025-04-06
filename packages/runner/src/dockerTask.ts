@@ -26,6 +26,7 @@ interface DockerTaskOptions extends SpawnOptions {
    * List of ports to expose
    */
   ports?: `${number}:${number}`[];
+
   /**
    * List of volumes to mount in container
    */
@@ -34,6 +35,16 @@ interface DockerTaskOptions extends SpawnOptions {
    * Type of network
    */
   network?: "bridge" | "host";
+
+  /**
+   * Log driver
+   */
+  logDriver?: "json-file" | "syslog" | "journald" | "gelf" | "fluentd" | "awslogs" | "splunk" | "etwlogs" | "gcplogs" | "azurelogs" | "none";
+
+  /**
+   * Log driver options
+   */
+  logDriverOptions?: Record<string, string>;
 }
 
 /**
@@ -81,6 +92,20 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       .forEach((value) => {
         if (value.includes(":")) {
           args.push(`-v ${value}`);
+        }
+      });
+  }
+
+  if (options?.logDriver) {
+    args.push(`--log-driver=${options.logDriver}`);
+  }
+
+  if (options?.logDriverOptions) {
+    Object
+      .entries(options.logDriverOptions)
+      .forEach(([key, value]) => {
+        if (value) {
+          args.push(`--log-opt ${key}=${value}`);
         }
       });
   }
