@@ -54,6 +54,23 @@ interface DockerTaskOptions extends SpawnOptions {
    * Log driver options
    */
   logDriverOptions?: Record<string, string>;
+
+  /**
+   * The maximum amount of memory the container can use.
+   * If you set this option, the minimum allowed value is 6m (6 megabytes). That is, you must set the value to at least 6 megabytes.
+   */
+  memory?: number;
+
+  /**
+   * The amount of memory this container is allowed to swap to disk.
+   */
+  memorySwap?: number;
+
+  /**
+   * A value of 0 turns off anonymous page swapping.
+   * A value of 100 sets all anonymous pages as swappable.
+   */
+  memorySwappiness?: number;
 }
 
 /**
@@ -85,6 +102,18 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
 
   if (options?.logDriver) {
     args.push(`--log-driver ${options.logDriver}`);
+  }
+
+  if (typeof options?.memory === "number") {
+    args.push(`--memory ${options.memory}`);
+  }
+
+  if (typeof options?.memorySwap === "number") {
+    args.push(`--memory-swap ${options.memorySwap}`);
+  }
+
+  if (typeof options?.memorySwappiness === "number") {
+    args.push(`--memory-swappiness ${options.memorySwappiness}`);
   }
 
   if (options?.logDriverOptions) {
