@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.6.0...@chyzwar/runner@0.7.0) (2025-04-08)
+
+### Features
+
+* **runner:** added memmory options for docker ([dd06170](https://github.com/chyzwar/common/commit/dd0617064dffdf3dc62a085be2d72fc5a1cbfd3f)) - by @chyzwar
+
 ## [0.6.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.5.0...@chyzwar/runner@0.6.0) (2025-04-06)
 
 ### Features
