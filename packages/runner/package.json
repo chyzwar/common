@@ -35,7 +35,7 @@
   "devDependencies": {
     "@chyzwar/eslint-config": "^0.2.35",
     "@chyzwar/tsconfig": "^0.3.2",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
     "eslint": "^9.24.0",
     "typescript": "^5.8.3",
     "vitest": "^3.1.1"
