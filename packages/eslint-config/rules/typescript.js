@@ -171,5 +171,11 @@ export default [{
      * @see https://typescript-eslint.io/rules/consistent-return
      */
     "@typescript-eslint/consistent-return": ["off"],
+
+    /**
+     * No longer needed as TSC checks this
+     * https://typescript-eslint.io/rules/no-redeclare/
+     */
+    "@typescript-eslint/no-redeclare": ["off"],
   },
 }];
