@@ -3,7 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "bundler",
     "module": "es2022",
-    "target": "es2022",
+    "target": "ES2024",
     "newLine": "lf",
     "jsx": "react-jsx",
 

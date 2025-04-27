@@ -2,8 +2,8 @@
   "compileOnSave": true,
   "compilerOptions": {
     "moduleResolution": "Node16",
-    "module": "Node16",
-    "target": "es2022",
+    "module": "Node18",
+    "target": "ES2024",
     "newLine": "lf",
     "jsx": "react",
 
@@ -13,6 +13,7 @@
 
     "incremental": true,
     "experimentalDecorators": true,
+    "erasableSyntaxOnly": true,
 
     "allowUnreachableCode": false,
     "strict": true,
