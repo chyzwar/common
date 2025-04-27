@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/chyzwar/common/compare/@chyzwar/tsconfig@0.3.2...@chyzwar/tsconfig@0.4.0) (2025-04-27)
+
+### Features
+
+* **tsconfig:** erasableSyntaxOnly as default, and target to 2024 ([e31fb02](https://github.com/chyzwar/common/commit/e31fb029a9587eb0662fe3240d3ff6918d4b89d3)) - by @chyzwar
+
 ## [0.3.2](https://github.com/chyzwar/common/compare/@chyzwar/tsconfig@0.3.1...@chyzwar/tsconfig@0.3.2) (2025-02-05)
 
 **Note:** Version bump only for package @chyzwar/tsconfig

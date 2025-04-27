@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.7.0...@chyzwar/runner@0.7.1) (2025-04-27)
+
+**Note:** Version bump only for package @chyzwar/runner
+
 ## [0.7.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.6.0...@chyzwar/runner@0.7.0) (2025-04-08)
 
 ### Features
