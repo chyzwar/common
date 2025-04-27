@@ -3,9 +3,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "moduleResolution": "node16",
-    "module": "node16",
-    "target": "es2022",
+    "moduleResolution": "nodenext",
+    "module": "Node18",
+    "target": "ES2024",
     "newLine": "lf",
 
     "rootDir": "${configDir}/src",
@@ -14,6 +14,7 @@
 
     "incremental": true,
     "experimentalDecorators": true,
+    "erasableSyntaxOnly": true,
 
     "allowUnreachableCode": false,
     "strict": true,
