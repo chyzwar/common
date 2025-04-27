@@ -31,14 +31,14 @@
     "@lerna-lite/cli": "^4.0.0",
     "@lerna-lite/publish": "^4.0.0",
     "@lerna-lite/version": "^4.0.0",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.15.2",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "eslint": "^9.24.0",
+    "eslint": "^9.25.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn lint:fix"
