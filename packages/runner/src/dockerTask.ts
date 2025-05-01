@@ -165,6 +165,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         }
       });
   }
+
   if (options?.mount) {
     options.mount
       .forEach((value) => {
