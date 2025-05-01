@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.0.19...@chyzwar/sea@1.1.0) (2025-05-01)
+
+### Features
+
+* **runner:** added mounts to docker task ([a405daf](https://github.com/chyzwar/common/commit/a405daf7e6bb9899729402dde184a7d3be489199)) - by @chyzwar
+
 ## [1.0.19](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.0.18...@chyzwar/sea@1.0.19) (2025-04-27)
 
 **Note:** Version bump only for package @chyzwar/sea

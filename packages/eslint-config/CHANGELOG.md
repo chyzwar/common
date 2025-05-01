@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.2.36...@chyzwar/eslint-config@0.3.0) (2025-05-01)
+
+### Features
+
+* **runner:** added mounts to docker task ([a405daf](https://github.com/chyzwar/common/commit/a405daf7e6bb9899729402dde184a7d3be489199)) - by @chyzwar
+
 ## [0.2.36](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.2.35...@chyzwar/eslint-config@0.2.36) (2025-04-27)
 
 **Note:** Version bump only for package @chyzwar/eslint-config

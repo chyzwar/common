@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.7.1...@chyzwar/runner@0.8.0) (2025-05-01)
+
+### Features
+
+* **runner:** added mounts to docker task ([a405daf](https://github.com/chyzwar/common/commit/a405daf7e6bb9899729402dde184a7d3be489199)) - by @chyzwar
+
 ## [0.7.1](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.7.0...@chyzwar/runner@0.7.1) (2025-04-27)
 
 **Note:** Version bump only for package @chyzwar/runner
