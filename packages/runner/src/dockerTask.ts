@@ -5,6 +5,8 @@ import register from "./register.js";
 import Logger from "./Logger.js";
 import SpawnError from "./SpawnError.js";
 
+type BindMountType = "bind";
+
 interface DockerTaskOptions extends SpawnOptions {
   /**
    * Debug mode, print full docker command
@@ -35,6 +37,16 @@ interface DockerTaskOptions extends SpawnOptions {
    * List of volumes to mount in container
    */
   volumes?: `${string}:${string}`[];
+
+  /**
+   * Bind mount a host path to container path
+   */
+  mount?: {
+    type: BindMountType;
+    src: string;
+    dst: string;
+  }[];
+
   /**
    * Type of network
    */
@@ -151,6 +163,12 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
         if (value.includes(":")) {
           args.push(`-v ${value}`);
         }
+      });
+  }
+  if (options?.mount) {
+    options.mount
+      .forEach((value) => {
+        args.push(`--mount type=bind,src=${value.src},dst=${value.dst}`);
       });
   }
 

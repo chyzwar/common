@@ -12,13 +12,13 @@
     "preact": "^10.26.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
+    "@babel/core": "^7.27.1",
     "@chyzwar/eslint-config": "^0.2.2",
-    "@chyzwar/tsconfig": "^0.3.0",
+    "@chyzwar/tsconfig": "^0.4.0",
     "@preact/preset-vite": "^2.10.1",
     "eslint": "^9.25.1",
     "preact": "^10.26.5",
     "typescript": "^5.8.3",
-    "vite": "^6.3.3"
+    "vite": "^6.3.4"
   }
 }
