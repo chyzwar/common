@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
+import { createWriteStream, existsSync, rmSync } from "node:fs";
 import type { SpawnOptions } from "node:child_process";
-
 import register from "./register.js";
 import Logger from "./Logger.js";
 import SpawnError from "./SpawnError.js";
@@ -12,6 +12,11 @@ interface DockerTaskOptions extends SpawnOptions {
    * Debug mode, print full docker command
    */
   debug?: boolean;
+
+  /**
+   * Log stdout and stderr to file
+   */
+  logFile?: string;
 
   /**
    * Automatically remove the container when it exits
@@ -58,7 +63,7 @@ interface DockerTaskOptions extends SpawnOptions {
   user?: string;
 
   /**
-   * Log driver
+   * Docker logg driver
    */
   logDriver?: "json-file" | "syslog" | "journald" | "gelf" | "fluentd" | "awslogs" | "splunk" | "etwlogs" | "gcplogs" | "azurelogs" | "none";
 
@@ -185,46 +190,56 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
     const proc = spawn("docker", args, { shell: true });
 
     return new Promise<void>((resolve, reject) => {
-      proc.stdout.on("data", (data?: Buffer) => {
-        if (data) {
-          data
-            .toString()
-            .split("\n")
-            .filter(s => s !== "")
-            .forEach((line: string) => {
-              logger.info(line);
-            });
+      if (options?.logFile) {
+        if (existsSync(options.logFile)) {
+          rmSync(options.logFile);
         }
-      });
+        const logFile = createWriteStream(options.logFile, { flags: "a" });
+        proc.stdout.pipe(logFile);
+        proc.stderr.pipe(logFile);
+      }
+      else {
+        proc.stdout.on("data", (data?: Buffer) => {
+          if (data) {
+            data
+              .toString()
+              .split("\n")
+              .filter(s => s !== "")
+              .forEach((line: string) => {
+                logger.info(line);
+              });
+          }
+        });
 
-      proc.stderr.on("data", (data?: Buffer) => {
-        if (data) {
-          data
-            .toString()
-            .split("\n")
-            .filter(s => s !== "")
-            .forEach((line: string) => {
-              logger.info(line);
-            });
-        }
-      });
+        proc.stderr.on("data", (data?: Buffer) => {
+          if (data) {
+            data
+              .toString()
+              .split("\n")
+              .filter(s => s !== "")
+              .forEach((line: string) => {
+                logger.info(line);
+              });
+          }
+        });
 
-      proc.on("error", (error) => {
-        logger.error(`Task <${taskName}> failed with:`, error);
-      });
+        proc.on("error", (error) => {
+          logger.error(`Task <${taskName}> failed with:`, error);
+        });
 
-      proc.on("close", (code: number) => {
-        if (code === 0) {
-          logger.timeEnd("Task completed in");
-          resolve();
-        }
-        else {
-          logger.error(`Failed with code: ${code}`);
-          reject(
-            new SpawnError("Docker Task closed with non-zero exit code", code, taskName),
-          );
-        }
-      });
+        proc.on("close", (code: number) => {
+          if (code === 0) {
+            logger.timeEnd("Task completed in");
+            resolve();
+          }
+          else {
+            logger.error(`Failed with code: ${code}`);
+            reject(
+              new SpawnError("Docker Task closed with non-zero exit code", code, taskName),
+            );
+          }
+        });
+      }
     });
   }
 
