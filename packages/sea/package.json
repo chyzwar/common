@@ -1,11 +1,11 @@
 {
   "name": "@chyzwar/sea",
   "version": "1.2.3",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.9.1",
   "bin": "./bin/sea.js",
   "engines": {
     "node": "> 20.x.x",
-    "yarn": "4.x"
+    "yarn": "4.9.1"
   },
   "repository": {
     "type": "git",
