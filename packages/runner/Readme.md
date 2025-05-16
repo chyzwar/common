@@ -1,15 +1,15 @@
-## Runnner
+# @chyzwar/runner
 
 Simple task runner inspired by:
 
 - [just](https://github.com/microsoft/just)
 - [undertaker](https://github.com/gulpjs/undertaker)
 
-### Instalation
+## Installation
 
 yarn add @chyzwar/runner
 
-### Examples
+## Examples
 
 Example of config file runner.config.js
 
