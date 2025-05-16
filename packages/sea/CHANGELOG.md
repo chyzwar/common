@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.1.0...@chyzwar/sea@1.2.0) (2025-05-16)
+
+### Features
+
+* **runner,eslint-config:** added logFile option in runner, eslint update deps ([e5ebf31](https://github.com/chyzwar/common/commit/e5ebf31e258fde7ab14576cf8f3be67a42377856)) - by @chyzwar
+
 ## [1.1.0](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.0.19...@chyzwar/sea@1.1.0) (2025-05-01)
 
 ### Features
