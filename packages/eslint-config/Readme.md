@@ -6,7 +6,7 @@ It support number of sub-presets:
 - node
 - react
 
-## Instalation
+## Installation
 
 ```sh
 yarn add eslint @chyzwar/eslint-config
