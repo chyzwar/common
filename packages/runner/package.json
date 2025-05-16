@@ -1,6 +1,6 @@
 {
   "name": "@chyzwar/runner",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "engines": {
     "node": "> 22.x.x"
   },
@@ -33,7 +33,7 @@
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
-    "@chyzwar/eslint-config": "^0.4.2",
+    "@chyzwar/eslint-config": "^0.4.3",
     "@chyzwar/tsconfig": "^0.4.0",
     "@types/node": "^22.15.18",
     "eslint": "^9.27.0",
