@@ -381,7 +381,7 @@ __metadata:
   dependencies:
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@eslint/js": "npm:^9.27.0"
-    "@stylistic/eslint-plugin": "npm:^4.2.0"
+    "@stylistic/eslint-plugin": "npm:^4.4.0"
     eslint: "npm:^9.27.0"
     eslint-plugin-jest: "npm:^28.11.0"
     globals: "npm:^16.1.0"
@@ -2089,6 +2089,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stylistic/eslint-plugin@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "@stylistic/eslint-plugin@npm:4.4.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.32.1"
+    eslint-visitor-keys: "npm:^4.2.0"
+    espree: "npm:^10.3.0"
+    estraverse: "npm:^5.3.0"
+    picomatch: "npm:^4.0.2"
+  peerDependencies:
+    eslint: ">=9.0.0"
+  checksum: 10c2/411f16e11a955d02a604fee3db8ba5000c2de13737f0fdd53719bc93c73505698889e1089cbf0ac38be6b0fa1eb419fd70de42d04d3cb4830988962cf9ba6f59
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.11
   resolution: "@tsconfig/node10@npm:1.0.11"
@@ -2274,7 +2289,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.32.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.23.0":
+"@typescript-eslint/utils@npm:8.32.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.23.0, @typescript-eslint/utils@npm:^8.32.1":
   version: 8.32.1
   resolution: "@typescript-eslint/utils@npm:8.32.1"
   dependencies:
