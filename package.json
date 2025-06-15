@@ -33,7 +33,7 @@
     "@lerna-lite/version": "^4.1.2",
     "@types/node": "^22.15.18",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "eslint": "^9.27.0",
+    "eslint": "^9.29.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "ts-node": "^10.9.2",
