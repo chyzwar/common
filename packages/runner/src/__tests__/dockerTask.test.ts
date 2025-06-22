@@ -46,7 +46,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--rm", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--rm", "hello-world"]);
   });
 
   it("should append --interactive if interactive:true", async () => {
@@ -55,7 +55,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--interactive", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--interactive", "hello-world"]);
   });
 
   it("should append --name if name is provided", async () => {
@@ -64,7 +64,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--name MyHello", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--name", "MyHello", "hello-world"]);
   });
 
   it("should append env variables", async () => {
@@ -77,7 +77,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-e test1=test-value1", "-e test3=test-value3", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-e", "test1=test-value1", "-e", "test3=test-value3", "hello-world"]);
   });
 
   it("should append ports variables", async () => {
@@ -89,7 +89,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-p 3000:3000", "-p 3001:3001", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-p", "3000:3000", "-p", "3001:3001", "hello-world"]);
   });
 
   it("should append volumes variables", async () => {
@@ -100,7 +100,7 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-v ./Caddyfile:/etc/caddy/Caddyfile", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "-v", "./Caddyfile:/etc/caddy/Caddyfile", "hello-world"]);
   });
 
   it("should support network option", async () => {
@@ -109,6 +109,6 @@ describe("dockerTask", () => {
     });
     await register.get("hello")?.();
 
-    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--network=host", "hello-world"], { shell: true });
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--network=host", "hello-world"]);
   });
 });
