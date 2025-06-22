@@ -110,27 +110,27 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
   }
 
   if (options?.user) {
-    args.push(`--user ${options.user}`);
+    args.push(`--user`, options.user);
   }
 
   if (options?.name) {
-    args.push(`--name ${options.name}`);
+    args.push(`--name`, options.name);
   }
 
   if (options?.logDriver) {
-    args.push(`--log-driver ${options.logDriver}`);
+    args.push(`--log-driver`, options.logDriver);
   }
 
   if (typeof options?.memory === "number") {
-    args.push(`--memory ${options.memory}`);
+    args.push(`--memory`, options.memory.toString());
   }
 
   if (typeof options?.memorySwap === "number") {
-    args.push(`--memory-swap ${options.memorySwap}`);
+    args.push(`--memory-swap`, options.memorySwap.toString());
   }
 
   if (typeof options?.memorySwappiness === "number") {
-    args.push(`--memory-swappiness ${options.memorySwappiness}`);
+    args.push(`--memory-swappiness`, options.memorySwappiness.toString());
   }
 
   if (options?.logDriverOptions) {
@@ -148,7 +148,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       .entries(options.env)
       .forEach(([key, value]) => {
         if (value) {
-          args.push(`-e ${key}=${value}`);
+          args.push(`-e`, `${key}=${value}`);
         }
       });
   }
@@ -157,7 +157,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
     options.ports
       .forEach((value) => {
         if (value.includes(":")) {
-          args.push(`-p ${value}`);
+          args.push(`-p`, value);
         }
       });
   }
@@ -166,7 +166,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
     options.volumes
       .forEach((value) => {
         if (value.includes(":")) {
-          args.push(`-v ${value}`);
+          args.push(`-v`, value);
         }
       });
   }
@@ -174,7 +174,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
   if (options?.mount) {
     options.mount
       .forEach((value) => {
-        args.push(`--mount type=bind,src=${value.src},dst=${value.dst}`);
+        args.push(`--mount`, `type=bind,src=${value.src},dst=${value.dst}`);
       });
   }
 
@@ -187,7 +187,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       logger.info(`docker ${args.join(" ")}`);
     }
     logger.time("Task completed in");
-    const proc = spawn("docker", args, { shell: true });
+    const proc = spawn("docker", args);
 
     return new Promise<void>((resolve, reject) => {
       if (options?.logFile) {
