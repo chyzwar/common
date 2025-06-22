@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.9.3...@chyzwar/runner@0.9.4) (2025-06-22)
+
+### Bug Fixes
+
+* **runner:** fix shell: true warning ([2143c8c](https://github.com/chyzwar/common/commit/2143c8cb4b8066e4939dc86330d16dc3cf0f926c)) - by @chyzwar
+
 ## [0.9.3](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.9.2...@chyzwar/runner@0.9.3) (2025-05-16)
 
 **Note:** Version bump only for package @chyzwar/runner

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.2.3...@chyzwar/sea@1.3.0) (2025-06-22)
+
+### Features
+
+* **biome-config:** upgrade to v2 ([403903e](https://github.com/chyzwar/common/commit/403903e30c23fc999b4e21796f530d9fa2cc4dc2)) - by @chyzwar
+
 ## [1.2.3](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.2.2...@chyzwar/sea@1.2.3) (2025-05-16)
 
 **Note:** Version bump only for package @chyzwar/sea

@@ -358,7 +358,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.4.3, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@chyzwar/eslint-config@npm:0.4.3"
+  dependencies:
+    "@eslint/js": "npm:^9.27.0"
+    "@stylistic/eslint-plugin": "npm:^4.2.0"
+    eslint-plugin-jest: "npm:^28.11.0"
+    globals: "npm:^16.1.0"
+    typescript-eslint: "npm:^8.32.1"
+  peerDependencies:
+    eslint: ^9.2.0
+    typescript: ^5.8.3
+  checksum: 10c2/fd1fbd217380be0292109f250e542c4684263d767eec5900bb2a3c8e5dbaaa3c3d278b96a829939e76318574229f546c2ba5f3015eb1171f57d3d7db9736b4a5
+  languageName: node
+  linkType: hard
+
+"@chyzwar/eslint-config@npm:^0.5.0, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
@@ -419,7 +435,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.4.3"
+    "@chyzwar/eslint-config": "npm:^0.5.0"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.0.3"
     eslint: "npm:^9.29.0"
@@ -437,7 +453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.4.3"
+    "@chyzwar/eslint-config": "npm:^0.5.0"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.0.3"
     eslint: "npm:^9.29.0"
@@ -911,7 +927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.29.0, @eslint/js@npm:^9.29.0":
+"@eslint/js@npm:9.29.0, @eslint/js@npm:^9.27.0, @eslint/js@npm:^9.29.0":
   version: 9.29.0
   resolution: "@eslint/js@npm:9.29.0"
   checksum: 10c2/ad1f148144cc039da5f63d3ab4d97f9291630a35e6d7f850e6edb54768d9012aea6915b11c1aa7aa096879da81d05ec28c008cd27c7ef674ef5e78cc27f5cd15
@@ -2053,7 +2069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:^4.4.1":
+"@stylistic/eslint-plugin@npm:^4.2.0, @stylistic/eslint-plugin@npm:^4.4.1":
   version: 4.4.1
   resolution: "@stylistic/eslint-plugin@npm:4.4.1"
   dependencies:
@@ -2295,7 +2311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.34.1, @typescript-eslint/utils@npm:^8.0.0, @typescript-eslint/utils@npm:^8.32.1":
+"@typescript-eslint/utils@npm:8.34.1, @typescript-eslint/utils@npm:^6.0.0 || ^7.0.0 || ^8.0.0, @typescript-eslint/utils@npm:^8.0.0, @typescript-eslint/utils@npm:^8.32.1":
   version: 8.34.1
   resolution: "@typescript-eslint/utils@npm:8.34.1"
   dependencies:
@@ -3583,6 +3599,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-jest@npm:^28.11.0":
+  version: 28.14.0
+  resolution: "eslint-plugin-jest@npm:28.14.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^6.0.0 || ^7.0.0 || ^8.0.0"
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^6.0.0 || ^7.0.0 || ^8.0.0
+    eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+    jest: "*"
+  peerDependenciesMeta:
+    "@typescript-eslint/eslint-plugin":
+      optional: true
+    jest:
+      optional: true
+  checksum: 10c2/e8446f69b8a1936537aab4409be0056c3e5131e30b4147a817eb147a5602b93467402a8611f6313c8493aae291169089040f41d46fcd9595a4def5cfec1fc859
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-jest@npm:^29.0.1":
   version: 29.0.1
   resolution: "eslint-plugin-jest@npm:29.0.1"
@@ -4199,7 +4233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.2.0":
+"globals@npm:^16.1.0, globals@npm:^16.2.0":
   version: 16.2.0
   resolution: "globals@npm:16.2.0"
   checksum: 10c2/b7d37d79f9f114d4e888664a48a4ad1fc8d2a8d0cf8a77a83ad1b0f395f3935fb138f177a41705ddcd1d6fd8175fc883e03d6405c13810fe2120650dd194171a
@@ -6910,7 +6944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.34.1":
+"typescript-eslint@npm:^8.32.1, typescript-eslint@npm:^8.34.1":
   version: 8.34.1
   resolution: "typescript-eslint@npm:8.34.1"
   dependencies:
