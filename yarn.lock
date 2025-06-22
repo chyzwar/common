@@ -333,7 +333,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:^2.0.4"
   peerDependencies:
-    "@biomejs/biome": ^1.0.0
+    "@biomejs/biome": ^2.0.0
   languageName: unknown
   linkType: soft
 
