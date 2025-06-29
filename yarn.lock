@@ -380,7 +380,7 @@ __metadata:
   dependencies:
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@eslint/js": "npm:^9.29.0"
-    "@stylistic/eslint-plugin": "npm:^4.4.1"
+    "@stylistic/eslint-plugin": "npm:^5.1.0"
     eslint: "npm:^9.29.0"
     eslint-plugin-jest: "npm:^29.0.1"
     globals: "npm:^16.2.0"
@@ -2069,7 +2069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:^4.2.0, @stylistic/eslint-plugin@npm:^4.4.1":
+"@stylistic/eslint-plugin@npm:^4.2.0":
   version: 4.4.1
   resolution: "@stylistic/eslint-plugin@npm:4.4.1"
   dependencies:
@@ -2081,6 +2081,22 @@ __metadata:
   peerDependencies:
     eslint: ">=9.0.0"
   checksum: 10c2/783c23ebd8a50430c7263b5c0100a1020b31e9ac96941104332d863714e81fcba516aba967eb9cd752f366f38a8a60c20b1b99043ee6d2fb2da680d4784b37ce
+  languageName: node
+  linkType: hard
+
+"@stylistic/eslint-plugin@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@stylistic/eslint-plugin@npm:5.1.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.7.0"
+    "@typescript-eslint/types": "npm:^8.34.1"
+    eslint-visitor-keys: "npm:^4.2.1"
+    espree: "npm:^10.4.0"
+    estraverse: "npm:^5.3.0"
+    picomatch: "npm:^4.0.2"
+  peerDependencies:
+    eslint: ">=9.0.0"
+  checksum: 10c2/75e2fdab0ef8becd3597a6254d301e48e6c2ba9ca6ae896b883c6dc6256443fc15b76f1625224d899f9785a5d80fd063d5a51422ad5d05fb008f51ee70314a68
   languageName: node
   linkType: hard
 
