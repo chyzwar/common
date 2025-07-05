@@ -383,7 +383,7 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:^4.4.1"
     eslint: "npm:^9.29.0"
     eslint-plugin-jest: "npm:^29.0.1"
-    globals: "npm:^16.2.0"
+    globals: "npm:^16.3.0"
     typescript: "npm:^5.8.3"
     typescript-eslint: "npm:^8.34.1"
   peerDependencies:
@@ -4233,10 +4233,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.1.0, globals@npm:^16.2.0":
+"globals@npm:^16.1.0":
   version: 16.2.0
   resolution: "globals@npm:16.2.0"
   checksum: 10c2/b7d37d79f9f114d4e888664a48a4ad1fc8d2a8d0cf8a77a83ad1b0f395f3935fb138f177a41705ddcd1d6fd8175fc883e03d6405c13810fe2120650dd194171a
+  languageName: node
+  linkType: hard
+
+"globals@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "globals@npm:16.3.0"
+  checksum: 10c2/83628f8857f3e39db8fa5a380e948a7108319f4460cb15e9a973612701c509b143a9de08b848fca017ecb116c6a5704e7f4d6cc41498224944a0015820b32106
   languageName: node
   linkType: hard
 
