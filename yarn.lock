@@ -380,7 +380,7 @@ __metadata:
   dependencies:
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@eslint/js": "npm:^9.29.0"
-    "@stylistic/eslint-plugin": "npm:^4.4.1"
+    "@stylistic/eslint-plugin": "npm:^5.2.2"
     eslint: "npm:^9.29.0"
     eslint-plugin-jest: "npm:^29.0.1"
     globals: "npm:^16.2.0"
@@ -2069,7 +2069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stylistic/eslint-plugin@npm:^4.2.0, @stylistic/eslint-plugin@npm:^4.4.1":
+"@stylistic/eslint-plugin@npm:^4.2.0":
   version: 4.4.1
   resolution: "@stylistic/eslint-plugin@npm:4.4.1"
   dependencies:
@@ -2081,6 +2081,22 @@ __metadata:
   peerDependencies:
     eslint: ">=9.0.0"
   checksum: 10c2/783c23ebd8a50430c7263b5c0100a1020b31e9ac96941104332d863714e81fcba516aba967eb9cd752f366f38a8a60c20b1b99043ee6d2fb2da680d4784b37ce
+  languageName: node
+  linkType: hard
+
+"@stylistic/eslint-plugin@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "@stylistic/eslint-plugin@npm:5.2.2"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.7.0"
+    "@typescript-eslint/types": "npm:^8.37.0"
+    eslint-visitor-keys: "npm:^4.2.1"
+    espree: "npm:^10.4.0"
+    estraverse: "npm:^5.3.0"
+    picomatch: "npm:^4.0.3"
+  peerDependencies:
+    eslint: ">=9.0.0"
+  checksum: 10c2/7a4271aa4299d2a8818c622796b6b808faf7207ba635c1959e6ae374a409fc6f609dadfeb634bbabbcb005b640dae92b48c931ee89a49dd0e361aeb4ddf31696
   languageName: node
   linkType: hard
 
@@ -2288,6 +2304,13 @@ __metadata:
   version: 8.34.1
   resolution: "@typescript-eslint/types@npm:8.34.1"
   checksum: 10c2/030674239107684b19d46b9e973289487234f133b643db6cf23a05c72746eb43403a89f73127368e8bcbef839452adfd47341dda4d2fe5214b57ef02b467302c
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:^8.37.0":
+  version: 8.38.0
+  resolution: "@typescript-eslint/types@npm:8.38.0"
+  checksum: 10c2/6ce5075985d302d80080d612228f0e81cb9a55af8f0e0cbf64a964f9d81706c6499ac22a4e55a1e3d346e3c55166ac615bcfda4ec88e9e3f98f8c709c3c3b214
   languageName: node
   linkType: hard
 
@@ -5886,6 +5909,13 @@ __metadata:
   version: 4.0.2
   resolution: "picomatch@npm:4.0.2"
   checksum: 10c2/cfcdbe1795e49c56f87b51c8a28dec791a4bb0e7732142465876975ef868ba4a91d314e91c1521793b0e3e514b535da2ba2d85017f12772766a04121cb9d2e8b
+  languageName: node
+  linkType: hard
+
+"picomatch@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "picomatch@npm:4.0.3"
+  checksum: 10c2/98b62d8e9916d6a72aed7ef20fc0883f4423a1c8a55e2dcbc6b64ded13173828432a9cf8ffdadadd2c0360d083ee93fbbe1e6cdede5fb5e10554d96c19d843ca
   languageName: node
   linkType: hard
 
