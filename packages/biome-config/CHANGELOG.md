@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/chyzwar/common/compare/@chyzwar/biome-config@0.3.0...@chyzwar/biome-config@0.4.0) (2025-08-21)
+
+### Features
+
+* **eslint-config,runner,biome-config:** upgrade stylistic, update deps packages ([32c2944](https://github.com/chyzwar/common/commit/32c2944cdbf5e60b6352d433c016950c54509aff)) - by @chyzwar
+
 ## [0.3.0](https://github.com/chyzwar/common/compare/@chyzwar/biome-config@0.2.31...@chyzwar/biome-config@0.3.0) (2025-06-22)
 
 ### Features
