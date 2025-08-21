@@ -24,7 +24,7 @@
     "./lib": "./lib.json"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.4"
+    "@biomejs/biome": "^2.2.0"
   },
   "peerDependencies": {
     "@biomejs/biome": "^2.0.0"
