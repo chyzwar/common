@@ -6,7 +6,7 @@
   "license": "MIT",
   "engines": {
     "node": "20.x",
-    "yarn": "4.x"
+    "yarn": "4.9.3"
   },
   "repository": {
     "type": "git",
