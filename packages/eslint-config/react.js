@@ -1,10 +1,10 @@
 import eslint from "@eslint/js";
 import tsEslint from "typescript-eslint";
 import typescript from "./rules/typescript.js";
-import stylistic from "@stylistic/eslint-plugin";
 import jest from "./rules/jest.js";
 import esm from "./rules/esm.js";
 import globals from "globals";
+import stylistic from "./rules/stylistic.js";
 
 export default tsEslint.config(
   eslint.configs.recommended,
@@ -13,12 +13,7 @@ export default tsEslint.config(
   ...typescript,
   ...jest,
   ...esm,
-  stylistic.configs.customize({
-    indent: 2,
-    quotes: "double",
-    semi: true,
-    jsx: true,
-  }),
+  ...stylistic,
   {
     files: [
       "**/*.js",
