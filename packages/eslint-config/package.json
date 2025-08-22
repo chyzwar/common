@@ -24,7 +24,7 @@
     "./react": "./react.js"
   },
   "dependencies": {
-    "@eslint/js": "^9.33.0",
+    "@eslint/js": "^9.34.0",
     "@stylistic/eslint-plugin": "^5.2.3",
     "eslint-plugin-jest": "^29.0.1",
     "globals": "^16.3.0",
@@ -32,11 +32,11 @@
   },
   "devDependencies": {
     "@chyzwar/tsconfig": "^0.4.0",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "eslint": "^9.2.0",
+    "eslint": "^9.34.0",
     "typescript": "^5.8.3"
   }
 }
