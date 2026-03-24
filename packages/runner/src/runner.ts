@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-base-to-string */
 
 import { series } from "./series.js";
 import Logger from "./Logger.js";

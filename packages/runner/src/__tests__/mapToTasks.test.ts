@@ -15,6 +15,6 @@ describe("mapToTasks", () => {
 
   it("should throw if task is not registered", () => {
     expect(() => mapToTasks(["test-missing1", "test-missing2"]))
-      .toThrowError(new Error("Missing tasks definition for: test-missing1"));
+      .toThrow(new Error("Missing tasks definition for: test-missing1"));
   });
 });

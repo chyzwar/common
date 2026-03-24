@@ -3,7 +3,10 @@
   "compilerOptions": {
     "outDir": "bin",
     "rootDir": "src",
-    "tsBuildInfoFile": "buildInfo.json"
+    "tsBuildInfoFile": "buildInfo.json",
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "src/**/*"
