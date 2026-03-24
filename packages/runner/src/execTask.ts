@@ -7,7 +7,7 @@ import register from "./register.js";
 import Logger from "./Logger.js";
 
 /**
- * Create task to exec process
+ * Create task to exec process and log output
  * @param task task name
  * @param command command to spawn
  * @param options spawn option
