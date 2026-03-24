@@ -3,7 +3,7 @@
 
 import { series } from "./series.js";
 import Logger from "./Logger.js";
-import { argv, cwd } from "node:process";
+import process, { argv, cwd } from "node:process";
 import SpawnError from "./SpawnError.js";
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 
@@ -68,10 +68,12 @@ async function handle(args: string[]): Promise<void> {
  */
 process.on("uncaughtException", (error) => {
   logger.error("uncaughtException", error);
+  process.exit(1);
 });
 
 process.on("unhandledRejection", (signal) => {
   logger.error("unhandledRejection", signal);
+  process.exit(1);
 });
 
 const tasks = argv.slice(2, 3);
@@ -89,4 +91,5 @@ handle(tasks)
     if (error instanceof Error) {
       logger.error(`Failed with error: ${error}`);
     }
+    process.exit(1);
   });
