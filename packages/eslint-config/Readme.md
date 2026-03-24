@@ -1,26 +1,66 @@
 # @chyzwar/eslint-config
 
-Strict preset for eslint. Intention is to include plugin dependencies and make it easy manage configs in one place.
-It support number of sub-presets:
+Strict ESLint configuration preset for TypeScript projects. Bundles plugin dependencies and manages configs in one place.
 
-- node
-- react
+## Presets
+
+- `@chyzwar/eslint-config/node` - Node.js applications
+- `@chyzwar/eslint-config/react` - React applications
+
+Both presets include:
+
+- ESLint recommended rules
+- TypeScript strict type-checked rules (`typescript-eslint`)
+- Stylistic rules (`@stylistic/eslint-plugin`) - double quotes, semicolons
+- Jest rules (`eslint-plugin-jest`)
+- ESM enforcement (no `require`)
+- Auto-disabled type checking for JS and common config files (drizzle, runner, vite, vitest)
 
 ## Installation
 
 ```sh
-yarn add eslint @chyzwar/eslint-config
+yarn add -D eslint @chyzwar/eslint-config
 ```
 
-## Examples
+### Peer Dependencies
 
-Example of usage in eslint.cjs
+- `eslint@^10.0.0`
+- `typescript@^6.0.0`
+
+## Usage
+
+### Node.js
 
 ```js
-module.exports = {
-  extends: "@chyzwar/eslint-config/node",
-  parserOptions: {
-    tsconfigRootDir: __dirname,
+// eslint.config.js
+import node from "@chyzwar/eslint-config/node";
+
+export default [
+  ...node,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
   },
-};
+];
+```
+
+### React
+
+```js
+// eslint.config.js
+import react from "@chyzwar/eslint-config/react";
+
+export default [
+  ...react,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+];
 ```
