@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.10.0...@chyzwar/runner@0.10.1) (2026-03-24)
+
+### Bug Fixes
+
+* **runner:** import process from node:process to fix test mocking ([eb7c9d5](https://github.com/chyzwar/common/commit/eb7c9d5a7da9074c988bd959663df38c36dd6a6f)) - by @chyzwar
+
 ## [0.10.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.9.4...@chyzwar/runner@0.10.0) (2025-08-21)
 
 ### Features
