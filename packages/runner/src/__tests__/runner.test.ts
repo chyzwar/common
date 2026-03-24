@@ -5,13 +5,21 @@ import { fileURLToPath } from "node:url";
 vi.mock("node:process", () => {
   const currentDir = dirname(fileURLToPath(import.meta.url));
 
-  return {
+  const mock = {
     cwd: (): string => resolve(currentDir, "../__fixtures__"),
     argv: [
       "node",
       "runner",
       "test",
     ],
+    title: "runner",
+    on: vi.fn(),
+    exit: vi.fn(),
+  };
+
+  return {
+    ...mock,
+    default: mock,
   };
 });
 
