@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import { copyFileSync, mkdirSync, rmSync, writeFileSync } from "fs";
 import { dirname } from "path";
-import { argv, execPath } from "process";
+import { argv, execPath } from "node:process";
 
 const [main, output] = argv.slice(2);
 

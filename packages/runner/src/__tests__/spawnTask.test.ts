@@ -21,7 +21,7 @@ describe("spawnTask", () => {
 
     const task = register.get("invalid");
 
-    await expect(task?.()).rejects.toThrowError(
+    await expect(task?.()).rejects.toThrow(
       new SpawnError("Spawn Task closed with non-zero exit code", -2, "invalid"),
     );
   });
