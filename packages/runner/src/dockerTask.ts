@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import { createWriteStream, existsSync, rmSync } from "node:fs";
+import process from "node:process";
 import type { SpawnOptions } from "node:child_process";
 import register from "./register.js";
 import Logger from "./Logger.js";
@@ -190,6 +191,23 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
     const proc = spawn("docker", args);
 
     return new Promise<void>((resolve, reject) => {
+      let forceKillTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
+
+      const killProc = (): void => {
+        if (!proc.killed) {
+          proc.kill("SIGTERM");
+
+          forceKillTimeout = setTimeout(() => {
+            if (!proc.killed) {
+              proc.kill("SIGKILL");
+            }
+          }, 5000);
+        }
+      };
+
+      process.on("SIGINT", killProc);
+      process.on("SIGTERM", killProc);
+
       if (options?.logFile) {
         if (existsSync(options.logFile)) {
           rmSync(options.logFile);
@@ -222,24 +240,28 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
               });
           }
         });
-
-        proc.on("error", (error) => {
-          logger.error(`Task <${taskName}> failed with:`, error);
-        });
-
-        proc.on("close", (code: number) => {
-          if (code === 0) {
-            logger.timeEnd("Task completed in");
-            resolve();
-          }
-          else {
-            logger.error(`Failed with code: ${code}`);
-            reject(
-              new SpawnError("Docker Task closed with non-zero exit code", code, taskName),
-            );
-          }
-        });
       }
+
+      proc.on("error", (error) => {
+        logger.error(`Task <${taskName}> failed with:`, error);
+      });
+
+      proc.on("close", (code: number | null) => {
+        clearTimeout(forceKillTimeout);
+        process.off("SIGINT", killProc);
+        process.off("SIGTERM", killProc);
+
+        if (code === 0 || code === null) {
+          logger.timeEnd("Task completed in");
+          resolve();
+        }
+        else {
+          logger.error(`Failed with code: ${code}`);
+          reject(
+            new SpawnError("Docker Task closed with non-zero exit code", code, taskName),
+          );
+        }
+      });
     });
   }
 
