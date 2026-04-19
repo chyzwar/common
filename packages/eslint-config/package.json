@@ -32,11 +32,11 @@
   },
   "devDependencies": {
     "@chyzwar/tsconfig": "^0.4.0",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "typescript": "^6.0.2"
   },
   "peerDependencies": {
-    "eslint": "^10.0.0",
+    "eslint": "^10.2.1",
     "typescript": "^6.0.0"
   }
 }
