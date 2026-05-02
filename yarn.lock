@@ -339,8 +339,8 @@ __metadata:
   resolution: "@chyzwar/common@workspace:."
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.6.0"
-    "@commitlint/cli": "npm:^20.5.0"
-    "@commitlint/config-conventional": "npm:^20.5.0"
+    "@commitlint/cli": "npm:^20.5.3"
+    "@commitlint/config-conventional": "npm:^20.5.3"
     "@lerna-lite/cli": "npm:^5.0.0"
     "@lerna-lite/publish": "npm:^5.0.0"
     "@lerna-lite/version": "npm:^5.0.0"
@@ -452,30 +452,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@commitlint/cli@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/cli@npm:20.5.0"
+"@commitlint/cli@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/cli@npm:20.5.3"
   dependencies:
     "@commitlint/format": "npm:^20.5.0"
-    "@commitlint/lint": "npm:^20.5.0"
-    "@commitlint/load": "npm:^20.5.0"
+    "@commitlint/lint": "npm:^20.5.3"
+    "@commitlint/load": "npm:^20.5.3"
     "@commitlint/read": "npm:^20.5.0"
     "@commitlint/types": "npm:^20.5.0"
     tinyexec: "npm:^1.0.0"
     yargs: "npm:^17.0.0"
   bin:
     commitlint: ./cli.js
-  checksum: 10c2/a56b81b6dbf0b4d1cda93ad462101b14afc9c0c73eddd69c9e774fe647b4ac1f61aadd9b28a3bf1990f2ea3a13f3611ed859bfd9b72d58fe05d297698226f02c
+  checksum: 10c2/f4f7e9ce5de1333eae59000c0b7fa1908297a3921cdabf1135b0dd7567b8d4e111abbb25f5591da8230329a903469e698d16953f657d286701c5c08449de4c93
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/config-conventional@npm:20.5.0"
+"@commitlint/config-conventional@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/config-conventional@npm:20.5.3"
   dependencies:
     "@commitlint/types": "npm:^20.5.0"
     conventional-changelog-conventionalcommits: "npm:^9.2.0"
-  checksum: 10c2/edf7968c3e8ae2d852db3b3ca490d30c44c33a79da9f9e9622f935533c200fd09b1ad214b4162490ba1e1ea6032aa2952a78b3e5dde5ef743837cd86ddbd2c34
+  checksum: 10c2/09915ba34ff426906db0e9e698bda0b5df755be120ec15a3a3c1c3f383f07cbfc58c020b67ac479266e03a3cba65a447927e3da745e6a1fecc2b1592d5625d61
   languageName: node
   linkType: hard
 
@@ -489,17 +489,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/ensure@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/ensure@npm:20.5.0"
+"@commitlint/ensure@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/ensure@npm:20.5.3"
   dependencies:
     "@commitlint/types": "npm:^20.5.0"
-    lodash.camelcase: "npm:^4.3.0"
-    lodash.kebabcase: "npm:^4.1.1"
-    lodash.snakecase: "npm:^4.1.1"
-    lodash.startcase: "npm:^4.4.0"
-    lodash.upperfirst: "npm:^4.3.1"
-  checksum: 10c2/7288d7b381a4b169bb196f06c618cef279df3045817d2c6e4f3ed090f28f73ab8ad0c82d10bd8d692b418219fdc128b4dbc19ae477f87c86c755dc8176bcc40c
+    es-toolkit: "npm:^1.46.0"
+  checksum: 10c2/76b780a45df2b3902fcaf8cdccb313cf4499b611dde24aa8a189af0512f63bf8b203c53625959e0de2829f889986151b4741995289aa4190586c7ecc4ef75f2a
   languageName: node
   linkType: hard
 
@@ -530,32 +526,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/lint@npm:20.5.0"
+"@commitlint/lint@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/lint@npm:20.5.3"
   dependencies:
     "@commitlint/is-ignored": "npm:^20.5.0"
     "@commitlint/parse": "npm:^20.5.0"
-    "@commitlint/rules": "npm:^20.5.0"
+    "@commitlint/rules": "npm:^20.5.3"
     "@commitlint/types": "npm:^20.5.0"
-  checksum: 10c2/38b7b98927ca0b7bd01b674798192fcbb94b001d433607340d9508ad02f521765687d515146dc82ffa29ead50daa0109ad8ad11f5e8859dd30db2ea84c236e03
+  checksum: 10c2/a98911a814074606d108a755612d2b9d625622b815c222e303d93de6b48a5e4a4e4eb99aaae74bf4817d81fc984eab8e6df68417540cae4d64f1a0dec806c5d8
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/load@npm:20.5.0"
+"@commitlint/load@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/load@npm:20.5.3"
   dependencies:
     "@commitlint/config-validator": "npm:^20.5.0"
     "@commitlint/execute-rule": "npm:^20.0.0"
-    "@commitlint/resolve-extends": "npm:^20.5.0"
+    "@commitlint/resolve-extends": "npm:^20.5.3"
     "@commitlint/types": "npm:^20.5.0"
     cosmiconfig: "npm:^9.0.1"
     cosmiconfig-typescript-loader: "npm:^6.1.0"
+    es-toolkit: "npm:^1.46.0"
     is-plain-obj: "npm:^4.1.0"
-    lodash.mergewith: "npm:^4.6.2"
     picocolors: "npm:^1.1.1"
-  checksum: 10c2/ad8ae1bc4f0403e68679a03939eb67db53cc26b8941f5058481dd8e7ce15060801bab03c8049321cda6aa2c53e4f59a6183bc90ef73b3ac1042b956ec7e64da6
+  checksum: 10c2/5a0dbfb2ed2534f6e3fa7b2347c7bb942143cd4eb9a82d770bcdef44d1f5aeebc470afa699d721f187793eb8676e60ca8ff99f8fbf01239844084c6a02cd8eaa
   languageName: node
   linkType: hard
 
@@ -590,29 +586,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/resolve-extends@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/resolve-extends@npm:20.5.0"
+"@commitlint/resolve-extends@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/resolve-extends@npm:20.5.3"
   dependencies:
     "@commitlint/config-validator": "npm:^20.5.0"
     "@commitlint/types": "npm:^20.5.0"
-    global-directory: "npm:^4.0.1"
+    es-toolkit: "npm:^1.46.0"
+    global-directory: "npm:^5.0.0"
     import-meta-resolve: "npm:^4.0.0"
-    lodash.mergewith: "npm:^4.6.2"
     resolve-from: "npm:^5.0.0"
-  checksum: 10c2/11a185e0c3b7f9b20e0f37e3ed7e4b712a2d0e803ee5c7cd005261334638b048ce6ba6f3c7f93051e03d504ff0416ac54d82f670d59c21fe1ab6b60da7f56c1c
+  checksum: 10c2/796a12f4cf9923d7b289d65e8ee504e5e4e87f904885618132a21e58dd2bf3a3353ae0d0e2a36df68d1896e345a29b6a243ffc507182602a071c39bd11afb1fd
   languageName: node
   linkType: hard
 
-"@commitlint/rules@npm:^20.5.0":
-  version: 20.5.0
-  resolution: "@commitlint/rules@npm:20.5.0"
+"@commitlint/rules@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "@commitlint/rules@npm:20.5.3"
   dependencies:
-    "@commitlint/ensure": "npm:^20.5.0"
+    "@commitlint/ensure": "npm:^20.5.3"
     "@commitlint/message": "npm:^20.4.3"
     "@commitlint/to-lines": "npm:^20.0.0"
     "@commitlint/types": "npm:^20.5.0"
-  checksum: 10c2/bd846ea25f811ceae34cbdf17d8565902215708cd7c9ea43e634fd0da8449d3ba14220ed528147a902f391c20c5a7291381e2fa40ad39ea221cdc575acebc0ec
+  checksum: 10c2/66e3ee69767fec7615b222a8f741843ed8e00b1520d606e7f0f1bf2c5e5df814e648c836e81aa8b245bbd14da71b16feaa718dad6eefe9edce15789b26cdb231
   languageName: node
   linkType: hard
 
@@ -3244,6 +3240,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"es-toolkit@npm:^1.46.0":
+  version: 1.46.1
+  resolution: "es-toolkit@npm:1.46.1"
+  dependenciesMeta:
+    "@trivago/prettier-plugin-sort-imports@4.3.0":
+      unplugged: true
+    prettier-plugin-sort-re-exports@0.0.1:
+      unplugged: true
+  checksum: 10c2/4f642b34ca67f145932da7b16c9e0c0a27ea6f07a80c09999e5f80f49d47312fb0276d5579b914990070d42e6c2c2154e01556d5e97b6d6cfebace48bcdba783
+  languageName: node
+  linkType: hard
+
 "escalade@npm:^3.1.1, escalade@npm:^3.1.2, escalade@npm:^3.2.0":
   version: 3.2.0
   resolution: "escalade@npm:3.2.0"
@@ -3841,12 +3849,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"global-directory@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "global-directory@npm:4.0.1"
+"global-directory@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "global-directory@npm:5.0.0"
   dependencies:
-    ini: "npm:4.1.1"
-  checksum: 10c2/afd88b21401c29499b25f33adf4afd15d3dd861460a9ddff11fa7e4eddba8954f3015ff88e946128882d12c498c9af258d8ad735560c58540b6a60eec5258c2c
+    ini: "npm:6.0.0"
+  checksum: 10c2/32a05deee74ff880e41970da193a0d218e725d10836a1e6fab4b43425c642eddadf061e6d55360ebcbf335abe07b41aaae52b2527ad7c51b097d7d147c950a89
   languageName: node
   linkType: hard
 
@@ -4041,14 +4049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:4.1.1":
-  version: 4.1.1
-  resolution: "ini@npm:4.1.1"
-  checksum: 10c2/f26a6ed7a1b364052ad654aa6c8eaa473808dba3b70ead81b7adaad56638cbf4045b7c2a76f551d6bf0c02a0d93db9439cbcfc9a33150e180cd11b7d50faa774
-  languageName: node
-  linkType: hard
-
-"ini@npm:^6.0.0":
+"ini@npm:6.0.0, ini@npm:^6.0.0":
   version: 6.0.0
   resolution: "ini@npm:6.0.0"
   checksum: 10c2/c85685c1537c2d57f324a8584d54780a7832a35ab93c33ec6314cdc28b43b727ad7d628cded01d5a61a19b3078298fcdf2926a3eafa78c8f6e0902772020ac1c
@@ -4575,48 +4576,6 @@ __metadata:
   dependencies:
     p-locate: "npm:^5.0.0"
   checksum: 10c2/add2ac106b792e1653e7b75d7bc788a14e5605353f88a22bd29076f5553500597db65bfb2b6a4790ee927b0222fddfdcd26168a2c00a3b0eaf9c01c5e3a09d78
-  languageName: node
-  linkType: hard
-
-"lodash.camelcase@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "lodash.camelcase@npm:4.3.0"
-  checksum: 10c2/c4a9f264e44d75732fe41f73f6198da7c976181c11bbab91fafa982fd4c8150cc726b67ab189b569b92574bec767e76e69e60c354f74254210b4c231e2521f38
-  languageName: node
-  linkType: hard
-
-"lodash.kebabcase@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "lodash.kebabcase@npm:4.1.1"
-  checksum: 10c2/d63e08f7737f47870522fa79989938a5fbbe81e9608a5c582b31740f710c2cd3083e95a2fc35fc3c5c593369b90de4ae77bec06be0e6e295f64306166252d77b
-  languageName: node
-  linkType: hard
-
-"lodash.mergewith@npm:^4.6.2":
-  version: 4.6.2
-  resolution: "lodash.mergewith@npm:4.6.2"
-  checksum: 10c2/70e157a68d96b730c93ab9f4258046e8ac42c03ada55a6666fc2230ce8697dd169f7614e23a32d98e390138fe6dcb788117e730aca5c7b59f890f73554920b1f
-  languageName: node
-  linkType: hard
-
-"lodash.snakecase@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "lodash.snakecase@npm:4.1.1"
-  checksum: 10c2/664d48c656f417bbd2f9d897463c70bd9bbad57c929bb2755f7df671b454c308479e00d07134aa61cf05981691a9c3686229ca95a22055107e5dc26ecbf9a846
-  languageName: node
-  linkType: hard
-
-"lodash.startcase@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "lodash.startcase@npm:4.4.0"
-  checksum: 10c2/142cd1e1cb83ddb43c9d13f4350530a39bb0e5d68ea7ce9a87b431533a601e459a4e5ec4f033e93682ebaa58d6179e24eb0a48923e9cd1e4fce9442d24981ec2
-  languageName: node
-  linkType: hard
-
-"lodash.upperfirst@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "lodash.upperfirst@npm:4.3.1"
-  checksum: 10c2/ba9afb788e8b10475bbe1ab63c6267866a9d3fe89d9862859fc96ca00b09bfbf9e2c892f701e0d52f72541e137787881d3f110488f72514f0fd5725fb7cb8478
   languageName: node
   linkType: hard
 
