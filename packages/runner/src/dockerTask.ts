@@ -8,6 +8,8 @@ import SpawnError from "./SpawnError.js";
 
 type BindMountType = "bind";
 
+const STOP_GRACE_MS = 5_000;
+
 interface DockerTaskOptions extends SpawnOptions {
   /**
    * Debug mode, print full docker command
@@ -33,6 +35,12 @@ interface DockerTaskOptions extends SpawnOptions {
    * Assign a name to the container
    */
   name?: string;
+
+  /**
+   * Seconds the docker daemon waits for graceful shutdown before SIGKILL,
+   * passed as `docker stop -t <stopTimeout>`. Default: 5.
+   */
+  stopTimeout?: number;
 
   /**
    * List of ports to expose
@@ -91,6 +99,18 @@ interface DockerTaskOptions extends SpawnOptions {
   memorySwappiness?: number;
 }
 
+function dockerStop(name: string, timeout: number): void {
+  spawn(
+    "docker",
+    ["stop", "-t", String(timeout), name],
+    {
+      stdio: "ignore",
+      shell: false,
+      detached: true,
+    },
+  ).unref();
+}
+
 /**
  * Create task to run docker container
  * @param task task name
@@ -98,43 +118,43 @@ interface DockerTaskOptions extends SpawnOptions {
  * @param args arguments for command
  * @param options spawn option
  */
-export function dockerTask(taskName: string, image: string, options?: DockerTaskOptions): void {
+export function dockerTask(taskName: string, image: string, options: DockerTaskOptions = {}): void {
   const args = ["run"];
-  if (options?.rm) {
+  if (options.rm) {
     args.push("--rm");
   }
-  if (options?.network) {
+  if (options.network) {
     args.push(`--network=${options.network}`);
   }
-  if (options?.interactive) {
+  if (options.interactive) {
     args.push("--interactive");
   }
 
-  if (options?.user) {
+  if (options.user) {
     args.push("--user", options.user);
   }
 
-  if (options?.name) {
+  if (options.name) {
     args.push("--name", options.name);
   }
 
-  if (options?.logDriver) {
+  if (options.logDriver) {
     args.push("--log-driver", options.logDriver);
   }
 
-  if (typeof options?.memory === "number") {
+  if (typeof options.memory === "number") {
     args.push("--memory", options.memory.toString());
   }
 
-  if (typeof options?.memorySwap === "number") {
+  if (typeof options.memorySwap === "number") {
     args.push("--memory-swap", options.memorySwap.toString());
   }
 
-  if (typeof options?.memorySwappiness === "number") {
+  if (typeof options.memorySwappiness === "number") {
     args.push("--memory-swappiness", options.memorySwappiness.toString());
   }
 
-  if (options?.logDriverOptions) {
+  if (options.logDriverOptions) {
     Object
       .entries(options.logDriverOptions)
       .forEach(([key, value]) => {
@@ -144,7 +164,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       });
   }
 
-  if (options?.env) {
+  if (options.env) {
     Object
       .entries(options.env)
       .forEach(([key, value]) => {
@@ -154,7 +174,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       });
   }
 
-  if (options?.ports) {
+  if (options.ports) {
     options.ports
       .forEach((value) => {
         if (value.includes(":")) {
@@ -163,7 +183,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       });
   }
 
-  if (options?.volumes) {
+  if (options.volumes) {
     options.volumes
       .forEach((value) => {
         if (value.includes(":")) {
@@ -172,7 +192,7 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
       });
   }
 
-  if (options?.mount) {
+  if (options.mount) {
     options.mount
       .forEach((value) => {
         args.push("--mount", `type=bind,src=${value.src},dst=${value.dst}`);
@@ -181,10 +201,16 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
 
   args.push(image);
 
+  const {
+    stopTimeout = 5,
+    name,
+    logFile,
+  } = options;
+
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
     logger.info("Started task");
-    if (options?.debug) {
+    if (options.debug) {
       logger.info(`docker ${args.join(" ")}`);
     }
     logger.time("Task completed in");
@@ -192,29 +218,36 @@ export function dockerTask(taskName: string, image: string, options?: DockerTask
 
     return new Promise<void>((resolve, reject) => {
       let forceKillTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
+      let stopRequested = false;
+
+      const requestStop = name
+        ? () => { dockerStop(name, stopTimeout); }
+        : () => { proc.kill("SIGTERM"); };
 
       const killProc = (): void => {
-        if (!proc.killed) {
-          proc.kill("SIGTERM");
-
-          forceKillTimeout = setTimeout(() => {
-            if (!proc.killed) {
-              proc.kill("SIGKILL");
-            }
-          }, 5000);
+        if (stopRequested) {
+          return;
         }
+        stopRequested = true;
+        requestStop();
+
+        forceKillTimeout = setTimeout(() => {
+          if (!proc.killed) {
+            proc.kill("SIGKILL");
+          }
+        }, stopTimeout * 1000 + STOP_GRACE_MS);
       };
 
       process.on("SIGINT", killProc);
       process.on("SIGTERM", killProc);
 
-      if (options?.logFile) {
-        if (existsSync(options.logFile)) {
-          rmSync(options.logFile);
+      if (logFile) {
+        if (existsSync(logFile)) {
+          rmSync(logFile);
         }
-        const logFile = createWriteStream(options.logFile, { flags: "a" });
-        proc.stdout.pipe(logFile);
-        proc.stderr.pipe(logFile);
+        const logFileStream = createWriteStream(logFile, { flags: "a" });
+        proc.stdout.pipe(logFileStream);
+        proc.stderr.pipe(logFileStream);
       }
       else {
         proc.stdout.on("data", (data?: Buffer) => {
