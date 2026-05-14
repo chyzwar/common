@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.6.3...@chyzwar/eslint-config@0.6.4) (2026-05-14)
+
+**Note:** Version bump only for package @chyzwar/eslint-config
+
 ## [0.6.3](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.6.2...@chyzwar/eslint-config@0.6.3) (2026-04-09)
 
 **Note:** Version bump only for package @chyzwar/eslint-config

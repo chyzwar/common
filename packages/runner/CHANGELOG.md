@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.10.3...@chyzwar/runner@0.11.0) (2026-05-14)
+
+### Features
+
+* **runner:** graceful container shutdown via docker stop ([b6b67c9](https://github.com/chyzwar/common/commit/b6b67c988c01a5c9e93b80ae28762a4adfdd31e1)) - by @chyzwar
+
 ## [0.10.3](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.10.2...@chyzwar/runner@0.10.3) (2026-04-09)
 
 **Note:** Version bump only for package @chyzwar/runner
