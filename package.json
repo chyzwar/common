@@ -26,19 +26,19 @@
   },
   "dependencies": {
     "@chyzwar/eslint-config": "^0.6.0",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@lerna-lite/cli": "^5.0.0",
-    "@lerna-lite/publish": "^5.0.0",
-    "@lerna-lite/version": "^5.0.0",
-    "@types/node": "^24.12.2",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@lerna-lite/cli": "^5.2.1",
+    "@lerna-lite/publish": "^5.2.1",
+    "@lerna-lite/version": "^5.2.1",
+    "@types/node": "^24.12.4",
     "conventional-changelog-conventionalcommits": "^9.3.1",
-    "eslint": "^10.2.0",
+    "eslint": "^10.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.4",
     "ts-node": "^10.9.2",
-    "typescript": "^6.0.2",
-    "vitest": "^4.1.4"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "yarn lint:fix"
