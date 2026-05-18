@@ -369,7 +369,7 @@ __metadata:
     typescript-eslint: "npm:^8.59.3"
   peerDependencies:
     eslint: ^10.0.0
-    typescript: ^6.0.0
+    typescript: ^6.0.3
   languageName: unknown
   linkType: soft
 
