@@ -53,10 +53,26 @@ export default [{
     "@typescript-eslint/generic-type-naming": ["off"],
 
     /**
-     * It is common to use undefined and null as falsy
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md
+     * Allow null/undefined as falsy (nullable string/number/boolean/enum stay
+     * frictionless), but still catch always-truthy conditions (bare object, array,
+     * Promise — forgot `await`, function — forgot `()`) and `any`/`unknown`.
+     * @see https://typescript-eslint.io/rules/strict-boolean-expressions/
      */
-    "@typescript-eslint/strict-boolean-expressions": ["off"],
+    "@typescript-eslint/strict-boolean-expressions": ["error", {
+      allowNullableBoolean: true,
+      allowNullableString: true,
+      allowNullableNumber: true,
+      allowNullableEnum: true,
+    }],
+
+    /**
+     * We favor truthy/falsy conditionals over defensive null checks, so allow
+     * `a ? a : b` / `!x ? y : x` ternaries. Still flags `||` that should be `??`.
+     * @see https://typescript-eslint.io/rules/prefer-nullish-coalescing/
+     */
+    "@typescript-eslint/prefer-nullish-coalescing": ["error", {
+      ignoreTernaryTests: true,
+    }],
 
     /**
      * Silly
