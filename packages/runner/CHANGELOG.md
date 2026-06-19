@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.11.0...@chyzwar/runner@0.12.0) (2026-06-19)
+
+### Features
+
+* **eslint-config,runner:** enforce strict-boolean-expressions and prefer-nullish-coalescing ([e0aa19e](https://github.com/chyzwar/common/commit/e0aa19e13151143320063a9d6c1c93c4edef5a6a)) - by @chyzwar
+
 ## [0.11.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.10.3...@chyzwar/runner@0.11.0) (2026-05-14)
 
 ### Features
