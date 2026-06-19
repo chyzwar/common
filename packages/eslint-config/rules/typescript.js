@@ -53,17 +53,11 @@ export default [{
     "@typescript-eslint/generic-type-naming": ["off"],
 
     /**
-     * Allow null/undefined as falsy (nullable string/number/boolean/enum stay
-     * frictionless), but still catch always-truthy conditions (bare object, array,
-     * Promise — forgot `await`, function — forgot `()`) and `any`/`unknown`.
+     * Off: too noisy to enforce retroactively on existing consumers. It is
+     * common to use undefined/null (and mixed unions) as falsy.
      * @see https://typescript-eslint.io/rules/strict-boolean-expressions/
      */
-    "@typescript-eslint/strict-boolean-expressions": ["error", {
-      allowNullableBoolean: true,
-      allowNullableString: true,
-      allowNullableNumber: true,
-      allowNullableEnum: true,
-    }],
+    "@typescript-eslint/strict-boolean-expressions": ["off"],
 
     /**
      * We favor truthy/falsy conditionals over defensive null checks, so allow
