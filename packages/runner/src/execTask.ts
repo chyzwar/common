@@ -19,7 +19,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
 
     return new Promise<void>((resolve, reject) => {
       const child = exec(command, options, (error, stdout, stderr) => {
-        if (stdout) {
+        if (stdout.length > 0) {
           stdout
             .toString()
             .split(/\r?\n/)
@@ -28,7 +28,7 @@ export function execTask(taskName: string, command: string, options?: ExecOption
             });
         }
 
-        if (stderr) {
+        if (stderr.length > 0) {
           stderr
             .toString()
             .split(/\r?\n/)
