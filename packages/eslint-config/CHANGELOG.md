@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.6.4...@chyzwar/eslint-config@0.8.0) (2026-06-19)
+
+### Features
+
+* **eslint-config,runner:** enforce strict-boolean-expressions and prefer-nullish-coalescing ([40bd383](https://github.com/chyzwar/common/commit/40bd383b2e025ebd5c106a8fed7632e66255eb4d)) - by @chyzwar
+
 ## [0.7.0](https://github.com/chyzwar/common/compare/@chyzwar/eslint-config@0.6.4...@chyzwar/eslint-config@0.7.0) (2026-06-19)
 
 ### Features
