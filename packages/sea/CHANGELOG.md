@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.4.6...@chyzwar/sea@1.4.7) (2026-06-19)
+
+**Note:** Version bump only for package @chyzwar/sea
+
 ## [1.4.6](https://github.com/chyzwar/common/compare/@chyzwar/sea@1.4.4...@chyzwar/sea@1.4.6) (2026-06-19)
 
 **Note:** Version bump only for package @chyzwar/sea
