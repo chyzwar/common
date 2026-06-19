@@ -355,7 +355,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chyzwar/eslint-config@npm:^0.6.0, @chyzwar/eslint-config@npm:^0.6.4, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.6.0":
+  version: 0.6.4
+  resolution: "@chyzwar/eslint-config@npm:0.6.4"
+  dependencies:
+    "@eslint/js": "npm:^10.0.1"
+    "@stylistic/eslint-plugin": "npm:^5.10.0"
+    eslint-plugin-jest: "npm:^29.15.2"
+    globals: "npm:^17.6.0"
+    typescript-eslint: "npm:^8.59.3"
+  peerDependencies:
+    eslint: ^10.0.0
+    typescript: ^6.0.0
+  checksum: 10c2/3448e210adc04ec665f7a0063e1ff3beeb91af0d7fe93e31ac06b85ef9471acbbcabf21c328e25535e1f11af4dfaefb7277120460b75c340179a4b9f316e2771
+  languageName: node
+  linkType: hard
+
+"@chyzwar/eslint-config@npm:^0.7.0, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
@@ -429,7 +445,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.6.4"
+    "@chyzwar/eslint-config": "npm:^0.7.0"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.12.4"
     eslint: "npm:^10.3.0"
@@ -447,7 +463,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.6.4"
+    "@chyzwar/eslint-config": "npm:^0.7.0"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.12.4"
     eslint: "npm:^10.3.0"
