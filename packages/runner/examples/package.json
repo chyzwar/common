@@ -9,10 +9,10 @@
     "start": "runner start"
   },
   "dependencies": {
-    "@chyzwar/eslint-config": "^0.6.0",
-    "@chyzwar/runner": "^0.10.0",
+    "@chyzwar/eslint-config": "^0.6.4",
+    "@chyzwar/runner": "^0.11.0",
     "@chyzwar/tsconfig": "^0.4.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.5.0",
     "typescript": "^6.0.3"
   }
 }
