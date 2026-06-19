@@ -371,7 +371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chyzwar/eslint-config@npm:^0.8.1, @chyzwar/eslint-config@workspace:packages/eslint-config":
+"@chyzwar/eslint-config@npm:^0.8.2, @chyzwar/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@chyzwar/eslint-config@workspace:packages/eslint-config"
   dependencies:
@@ -445,7 +445,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/runner@workspace:packages/runner"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.8.1"
+    "@chyzwar/eslint-config": "npm:^0.8.2"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.13.2"
     eslint: "npm:^10.5.0"
@@ -463,7 +463,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chyzwar/sea@workspace:packages/sea"
   dependencies:
-    "@chyzwar/eslint-config": "npm:^0.8.1"
+    "@chyzwar/eslint-config": "npm:^0.8.2"
     "@chyzwar/tsconfig": "npm:^0.4.0"
     "@types/node": "npm:^24.13.2"
     eslint: "npm:^10.5.0"
