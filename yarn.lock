@@ -348,7 +348,7 @@ __metadata:
     conventional-changelog-conventionalcommits: "npm:^9.3.1"
     eslint: "npm:^10.5.0"
     husky: "npm:^9.1.7"
-    lint-staged: "npm:^17.0.7"
+    lint-staged: "npm:^17.0.8"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^6.0.3"
     vitest: "npm:^4.1.9"
@@ -4199,9 +4199,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^17.0.7":
-  version: 17.0.7
-  resolution: "lint-staged@npm:17.0.7"
+"lint-staged@npm:^17.0.8":
+  version: 17.0.8
+  resolution: "lint-staged@npm:17.0.8"
   dependencies:
     listr2: "npm:^10.2.1"
     picomatch: "npm:^4.0.4"
@@ -4213,7 +4213,7 @@ __metadata:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c2/94585c5fc8a649e06de2d9ba793604f970cb90b83b6b8d75b401813b7026d3cc1971884daec47bf51c0a507695ca63832d01016e0b8c8970e147818e358aa674
+  checksum: 10c2/55943c1e302aa57c393dd7f95b0dbc6783e2a2f4b6f8660b5ac9c6b60f6cd5896efb95347c7e2aa1bcd81de8a7874115958bfeb6d51f66c73745d4107e01401b
   languageName: node
   linkType: hard
 
