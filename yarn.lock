@@ -379,7 +379,7 @@ __metadata:
     "@eslint/js": "npm:^10.0.1"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     eslint: "npm:^10.5.0"
-    eslint-plugin-jest: "npm:^29.15.2"
+    eslint-plugin-jest: "npm:^29.15.4"
     globals: "npm:^17.6.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.61.1"
@@ -3050,6 +3050,27 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c2/75643d662b07203fdc718bf126a599afb3d8261be05e189e754d8703e28658336be8a8a05ea38d203e36d68ac838cc35e8980f77b6543e23ba7a7f290c605ed4
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jest@npm:^29.15.4":
+  version: 29.15.4
+  resolution: "eslint-plugin-jest@npm:29.15.4"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.0.0"
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^8.0.0
+    eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
+    jest: "*"
+    typescript: ">=4.8.4 <7.0.0"
+  peerDependenciesMeta:
+    "@typescript-eslint/eslint-plugin":
+      optional: true
+    jest:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 10c2/249be99a14e717e81fe70aef44a47d588ffd945f6584bfcb50c8001834c86d6547d798af8646941459df4878c2496139b592b39b81f2060bc4cb2e8660e954da
   languageName: node
   linkType: hard
 
