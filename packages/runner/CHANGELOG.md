@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.13.2...@chyzwar/runner@0.14.0) (2026-07-24)
+
+### Features
+
+* **runner:** add reuse flag to dockerTask ([9d34b40](https://github.com/chyzwar/common/commit/9d34b40af658ee3ff2721832ba0670c567ec249f)) - by @chyzwar
+
 ## [0.13.2](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.13.1...@chyzwar/runner@0.13.2) (2026-06-19)
 
 **Note:** Version bump only for package @chyzwar/runner
