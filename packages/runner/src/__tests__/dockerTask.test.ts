@@ -3,6 +3,7 @@ import register from "../register.js";
 
 vi.mock("node:child_process", () => {
   return {
+    execSync: vi.fn(),
     spawn: vi.fn().mockImplementation(() => {
       const handlers: Record<string, (arg: unknown) => void> = {};
 
@@ -31,7 +32,7 @@ vi.mock("../Logger.js", async () => {
 });
 
 const { dockerTask } = await import("../dockerTask.js");
-const { spawn } = await import("node:child_process");
+const { spawn, execSync } = await import("node:child_process");
 
 describe("dockerTask", () => {
   it("should register new task", () => {
@@ -110,5 +111,30 @@ describe("dockerTask", () => {
     await register.get("hello")?.();
 
     expect(spawn).toHaveBeenCalledWith("docker", ["run", "--network=host", "hello-world"]);
+  });
+
+  it("should skip spawning when reuse:true and the named container is already running", async () => {
+    vi.mocked(execSync).mockReturnValueOnce(Buffer.from("MyHello"));
+    dockerTask("hello", "hello-world", {
+      name: "MyHello",
+      reuse: true,
+    });
+    vi.mocked(spawn).mockClear();
+    await register.get("hello")?.();
+
+    expect(execSync).toHaveBeenCalled();
+    expect(spawn).not.toHaveBeenCalled();
+  });
+
+  it("should spawn normally when reuse:true but no container is running", async () => {
+    vi.mocked(execSync).mockReturnValueOnce(Buffer.from(""));
+    dockerTask("hello", "hello-world", {
+      name: "MyHello",
+      reuse: true,
+    });
+    vi.mocked(spawn).mockClear();
+    await register.get("hello")?.();
+
+    expect(spawn).toHaveBeenCalledWith("docker", ["run", "--name", "MyHello", "hello-world"]);
   });
 });

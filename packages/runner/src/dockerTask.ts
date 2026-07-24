@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { execSync, spawn } from "node:child_process";
 import { createWriteStream, existsSync, rmSync } from "node:fs";
 import process from "node:process";
 import type { SpawnOptions } from "node:child_process";
@@ -25,6 +25,14 @@ interface DockerTaskOptions extends SpawnOptions {
    * Automatically remove the container when it exits
    */
   rm?: boolean;
+
+  /**
+   * Skip starting the container when one with the same `name` is already
+   * running (e.g. started by a sibling project that shares it). Requires `name`.
+   * The task resolves immediately instead of failing on a duplicate-name
+   * conflict, so tasks can be declared unconditionally regardless of start order.
+   */
+  reuse?: boolean;
 
   /**
    * Keep STDIN open even if not attached
@@ -109,6 +117,21 @@ function dockerStop(name: string, timeout: number): void {
       detached: true,
     },
   ).unref();
+}
+
+function isContainerRunning(name: string): boolean {
+  try {
+    const out = execSync(
+      `docker ps --filter name=^/${name}$ --filter status=running --format "{{.Names}}"`,
+      { stdio: ["ignore", "pipe", "ignore"] },
+    )
+      .toString()
+      .trim();
+    return out === name;
+  }
+  catch {
+    return false;
+  }
 }
 
 /**
@@ -209,6 +232,10 @@ export function dockerTask(taskName: string, image: string, options: DockerTaskO
 
   async function spawnTaskFunction(): Promise<void> {
     const logger = new Logger(taskName);
+    if (options.reuse && name && isContainerRunning(name)) {
+      logger.info(`Reusing already-running container <${name}>`);
+      return;
+    }
     logger.info("Started task");
     if (options.debug) {
       logger.info(`docker ${args.join(" ")}`);
