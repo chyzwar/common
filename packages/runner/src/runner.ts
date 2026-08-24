@@ -6,6 +6,8 @@ import Logger from "./Logger.js";
 import process, { argv, cwd } from "node:process";
 import SpawnError from "./SpawnError.js";
 import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 
 process.title = "runner";
 
@@ -40,7 +42,7 @@ const importTS = async (path: string): Promise<void> => {
       compiledConfigPath,
       outputText,
     );
-    await import(compiledConfigPath);
+    await import(pathToFileURL(compiledConfigPath).href);
   }
 
   finally {
@@ -50,11 +52,13 @@ const importTS = async (path: string): Promise<void> => {
 
 async function handle(args: string[]): Promise<void> {
   try {
-    if (existsSync(`${cwd()}/runner.config.ts`)) {
-      await importTS(`${cwd()}/runner.config.ts`);
+    const configTs = join(cwd(), "runner.config.ts");
+    if (existsSync(configTs)) {
+      await importTS(configTs);
     }
     else {
-      await import(`${cwd()}/runner.config.js`);
+      const { href } = pathToFileURL(join(cwd(), "runner.config.js"));
+      await import(href);
     }
   }
   catch (error: unknown) {
