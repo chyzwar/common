@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.14.0...@chyzwar/runner@0.14.1) (2026-08-24)
+
+### Bug Fixes
+
+* **runner:** import runner.config via file URL ([fa15050](https://github.com/chyzwar/common/commit/fa150504658a485210f470ef605f37a313cfc28f)) - by @chyzwar
+
 ## [0.14.0](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.13.2...@chyzwar/runner@0.14.0) (2026-07-24)
 
 ### Features
