@@ -2,7 +2,7 @@
   "name": "@chyzwar/runner",
   "version": "0.14.1",
   "engines": {
-    "node": "> 22.x.x"
+    "node": ">= 22.18"
   },
   "repository": {
     "type": "git",
