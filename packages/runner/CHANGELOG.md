@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.2](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.14.1...@chyzwar/runner@0.14.2) (2026-09-15)
+
+### Bug Fixes
+
+* **runner:** load runner.config.ts with Node type stripping ([8da196d](https://github.com/chyzwar/common/commit/8da196d7b42a8a06ac13ad59187904ad55cef59a)) - by @chyzwar
+
 ## [0.14.1](https://github.com/chyzwar/common/compare/@chyzwar/runner@0.14.0...@chyzwar/runner@0.14.1) (2026-08-24)
 
 ### Bug Fixes
