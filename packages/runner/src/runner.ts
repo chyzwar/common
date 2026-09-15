@@ -5,61 +5,23 @@ import { series } from "./series.js";
 import Logger from "./Logger.js";
 import process, { argv, cwd } from "node:process";
 import SpawnError from "./SpawnError.js";
-import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
 process.title = "runner";
 
-const encoding = { encoding: "utf-8" as const };
-const removeOpts = {
-  force: true,
-  recursive: true,
-};
-
 const logger = new Logger("runner");
-
-const importTS = async (path: string): Promise<void> => {
-  const {
-    default: {
-      transpileModule,
-      ScriptTarget,
-      ModuleKind,
-    },
-  } = await import("typescript");
-
-  const source = readFileSync(path, encoding);
-  const { outputText } = transpileModule(source, {
-    compilerOptions: {
-      target: ScriptTarget.ES2020,
-      module: ModuleKind.ESNext,
-    },
-  });
-
-  const compiledConfigPath = `${path}.mjs`;
-  try {
-    writeFileSync(
-      compiledConfigPath,
-      outputText,
-    );
-    await import(pathToFileURL(compiledConfigPath).href);
-  }
-
-  finally {
-    rmSync(compiledConfigPath, removeOpts);
-  }
-};
 
 async function handle(args: string[]): Promise<void> {
   try {
     const configTs = join(cwd(), "runner.config.ts");
-    if (existsSync(configTs)) {
-      await importTS(configTs);
-    }
-    else {
-      const { href } = pathToFileURL(join(cwd(), "runner.config.js"));
-      await import(href);
-    }
+    const configJs = join(cwd(), "runner.config.js");
+    const config = existsSync(configTs)
+      ? configTs
+      : configJs;
+
+    await import(pathToFileURL(config).href);
   }
   catch (error: unknown) {
     logger.error(`Failed loading configuration ${error}`);

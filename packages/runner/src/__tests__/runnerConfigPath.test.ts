@@ -11,6 +11,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const libDir = resolve(dirname(fileURLToPath(import.meta.url)), "../../lib");
 const taskModule = pathToFileURL(join(libDir, "task.js")).href;
 const config = `import { task } from "${taskModule}";\n\ntask("test", () => undefined);\n`;
+// The .ts config carries annotations Node has to strip; the .js one must stay plain JS.
+const typedConfig = `import { task } from "${taskModule}";\n\nconst name: string = "test";\n\ntask(name, (): undefined => undefined);\n`;
 
 interface RunnerResult {
   status: number | null;
@@ -24,7 +26,7 @@ function runnerWithConfig(fileName: string): RunnerResult {
   tempDir = mkdtempSync(join(tmpdir(), "runner-"));
   const cwd = join(tempDir, "url-hostile#dir");
   mkdirSync(cwd);
-  writeFileSync(join(cwd, fileName), config);
+  writeFileSync(join(cwd, fileName), fileName.endsWith(".ts") ? typedConfig : config);
 
   const { status, stdout, stderr } = spawnSync(execPath, [join(libDir, "runner.js"), "test"], { cwd, encoding: "utf8" });
   return { status, output: stdout + stderr };
@@ -35,7 +37,7 @@ afterEach(() => {
 });
 
 describe("runner config path", () => {
-  it("loads runner.config.ts from a cwd that is not a valid URL path", () => {
+  it("strips types from runner.config.ts in a cwd that is not a valid URL path", () => {
     const { status, output } = runnerWithConfig("runner.config.ts");
 
     expect(output).not.toContain("Failed loading configuration");
