@@ -344,7 +344,7 @@ __metadata:
     "@lerna-lite/cli": "npm:^5.3.0"
     "@lerna-lite/publish": "npm:^5.3.0"
     "@lerna-lite/version": "npm:^5.3.0"
-    "@types/node": "npm:^24.13.2"
+    "@types/node": "npm:^24.19.2"
     conventional-changelog-conventionalcommits: "npm:^9.3.1"
     eslint: "npm:^10.5.0"
     husky: "npm:^9.1.7"
@@ -447,7 +447,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.8.2"
     "@chyzwar/tsconfig": "npm:^0.4.0"
-    "@types/node": "npm:^24.13.2"
+    "@types/node": "npm:^24.19.2"
     eslint: "npm:^10.5.0"
     picocolors: "npm:^1.1.1"
     typescript: "npm:^6.0.3"
@@ -465,7 +465,7 @@ __metadata:
   dependencies:
     "@chyzwar/eslint-config": "npm:^0.8.2"
     "@chyzwar/tsconfig": "npm:^0.4.0"
-    "@types/node": "npm:^24.13.2"
+    "@types/node": "npm:^24.19.2"
     eslint: "npm:^10.5.0"
     typescript: "npm:^6.0.3"
   peerDependencies:
@@ -1971,12 +1971,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.13.2":
-  version: 24.13.2
-  resolution: "@types/node@npm:24.13.2"
+"@types/node@npm:^24.19.2":
+  version: 24.19.2
+  resolution: "@types/node@npm:24.19.2"
   dependencies:
-    undici-types: "npm:~7.18.0"
-  checksum: 10c2/8f900d622998649c5b20f18fab26bae03aaf26cc9c0cddfe9585bdeca389538d03a6dd7bbc1a6459286644222ba5a6989ac5ac59457e14c62ae02983ad857796
+    undici-types: "npm:>=7.24.0 <7.24.7"
+  checksum: 10c2/7e2fef8e1ab9ce2f0aa671cfd0eb62e646139d9b2714e750ab35b69c5363c2bd8cef808b10e08fbfcc14579e4a0023a2bc19383271321e2f4f7031b82b2793b3
   languageName: node
   linkType: hard
 
@@ -5832,17 +5832,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:>=7.24.0 <7.24.7":
+  version: 7.24.6
+  resolution: "undici-types@npm:7.24.6"
+  checksum: 10c2/c85ca5590c825d6890496317820e4004788c419a90f2602b8ab1b05c306abafd6d8ea1e4465ddb0a3d81c65e7f1dd0009d4ed43689158d590a3a4290f4b4f2e2
+  languageName: node
+  linkType: hard
+
 "undici-types@npm:~6.21.0":
   version: 6.21.0
   resolution: "undici-types@npm:6.21.0"
   checksum: 10c2/c9594d1cb9f3f37f94394cf32a396c014e3f373457e91b8ea77fe5f659a1c945c2a5078b4904fd13bb78dd8574450da66c18f03849456ea6349464171148adb0
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~7.18.0":
-  version: 7.18.2
-  resolution: "undici-types@npm:7.18.2"
-  checksum: 10c2/7554a95aeb18888f567764658fd85a3c126811bdef4f912f903e54a2fb293a1b966ba968625f37d2935491881074a21cbef02b9fba4b96d1ea601db172fdee1f
   languageName: node
   linkType: hard
 
