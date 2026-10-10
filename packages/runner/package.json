@@ -2,7 +2,7 @@
   "name": "@chyzwar/runner",
   "version": "0.14.2",
   "engines": {
-    "node": ">= 22.18"
+    "node": ">= 24.21.0"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@chyzwar/eslint-config": "^0.8.2",
     "@chyzwar/tsconfig": "^0.4.0",
-    "@types/node": "^24.13.2",
+    "@types/node": "^24.19.2",
     "eslint": "^10.5.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.9"
