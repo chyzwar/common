@@ -9,8 +9,8 @@ name: Publish
 #   Lerna use npm for publish, even if npm client is set to yarn
 #   Publish only use npm as client and it ignore any config in yarnrc and npmClient settings
 #
-#   Npm token will not be configured without registry-url set in actions/setup-node
-#   To configure authToken for npm both registry-url and secret is needed.
+#   Publishing uses npm trusted publishing (OIDC), no NPM_TOKEN secret.
+#   Job needs id-token: write, trusted publisher is configured per package on npmjs.com
 #   
 #   When publishing public package, publishConfig.access need to be configured
 # 
@@ -25,6 +25,9 @@ jobs:
   publish:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
 
     steps:
     - name: "Checkout"
@@ -37,7 +40,6 @@ jobs:
       with:
         node-version: '24'
         cache: 'yarn'
-        registry-url: 'https://registry.npmjs.org'
 
     - name: Install
       run: yarn install
@@ -53,7 +55,6 @@ jobs:
     
     - name: "Version and publish"
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "Set git user"
